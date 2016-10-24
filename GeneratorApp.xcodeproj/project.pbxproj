@@ -14,6 +14,18 @@
 		6D914B5A1DBDAEBD00413CA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D914B581DBDAEBD00413CA5 /* LaunchScreen.storyboard */; };
 		6D914B651DBDAEBD00413CA5 /* GeneratorAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D914B641DBDAEBD00413CA5 /* GeneratorAppTests.swift */; };
 		6D914B701DBDAEBD00413CA5 /* GeneratorAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D914B6F1DBDAEBD00413CA5 /* GeneratorAppUITests.swift */; };
+		6D914B871DBDB1E000413CA5 /* Optimist_Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D914B7D1DBDB1E000413CA5 /* Optimist_Bd.ttf */; };
+		6D914B881DBDB1E000413CA5 /* Optimist_BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D914B7E1DBDB1E000413CA5 /* Optimist_BdIt.ttf */; };
+		6D914B891DBDB1E000413CA5 /* Optimist_It.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D914B7F1DBDB1E000413CA5 /* Optimist_It.ttf */; };
+		6D914B8A1DBDB1E000413CA5 /* Optimist_Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D914B801DBDB1E000413CA5 /* Optimist_Lt.ttf */; };
+		6D914B8B1DBDB1E000413CA5 /* Optimist_LtIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D914B811DBDB1E000413CA5 /* Optimist_LtIt.ttf */; };
+		6D914B8C1DBDB1E000413CA5 /* Optimist_Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D914B821DBDB1E000413CA5 /* Optimist_Rg.ttf */; };
+		6D914B8D1DBDB1E000413CA5 /* Optimist_SBd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D914B831DBDB1E000413CA5 /* Optimist_SBd.ttf */; };
+		6D914B8E1DBDB1E000413CA5 /* Optimist_SBdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D914B841DBDB1E000413CA5 /* Optimist_SBdIt.ttf */; };
+		6D914B8F1DBDB1E000413CA5 /* Optimist_XLt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D914B851DBDB1E000413CA5 /* Optimist_XLt.ttf */; };
+		6D914B901DBDB1E000413CA5 /* Optimist_XLtIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D914B861DBDB1E000413CA5 /* Optimist_XLtIt.ttf */; };
+		6D914B931DBDC77600413CA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D914B921DBDC77600413CA5 /* LoginViewController.swift */; };
+		6D914B961DBDC93100413CA5 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D914B951DBDC93100413CA5 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +59,18 @@
 		6D914B6B1DBDAEBD00413CA5 /* GeneratorAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeneratorAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D914B6F1DBDAEBD00413CA5 /* GeneratorAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorAppUITests.swift; sourceTree = "<group>"; };
 		6D914B711DBDAEBD00413CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D914B7D1DBDB1E000413CA5 /* Optimist_Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_Bd.ttf; sourceTree = "<group>"; };
+		6D914B7E1DBDB1E000413CA5 /* Optimist_BdIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_BdIt.ttf; sourceTree = "<group>"; };
+		6D914B7F1DBDB1E000413CA5 /* Optimist_It.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_It.ttf; sourceTree = "<group>"; };
+		6D914B801DBDB1E000413CA5 /* Optimist_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_Lt.ttf; sourceTree = "<group>"; };
+		6D914B811DBDB1E000413CA5 /* Optimist_LtIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_LtIt.ttf; sourceTree = "<group>"; };
+		6D914B821DBDB1E000413CA5 /* Optimist_Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_Rg.ttf; sourceTree = "<group>"; };
+		6D914B831DBDB1E000413CA5 /* Optimist_SBd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_SBd.ttf; sourceTree = "<group>"; };
+		6D914B841DBDB1E000413CA5 /* Optimist_SBdIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_SBdIt.ttf; sourceTree = "<group>"; };
+		6D914B851DBDB1E000413CA5 /* Optimist_XLt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_XLt.ttf; sourceTree = "<group>"; };
+		6D914B861DBDB1E000413CA5 /* Optimist_XLtIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_XLtIt.ttf; sourceTree = "<group>"; };
+		6D914B921DBDC77600413CA5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6D914B951DBDC93100413CA5 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = ../Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +105,7 @@
 				6D914B631DBDAEBD00413CA5 /* GeneratorAppTests */,
 				6D914B6E1DBDAEBD00413CA5 /* GeneratorAppUITests */,
 				6D914B4D1DBDAEBD00413CA5 /* Products */,
+				6D914B911DBDB1E400413CA5 /* optimist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +122,9 @@
 		6D914B4E1DBDAEBD00413CA5 /* GeneratorApp */ = {
 			isa = PBXGroup;
 			children = (
+				6D914B951DBDC93100413CA5 /* Common.swift */,
 				6D914B4F1DBDAEBD00413CA5 /* AppDelegate.swift */,
-				6D914B511DBDAEBD00413CA5 /* ViewController.swift */,
+				6D914B941DBDC77B00413CA5 /* controllers */,
 				6D914B531DBDAEBD00413CA5 /* Main.storyboard */,
 				6D914B561DBDAEBD00413CA5 /* Assets.xcassets */,
 				6D914B581DBDAEBD00413CA5 /* LaunchScreen.storyboard */,
@@ -123,6 +149,32 @@
 				6D914B711DBDAEBD00413CA5 /* Info.plist */,
 			);
 			path = GeneratorAppUITests;
+			sourceTree = "<group>";
+		};
+		6D914B911DBDB1E400413CA5 /* optimist */ = {
+			isa = PBXGroup;
+			children = (
+				6D914B7D1DBDB1E000413CA5 /* Optimist_Bd.ttf */,
+				6D914B7E1DBDB1E000413CA5 /* Optimist_BdIt.ttf */,
+				6D914B7F1DBDB1E000413CA5 /* Optimist_It.ttf */,
+				6D914B801DBDB1E000413CA5 /* Optimist_Lt.ttf */,
+				6D914B811DBDB1E000413CA5 /* Optimist_LtIt.ttf */,
+				6D914B821DBDB1E000413CA5 /* Optimist_Rg.ttf */,
+				6D914B831DBDB1E000413CA5 /* Optimist_SBd.ttf */,
+				6D914B841DBDB1E000413CA5 /* Optimist_SBdIt.ttf */,
+				6D914B851DBDB1E000413CA5 /* Optimist_XLt.ttf */,
+				6D914B861DBDB1E000413CA5 /* Optimist_XLtIt.ttf */,
+			);
+			name = optimist;
+			sourceTree = "<group>";
+		};
+		6D914B941DBDC77B00413CA5 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D914B511DBDAEBD00413CA5 /* ViewController.swift */,
+				6D914B921DBDC77600413CA5 /* LoginViewController.swift */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +287,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D914B8C1DBDB1E000413CA5 /* Optimist_Rg.ttf in Resources */,
+				6D914B891DBDB1E000413CA5 /* Optimist_It.ttf in Resources */,
+				6D914B8E1DBDB1E000413CA5 /* Optimist_SBdIt.ttf in Resources */,
+				6D914B881DBDB1E000413CA5 /* Optimist_BdIt.ttf in Resources */,
+				6D914B8D1DBDB1E000413CA5 /* Optimist_SBd.ttf in Resources */,
+				6D914B8B1DBDB1E000413CA5 /* Optimist_LtIt.ttf in Resources */,
 				6D914B5A1DBDAEBD00413CA5 /* LaunchScreen.storyboard in Resources */,
+				6D914B8A1DBDB1E000413CA5 /* Optimist_Lt.ttf in Resources */,
+				6D914B8F1DBDB1E000413CA5 /* Optimist_XLt.ttf in Resources */,
+				6D914B871DBDB1E000413CA5 /* Optimist_Bd.ttf in Resources */,
 				6D914B571DBDAEBD00413CA5 /* Assets.xcassets in Resources */,
 				6D914B551DBDAEBD00413CA5 /* Main.storyboard in Resources */,
+				6D914B901DBDB1E000413CA5 /* Optimist_XLtIt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +324,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D914B961DBDC93100413CA5 /* Common.swift in Sources */,
+				6D914B931DBDC77600413CA5 /* LoginViewController.swift in Sources */,
 				6D914B521DBDAEBD00413CA5 /* ViewController.swift in Sources */,
 				6D914B501DBDAEBD00413CA5 /* AppDelegate.swift in Sources */,
 			);
