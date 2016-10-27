@@ -20,21 +20,20 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-    <key>UIAppFonts</key>
-    <array>
-        <string>Optimist_Bd.ttf</string>
-        <string>Optimist_BdIt.ttf</string>
-        <string>Optimist_It.ttf</string>
-        <string>Optimist_Lt.ttf</string>
-        <string>Optimist_LtIt.ttf</string>
-        <string>Optimist_Rg.ttf</string>
-        <string>Optimist_SBd.ttf</string>
-        <string>Optimist_SBdIt.ttf</string>
-        <string>Optimist_XLt.ttf</string>
-        <string>Optimist_XLtIt.ttf</string>
-    </array>
-
-    <key>UILaunchStoryboardName</key>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Optimist_Bd.ttf</string>
+		<string>Optimist_BdIt.ttf</string>
+		<string>Optimist_It.ttf</string>
+		<string>Optimist_Lt.ttf</string>
+		<string>Optimist_LtIt.ttf</string>
+		<string>Optimist_Rg.ttf</string>
+		<string>Optimist_SBd.ttf</string>
+		<string>Optimist_SBdIt.ttf</string>
+		<string>Optimist_XLt.ttf</string>
+		<string>Optimist_XLtIt.ttf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
@@ -49,8 +48,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
