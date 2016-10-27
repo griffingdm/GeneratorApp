@@ -15,10 +15,10 @@ class PrincipalTableViewCell: UITableViewCell {
     @IBOutlet weak var header: SpaceLabel!
     @IBOutlet var labels: [UILabel]!
 
-    var headerString: String!
-    var numberString: String!
-    var labelAr: [String] = []
-    var iconImage: UIImage!
+//    var headerString: String!
+//    var numberString: String!
+//    var labelAr: [String] = []
+//    var iconImage: UIImage!
     
     override func awakeFromNib() {
         super.awakeFromNib()

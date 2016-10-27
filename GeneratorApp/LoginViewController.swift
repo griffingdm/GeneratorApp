@@ -18,14 +18,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var nameStack: UIStackView!
     @IBOutlet weak var passKeyStack: UIStackView!
     
+    var topSectionFrame: CGRect!
+    var powerButtonFrame: CGRect!
+    var passkeyFrame: CGRect!
+    
+    var powerButtonY: CGFloat!
+    var topSectionY: CGFloat!
+    
     var aniDuration: TimeInterval = 0.25
     var springVel: CGFloat = 5
     var springDamp: CGFloat = 0.8
-    
-    var passKeyFrame: CGRect!
-    var passKeyY: CGFloat!
-    var passKeyBottom: CGFloat!
-    var buttonUpDistance:CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,14 +52,18 @@ class LoginViewController: UIViewController {
         // Get the size of the keyboard.
         print("show keyboard")
         let frame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        topSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
+        powerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
+        passkeyFrame = mamaStack.convert(passKeyStack.frame, from: passKeyStack.superview)
         
-        print("passKeyBottom: \(passKeyBottom), keyboardTop: \(frame.origin.y)")
+        let powerButtonY: CGFloat = frame.origin.y - powerButtonFrame.height
+        let topSectionY: CGFloat = powerButtonY - passkeyFrame.origin.y - passkeyFrame.height - 2
         
         //if frame.origin.y < passKeyBottom{
         print("going up!")
         UIView.animate(withDuration: aniDuration, animations: {
-            self.mamaStack.frame.origin.y = frame.origin.y - self.mamaStack.frame.height
-            self.topSectionParent.frame.origin.y += self.buttonUpDistance
+            self.powerUpButtonParentView.frame.origin.y = powerButtonY
+            self.topSectionParent.frame.origin.y = topSectionY
         })
         //}
     }
@@ -67,11 +73,6 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        passKeyFrame = passKeyStack.frame
-        passKeyY = passKeyFrame.origin.y + mamaStack.frame.origin.y
-        passKeyBottom = passKeyY + passKeyFrame.height
-        buttonUpDistance = topSectionParent.frame.height - passKeyBottom
-        
         for buttonView in buttonViewsToRound{
             let cornerRadius: CGFloat = buttonView.frame.height / 2
             roundCorners(view: buttonView, radius: cornerRadius)

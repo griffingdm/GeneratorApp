@@ -13,7 +13,10 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
     
     var theImages: [UIImage] = []
     var headers: [String]!
-    var labels: [[String]]! = [[""],[""],[""]]
+//    var labels1: [String]! = []
+//    var labels2: [String]! = []
+//    var labels3: [String]! = []
+    var allLabels: [Int:[String]]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +25,10 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         theImages = [#imageLiteral(resourceName: "Screen Shot 2016-10-26 at 7.59.22 PM"),#imageLiteral(resourceName: "Screen Shot 2016-10-26 at 7.59.22 PM"),#imageLiteral(resourceName: "Screen Shot 2016-10-26 at 7.59.22 PM")]
         headers = ["FOR PLAYING ONLY", "LEARN, TEACH, REPEAT", "INSPIRE"]
         
-        labels[0] = ["Supplies are for the space. Contact your manager to get your own.", "No reservations. No Meetings. First Come First Serve", "Do you work at capital One? You're allowed to use it."]
-        labels.append(["Do not use the 3D printer or vinyl cutter without training!", "Come hang out 10AM-11AM on Fridays to learn how everything works.", "If you have expertise you're willing to share, teach a class!"])
-        labels.append(["When you make something, brag about it!", "If you have an idea, let us know. We'll help you make it a reality.", "Create tutorials and off the processes of others."])
+        allLabels = [0: ["Supplies are for the space. Contact your manager to get your own.", "No reservations. No Meetings. First Come First Serve", "Do you work at capital One? You're allowed to use it."],
+                     1: ["Do not use the 3D printer or vinyl cutter without training!", "Come hang out 10AM-11AM on Fridays to learn how everything works.", "If you have expertise you're willing to share, teach a class!"],
+                     2: ["When you make something, brag about it!", "If you have an idea, let us know. We'll help you make it a reality.", "Create tutorials and off the processes of others."]
+        ]
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 353
@@ -49,7 +53,7 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "PrincipleCell") as! PrincipalTableViewCell
         //        cell.textLabel?.text = "This is row \(indexPath.row)"
         
-        print("\(labels!)")
+        print("\(allLabels!)")
         
         for patternView in cell.patternViews{
             tileBG(view: patternView, image: #imageLiteral(resourceName: "dot-pttn"))
@@ -57,12 +61,14 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         
         cell.icon = theImages[indexPath.row]
         cell.header.text = headers[indexPath.row]
-        cell.number.text = ("0\(indexPath.row)")
+        cell.number.text = ("0\(indexPath.row + 1)")
         cell.layoutIfNeeded()
-//        for (index, labelAr) in labels![indexPath.row].enumerated() {
-//            print("\(index)")
-//            cell.labels![index].text = labelAr
-//        }
+        
+        for (index, labelText) in (allLabels![indexPath.row]?.enumerated())! {
+            print("\(index)")
+            print("\(labelText)")
+            cell.labels![index].text = labelText
+        }
         
         return cell
     }
