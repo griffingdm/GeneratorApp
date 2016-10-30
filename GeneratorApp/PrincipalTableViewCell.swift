@@ -11,14 +11,9 @@ import UIKit
 class PrincipalTableViewCell: UITableViewCell {
     @IBOutlet var patternViews: [UIView]!
     @IBOutlet weak var number: SpaceLabel!
-    @IBOutlet weak var icon: UIImage!
+    @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var header: SpaceLabel!
     @IBOutlet var labels: [UILabel]!
-
-//    var headerString: String!
-//    var numberString: String!
-//    var labelAr: [String] = []
-//    var iconImage: UIImage!
     
     override func awakeFromNib() {
         super.awakeFromNib()

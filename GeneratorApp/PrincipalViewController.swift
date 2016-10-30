@@ -13,16 +13,13 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
     
     var theImages: [UIImage] = []
     var headers: [String]!
-//    var labels1: [String]! = []
-//    var labels2: [String]! = []
-//    var labels3: [String]! = []
     var allLabels: [Int:[String]]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        theImages = [#imageLiteral(resourceName: "Screen Shot 2016-10-26 at 7.59.22 PM"),#imageLiteral(resourceName: "Screen Shot 2016-10-26 at 7.59.22 PM"),#imageLiteral(resourceName: "Screen Shot 2016-10-26 at 7.59.22 PM")]
+        theImages = [#imageLiteral(resourceName: "icon-prin-1"),#imageLiteral(resourceName: "icon-prin-2"),#imageLiteral(resourceName: "icon-prin-3")]
         headers = ["FOR PLAYING ONLY", "LEARN, TEACH, REPEAT", "INSPIRE"]
         
         allLabels = [0: ["Supplies are for the space. Contact your manager to get your own.", "No reservations. No Meetings. First Come First Serve", "Do you work at capital One? You're allowed to use it."],
@@ -30,10 +27,18 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
                      2: ["When you make something, brag about it!", "If you have an idea, let us know. We'll help you make it a reality.", "Create tutorials and off the processes of others."]
         ]
         
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 353
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 353
+        
+        tableView.tableHeaderView = tableView.dequeueReusableCell(withIdentifier: "header")
+        
+        tableView.tableFooterView = tableView.dequeueReusableCell(withIdentifier: "footer")?.contentView
+    }
+    
+    override func viewDidLayoutSubviews() {
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,7 +56,6 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PrincipleCell") as! PrincipalTableViewCell
-        //        cell.textLabel?.text = "This is row \(indexPath.row)"
         
         print("\(allLabels!)")
         
@@ -59,7 +63,8 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
             tileBG(view: patternView, image: #imageLiteral(resourceName: "dot-pttn"))
         }
         
-        cell.icon = theImages[indexPath.row]
+        cell.icon.image = theImages[indexPath.row]
+        
         cell.header.text = headers[indexPath.row]
         cell.number.text = ("0\(indexPath.row + 1)")
         cell.layoutIfNeeded()
@@ -72,6 +77,20 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         
         return cell
     }
+    
+    //MARK: UITableViewDelegate
+//    func tableView(_ tableView: UITableView,
+//                            viewForHeaderInSection section: Int) -> UIView?
+//    {
+//        // This is where you would change section header content
+//        return tableView.dequeueReusableCell(withIdentifier: "header")?.contentView
+//    }
+    
+    
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        // This is where you would change section header content
+//        return tableView.dequeueReusableCell(withIdentifier: "footer")?.contentView
+//    }
     
     /*
      // MARK: - Navigation

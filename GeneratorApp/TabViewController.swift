@@ -24,11 +24,13 @@ class TabViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        principalController = storyboard.instantiateViewController(withIdentifier: "controller0")
-        projectsController = storyboard.instantiateViewController(withIdentifier: "controller1")
-        equipmentController = storyboard.instantiateViewController(withIdentifier: "controller2")
-        viewControllers = [principalController, projectsController, equipmentController]
+        let equipmentStoryboard = UIStoryboard(name: "EquipmentStoryboard", bundle: nil)
+        let principleStoryboard = UIStoryboard(name: "PrincipleStoryboard", bundle: nil)
+        let projectStoryboard = UIStoryboard(name: "ProjectStoryboard", bundle: nil)
+        principalController = principleStoryboard.instantiateViewController(withIdentifier: "controller0")
+        projectsController = projectStoryboard.instantiateViewController(withIdentifier: "controller0")
+        equipmentController = equipmentStoryboard.instantiateViewController(withIdentifier: "controller0")
+        viewControllers = [projectsController, principalController, equipmentController]
         
         tapTab(tabButtons[selectedIndex])
     }

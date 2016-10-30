@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FHr-be-2uP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Optimist_Bd.ttf">
+            <string>Optimist-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tab View Controller-->
+        <scene sceneID="gnr-9t-kpa">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VjM-Dl-5lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="FHr-be-2uP" customClass="TabViewController" customModule="GeneratorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1g8-Df-zqc"/>
+                        <viewControllerLayoutGuide type="bottom" id="WN4-aw-XcB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vR1-Dg-Mve">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r5H-h2-I6n">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCv-EI-Hlf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aC2-Rd-N9W">
+                                        <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c2P-Mg-hoL">
+                                                <rect key="frame" x="10" y="10" width="355" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyR-Ga-OEz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
+                                                        <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Tab 0">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="tapTab:" destination="FHr-be-2uP" eventType="touchUpInside" id="j7u-JL-pST"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDg-SR-6FJ">
+                                                        <rect key="frame" x="121.5" y="0.0" width="112" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
+                                                        <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Tab 1">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="tapTab:" destination="FHr-be-2uP" eventType="touchUpInside" id="swJ-AO-CAm"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pf-W6-C1F">
+                                                        <rect key="frame" x="243.5" y="0.0" width="111.5" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
+                                                        <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Tab 2">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="tapTab:" destination="FHr-be-2uP" eventType="touchUpInside" id="gSX-2o-biA"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="jcF-sa-GGQ">
+                                                        <variation key="widthClass=regular" constant="400"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="jcF-sa-GGQ"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="jcF-sa-GGQ"/>
+                                                    </mask>
+                                                </variation>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.91764705879999997" green="0.25882352939999997" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="c2P-Mg-hoL" firstAttribute="centerX" secondItem="aC2-Rd-N9W" secondAttribute="centerX" id="81O-R2-SSB"/>
+                                            <constraint firstItem="c2P-Mg-hoL" firstAttribute="centerX" secondItem="aC2-Rd-N9W" secondAttribute="centerX" id="9rA-2D-9xl"/>
+                                            <constraint firstAttribute="height" constant="60" id="Cc2-8u-EZZ"/>
+                                            <constraint firstItem="c2P-Mg-hoL" firstAttribute="leading" secondItem="aC2-Rd-N9W" secondAttribute="leading" constant="10" id="T4j-yE-9Ur"/>
+                                            <constraint firstItem="c2P-Mg-hoL" firstAttribute="centerY" secondItem="aC2-Rd-N9W" secondAttribute="centerY" id="dtv-31-pNT"/>
+                                            <constraint firstItem="c2P-Mg-hoL" firstAttribute="top" secondItem="aC2-Rd-N9W" secondAttribute="top" constant="10" id="wde-cq-OcF"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="81O-R2-SSB"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="9rA-2D-9xl"/>
+                                                <exclude reference="T4j-yE-9Ur"/>
+                                                <include reference="81O-R2-SSB"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r5H-h2-I6n" firstAttribute="top" secondItem="vR1-Dg-Mve" secondAttribute="top" id="0uJ-fZ-aOc"/>
+                            <constraint firstItem="r5H-h2-I6n" firstAttribute="leading" secondItem="vR1-Dg-Mve" secondAttribute="leading" id="fiF-sV-m4v"/>
+                            <constraint firstItem="WN4-aw-XcB" firstAttribute="top" secondItem="r5H-h2-I6n" secondAttribute="bottom" id="pd9-bk-4HH"/>
+                            <constraint firstAttribute="trailing" secondItem="r5H-h2-I6n" secondAttribute="trailing" id="qSZ-bN-ZqJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="kCv-EI-Hlf" id="uN8-yz-RF3"/>
+                        <outletCollection property="tabButtons" destination="kyR-Ga-OEz" collectionClass="NSMutableArray" id="Sjp-Xc-qC1"/>
+                        <outletCollection property="tabButtons" destination="mDg-SR-6FJ" collectionClass="NSMutableArray" id="pKP-tf-FTl"/>
+                        <outletCollection property="tabButtons" destination="8Pf-W6-C1F" collectionClass="NSMutableArray" id="rwM-mu-S96"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="869.60000000000002" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+</document>
