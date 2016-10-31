@@ -12,7 +12,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var mamaStack: UIStackView!
     @IBOutlet weak var topSectionParent: UIView!
-    @IBOutlet var patternViews: [UIView]!
     @IBOutlet var buttonViewsToRound: [UIView]!
     @IBOutlet weak var powerUpButtonParentView: UIView!
     @IBOutlet weak var nameStack: UIStackView!
@@ -32,11 +31,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        for patternView in patternViews{
-            tileBG(view: patternView, image: #imageLiteral(resourceName: "dot-pttn"))
-        }
-        
         NotificationCenter.default.addObserver(forName: Notification.Name.UIKeyboardWillShow, object: nil, queue: OperationQueue.main) { (notification: Notification) in
             // Any code you put in here will be called when the keyboard is about to display
             self.showKeyboard(notification: notification)
@@ -46,6 +40,12 @@ class LoginViewController: UIViewController {
             // Any code you put in here will be called when the keyboard is about to hide
             self.hideKeyboard(notification: notification)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
+        ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
+        ogPasskeyFrame = mamaStack.convert(passKeyStack.frame, from: passKeyStack.superview)
     }
     
     func showKeyboard(notification: Notification){
@@ -83,9 +83,6 @@ class LoginViewController: UIViewController {
             let cornerRadius: CGFloat = buttonView.frame.height / 2
             roundCorners(view: buttonView, radius: cornerRadius)
         }
-        ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
-        ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
-        ogPasskeyFrame = mamaStack.convert(passKeyStack.frame, from: passKeyStack.superview)
     }
     
     @IBAction func tapView(_ sender: Any) {

@@ -95,7 +95,7 @@
                                         <rect key="frame" x="26" y="75" width="362" height="641"/>
                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="500" id="Ktk-SH-awU"/>
+                                            <constraint firstAttribute="width" constant="600" id="Ktk-SH-awU"/>
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="59" id="haz-sh-GhH">
@@ -160,7 +160,7 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="SZv-EJ-48c">
                                                                             <rect key="frame" x="0.0" y="0.0" width="358" height="354"/>
                                                                             <subviews>
-                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZjO-Vg-RRp">
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZjO-Vg-RRp" customClass="DottedView" customModule="GeneratorApp" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="358" height="40"/>
                                                                                     <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <constraints>
@@ -277,10 +277,10 @@
                                                                                     </constraints>
                                                                                 </view>
                                                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x1d-hZ-zrW">
-                                                                                    <rect key="frame" x="0.0" y="166" width="358" height="67.333333333333343"/>
+                                                                                    <rect key="frame" x="0.0" y="166" width="358" height="76.666666666666657"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Supplies are for the space. Contact your manager to get your own." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paI-e0-iEA">
-                                                                                            <rect key="frame" x="10" y="10" width="350" height="39"/>
+                                                                                            <rect key="frame" x="15" y="20" width="328" height="39"/>
                                                                                             <fontDescription key="fontDescription" name="Optimist-SemiBold" family="Optimist" pointSize="14"/>
                                                                                             <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                             <nil key="highlightedColor"/>
@@ -288,14 +288,14 @@
                                                                                     </subviews>
                                                                                     <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <constraints>
-                                                                                        <constraint firstItem="paI-e0-iEA" firstAttribute="centerX" secondItem="x1d-hZ-zrW" secondAttribute="centerX" id="IxO-gg-4z2"/>
+                                                                                        <constraint firstAttribute="trailing" secondItem="paI-e0-iEA" secondAttribute="trailing" constant="15" id="4Or-vw-ohE"/>
                                                                                         <constraint firstItem="paI-e0-iEA" firstAttribute="centerY" secondItem="x1d-hZ-zrW" secondAttribute="centerY" id="XD6-qO-CeU"/>
                                                                                         <constraint firstItem="paI-e0-iEA" firstAttribute="top" secondItem="x1d-hZ-zrW" secondAttribute="top" constant="20" id="c1L-tC-czA"/>
                                                                                         <constraint firstItem="paI-e0-iEA" firstAttribute="leading" secondItem="x1d-hZ-zrW" secondAttribute="leading" constant="15" id="znw-l6-RF6"/>
                                                                                     </constraints>
                                                                                 </view>
                                                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OCG-sd-wOc">
-                                                                                    <rect key="frame" x="0.0" y="235.33333333333331" width="358" height="58.333333333333314"/>
+                                                                                    <rect key="frame" x="0.0" y="244.66666666666669" width="358" height="65.000000000000057"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="No reservations. No meetings. First come, first serve." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOL-Xb-bka">
                                                                                             <rect key="frame" x="10" y="10" width="350" height="37"/>
@@ -313,7 +313,7 @@
                                                                                     </constraints>
                                                                                 </view>
                                                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5U-2K-YSq">
-                                                                                    <rect key="frame" x="0.0" y="295.66666666666674" width="358" height="58.333333333333314"/>
+                                                                                    <rect key="frame" x="0.0" y="311.66666666666674" width="358" height="42.333333333333314"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Do you work at Capital One? You're allowed to use it." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJa-Bd-xkg">
                                                                                             <rect key="frame" x="10" y="10" width="350" height="37"/>

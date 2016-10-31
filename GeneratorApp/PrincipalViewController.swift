@@ -59,10 +59,6 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         
         print("\(allLabels!)")
         
-        for patternView in cell.patternViews{
-            tileBG(view: patternView, image: #imageLiteral(resourceName: "dot-pttn"))
-        }
-        
         cell.icon.image = theImages[indexPath.row]
         
         cell.header.text = headers[indexPath.row]

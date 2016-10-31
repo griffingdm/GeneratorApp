@@ -17,7 +17,6 @@
         <!--Tab View Controller-->
         <scene sceneID="gnr-9t-kpa">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VjM-Dl-5lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="FHr-be-2uP" customClass="TabViewController" customModule="GeneratorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1g8-Df-zqc"/>
@@ -107,9 +106,9 @@
                                         </variation>
                                         <variation key="widthClass=regular">
                                             <mask key="constraints">
+                                                <include reference="81O-R2-SSB"/>
                                                 <exclude reference="9rA-2D-9xl"/>
                                                 <exclude reference="T4j-yE-9Ur"/>
-                                                <include reference="81O-R2-SSB"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -131,6 +130,7 @@
                         <outletCollection property="tabButtons" destination="8Pf-W6-C1F" collectionClass="NSMutableArray" id="rwM-mu-S96"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VjM-Dl-5lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="869.60000000000002" y="136.28185907046478"/>
         </scene>
