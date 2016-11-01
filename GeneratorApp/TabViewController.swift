@@ -10,12 +10,24 @@ import UIKit
 
 class TabViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
-
+    @IBOutlet weak var bottomGradient: UIView!
     @IBOutlet var tabButtons: [UIButton]!
+    @IBOutlet var tabImageViews: [UIImageView]!
+    
+    
+    //let textureImage = #imageLiteral(resourceName: "texture-test3")
+    var textureImageView: UIView!
+    
+    var gradientLayer: CAGradientLayer!
+    let bottomColor: CGColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1).cgColor
+    let topColor: CGColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 0).cgColor
     
     var principalController: UIViewController!
     var projectsController: UIViewController!
     var equipmentController: UIViewController!
+    
+    var defaultImages: [UIImage]!
+    var selectedImages: [UIImage]!
     
     var viewControllers: [UIViewController]!
     var selectedIndex: Int = 1
@@ -31,8 +43,15 @@ class TabViewController: UIViewController {
         projectsController = projectStoryboard.instantiateViewController(withIdentifier: "controller0")
         equipmentController = equipmentStoryboard.instantiateViewController(withIdentifier: "controller0")
         viewControllers = [projectsController, principalController, equipmentController]
+        defaultImages = [#imageLiteral(resourceName: "nav-icon-proj"), #imageLiteral(resourceName: "nav-icon-prin"), #imageLiteral(resourceName: "nav-icon-equip")]
+        selectedImages = [#imageLiteral(resourceName: "nav-icon-proj-active") , #imageLiteral(resourceName: "nav-icon-prin-active"), #imageLiteral(resourceName: "nav-icon-equip-active")]
         
         tapTab(tabButtons[selectedIndex])
+        
+        view.layoutIfNeeded()
+        let gradientFrame = view.convert(bottomGradient.frame, to: bottomGradient.superview)
+        let gradientLayer = vertGradient(topColor: topColor, bottomColor: bottomColor, frame: gradientFrame, yStart: 0)
+        view.layer.addSublayer(gradientLayer)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,17 +59,28 @@ class TabViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidLayoutSubviews() {
+    }
+    
     @IBAction func tapTab(_ sender: AnyObject) {
         let previousIndex = selectedIndex
         selectedIndex = sender.tag
         
-        tabButtons[previousIndex].isSelected = false
+        for tabImage in tabImageViews {
+            if tabImage.tag == previousIndex && previousIndex != selectedIndex {
+                tabImage.image = defaultImages[previousIndex]
+            } else if tabImage.tag == selectedIndex {
+                tabImage.image = selectedImages[selectedIndex]
+            }
+        }
+        
+        //tabButtons[previousIndex].isSelected = false
         let previousVC = viewControllers[previousIndex]
         previousVC.willMove(toParentViewController: nil)
         previousVC.view.removeFromSuperview()
         previousVC.removeFromParentViewController()
         
-        tabButtons[selectedIndex].isSelected = true
+        //tabButtons[selectedIndex].isSelected = true
         let selectedVC = viewControllers[selectedIndex]
         addChildViewController(selectedVC)
         selectedVC.view.frame = contentView.bounds

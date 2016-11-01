@@ -31,3 +31,13 @@ func roundCorners(view: UIView, radius: CGFloat){
     view.layer.masksToBounds = true
     view.layer.cornerRadius = radius
 }
+
+func vertGradient(topColor: CGColor, bottomColor: CGColor, frame: CGRect, yStart: CGFloat) -> CAGradientLayer {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [topColor, bottomColor]
+        gradientLayer.locations = [0, 1]
+        gradientLayer.startPoint = CGPoint(x:0.5, y: yStart)
+        gradientLayer.endPoint = CGPoint(x:0.5, y: 1)
+        gradientLayer.frame = frame
+        return gradientLayer
+}

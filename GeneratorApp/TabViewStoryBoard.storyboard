@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FHr-be-2uP">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,55 +23,109 @@
                         <viewControllerLayoutGuide type="bottom" id="WN4-aw-XcB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vR1-Dg-Mve">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r5H-h2-I6n">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCv-EI-Hlf">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="676"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aC2-Rd-N9W">
-                                        <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="676" width="414" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c2P-Mg-hoL">
-                                                <rect key="frame" x="10" y="10" width="355" height="40"/>
+                                                <rect key="frame" x="10" y="0.0" width="394" height="60"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyR-Ga-OEz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="40"/>
-                                                        <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
-                                                        <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Tab 0">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="tapTab:" destination="FHr-be-2uP" eventType="touchUpInside" id="j7u-JL-pST"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDg-SR-6FJ">
-                                                        <rect key="frame" x="121.5" y="0.0" width="112" height="40"/>
-                                                        <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
-                                                        <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Tab 1">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="tapTab:" destination="FHr-be-2uP" eventType="touchUpInside" id="swJ-AO-CAm"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pf-W6-C1F">
-                                                        <rect key="frame" x="243.5" y="0.0" width="111.5" height="40"/>
-                                                        <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
-                                                        <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Tab 2">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="tapTab:" destination="FHr-be-2uP" eventType="touchUpInside" id="gSX-2o-biA"/>
-                                                        </connections>
-                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0r-SM-dbB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.66666666666666" height="60"/>
+                                                        <subviews>
+                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="nav-icon-proj" translatesAutoresizingMaskIntoConstraints="NO" id="NCk-X8-Mx4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="60"/>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyR-Ga-OEz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666666" height="60"/>
+                                                                <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
+                                                                <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="tapTab:" destination="FHr-be-2uP" eventType="touchUpInside" id="j7u-JL-pST"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="NCk-X8-Mx4" firstAttribute="centerX" secondItem="d0r-SM-dbB" secondAttribute="centerX" id="4dF-Kk-xYd"/>
+                                                            <constraint firstItem="NCk-X8-Mx4" firstAttribute="centerY" secondItem="d0r-SM-dbB" secondAttribute="centerY" id="BGk-qC-mBt"/>
+                                                            <constraint firstItem="kyR-Ga-OEz" firstAttribute="width" secondItem="d0r-SM-dbB" secondAttribute="width" id="HY0-PJ-FXE"/>
+                                                            <constraint firstItem="NCk-X8-Mx4" firstAttribute="width" secondItem="d0r-SM-dbB" secondAttribute="width" id="Rcw-XJ-Lyg"/>
+                                                            <constraint firstItem="NCk-X8-Mx4" firstAttribute="height" secondItem="d0r-SM-dbB" secondAttribute="height" id="UjY-st-lHJ"/>
+                                                            <constraint firstItem="kyR-Ga-OEz" firstAttribute="centerY" secondItem="d0r-SM-dbB" secondAttribute="centerY" id="Vc3-sh-kTf"/>
+                                                            <constraint firstItem="kyR-Ga-OEz" firstAttribute="height" secondItem="d0r-SM-dbB" secondAttribute="height" id="X6g-uc-3LK"/>
+                                                            <constraint firstItem="kyR-Ga-OEz" firstAttribute="centerX" secondItem="d0r-SM-dbB" secondAttribute="centerX" id="uSN-zh-g9z"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grE-kh-aso">
+                                                        <rect key="frame" x="134.66666666666669" y="0.0" width="124.66666666666669" height="60"/>
+                                                        <subviews>
+                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFit" image="nav-icon-prin-active" translatesAutoresizingMaskIntoConstraints="NO" id="PV5-tc-Ba2">
+                                                                <rect key="frame" x="-1" y="0.0" width="125" height="60"/>
+                                                            </imageView>
+                                                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDg-SR-6FJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666666" height="60"/>
+                                                                <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
+                                                                <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="tapTab:" destination="FHr-be-2uP" eventType="touchUpInside" id="swJ-AO-CAm"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="mDg-SR-6FJ" firstAttribute="centerX" secondItem="grE-kh-aso" secondAttribute="centerX" id="6KP-1t-2XT"/>
+                                                            <constraint firstItem="mDg-SR-6FJ" firstAttribute="height" secondItem="grE-kh-aso" secondAttribute="height" id="8OW-cD-u9Z"/>
+                                                            <constraint firstItem="PV5-tc-Ba2" firstAttribute="centerX" secondItem="grE-kh-aso" secondAttribute="centerX" id="EcL-zQ-uS9"/>
+                                                            <constraint firstItem="mDg-SR-6FJ" firstAttribute="centerY" secondItem="grE-kh-aso" secondAttribute="centerY" id="T8Q-Aa-Ule"/>
+                                                            <constraint firstItem="PV5-tc-Ba2" firstAttribute="height" secondItem="grE-kh-aso" secondAttribute="height" id="Vyn-rS-kfO"/>
+                                                            <constraint firstItem="PV5-tc-Ba2" firstAttribute="centerY" secondItem="grE-kh-aso" secondAttribute="centerY" id="eBf-c1-hAd"/>
+                                                            <constraint firstItem="PV5-tc-Ba2" firstAttribute="width" secondItem="grE-kh-aso" secondAttribute="width" id="vA1-cb-Rse"/>
+                                                            <constraint firstItem="mDg-SR-6FJ" firstAttribute="width" secondItem="grE-kh-aso" secondAttribute="width" id="wyU-Ui-DCC"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-iz-FjY">
+                                                        <rect key="frame" x="269.33333333333326" y="0.0" width="124.66666666666669" height="60"/>
+                                                        <subviews>
+                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleAspectFit" image="nav-icon-equip" translatesAutoresizingMaskIntoConstraints="NO" id="Bds-Ru-aML">
+                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="60"/>
+                                                            </imageView>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pf-W6-C1F">
+                                                                <rect key="frame" x="-0.33333333333331439" y="0.0" width="124.66666666666669" height="60"/>
+                                                                <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
+                                                                <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="tapTab:" destination="FHr-be-2uP" eventType="touchUpInside" id="gSX-2o-biA"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="8Pf-W6-C1F" firstAttribute="centerX" secondItem="Moy-iz-FjY" secondAttribute="centerX" id="75u-u0-x9V"/>
+                                                            <constraint firstItem="Bds-Ru-aML" firstAttribute="centerY" secondItem="Moy-iz-FjY" secondAttribute="centerY" id="CEb-7x-uHR"/>
+                                                            <constraint firstItem="8Pf-W6-C1F" firstAttribute="centerY" secondItem="Moy-iz-FjY" secondAttribute="centerY" id="JRU-6i-Oz5"/>
+                                                            <constraint firstItem="8Pf-W6-C1F" firstAttribute="width" secondItem="Moy-iz-FjY" secondAttribute="width" id="cPl-TL-GRs"/>
+                                                            <constraint firstItem="Bds-Ru-aML" firstAttribute="height" secondItem="Moy-iz-FjY" secondAttribute="height" id="kd2-PZ-vzS"/>
+                                                            <constraint firstItem="8Pf-W6-C1F" firstAttribute="height" secondItem="Moy-iz-FjY" secondAttribute="height" id="mKA-RR-eGF"/>
+                                                            <constraint firstItem="Bds-Ru-aML" firstAttribute="width" secondItem="Moy-iz-FjY" secondAttribute="width" id="ttT-Ma-nck"/>
+                                                            <constraint firstItem="Bds-Ru-aML" firstAttribute="centerX" secondItem="Moy-iz-FjY" secondAttribute="centerX" id="xhS-ud-lE4"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="jcF-sa-GGQ">
@@ -97,7 +151,7 @@
                                             <constraint firstAttribute="height" constant="60" id="Cc2-8u-EZZ"/>
                                             <constraint firstItem="c2P-Mg-hoL" firstAttribute="leading" secondItem="aC2-Rd-N9W" secondAttribute="leading" constant="10" id="T4j-yE-9Ur"/>
                                             <constraint firstItem="c2P-Mg-hoL" firstAttribute="centerY" secondItem="aC2-Rd-N9W" secondAttribute="centerY" id="dtv-31-pNT"/>
-                                            <constraint firstItem="c2P-Mg-hoL" firstAttribute="top" secondItem="aC2-Rd-N9W" secondAttribute="top" constant="10" id="wde-cq-OcF"/>
+                                            <constraint firstItem="c2P-Mg-hoL" firstAttribute="top" secondItem="aC2-Rd-N9W" secondAttribute="top" id="wde-cq-OcF"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -114,20 +168,33 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVt-Aj-6ce">
+                                <rect key="frame" x="0.0" y="656" width="414" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="8Mv-j1-pZp"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="r5H-h2-I6n" firstAttribute="top" secondItem="vR1-Dg-Mve" secondAttribute="top" id="0uJ-fZ-aOc"/>
+                            <constraint firstItem="IVt-Aj-6ce" firstAttribute="width" secondItem="vR1-Dg-Mve" secondAttribute="width" id="PSO-AA-U0p"/>
+                            <constraint firstItem="WN4-aw-XcB" firstAttribute="top" secondItem="IVt-Aj-6ce" secondAttribute="bottom" constant="60" id="dtl-nQ-IWe"/>
                             <constraint firstItem="r5H-h2-I6n" firstAttribute="leading" secondItem="vR1-Dg-Mve" secondAttribute="leading" id="fiF-sV-m4v"/>
                             <constraint firstItem="WN4-aw-XcB" firstAttribute="top" secondItem="r5H-h2-I6n" secondAttribute="bottom" id="pd9-bk-4HH"/>
                             <constraint firstAttribute="trailing" secondItem="r5H-h2-I6n" secondAttribute="trailing" id="qSZ-bN-ZqJ"/>
+                            <constraint firstItem="IVt-Aj-6ce" firstAttribute="centerX" secondItem="vR1-Dg-Mve" secondAttribute="centerX" id="rzM-l0-PCe"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomGradient" destination="IVt-Aj-6ce" id="4MJ-4t-grB"/>
                         <outlet property="contentView" destination="kCv-EI-Hlf" id="uN8-yz-RF3"/>
                         <outletCollection property="tabButtons" destination="kyR-Ga-OEz" collectionClass="NSMutableArray" id="Sjp-Xc-qC1"/>
                         <outletCollection property="tabButtons" destination="mDg-SR-6FJ" collectionClass="NSMutableArray" id="pKP-tf-FTl"/>
                         <outletCollection property="tabButtons" destination="8Pf-W6-C1F" collectionClass="NSMutableArray" id="rwM-mu-S96"/>
+                        <outletCollection property="tabImageViews" destination="NCk-X8-Mx4" collectionClass="NSMutableArray" id="YW9-LV-fNL"/>
+                        <outletCollection property="tabImageViews" destination="PV5-tc-Ba2" collectionClass="NSMutableArray" id="EuD-07-cRE"/>
+                        <outletCollection property="tabImageViews" destination="Bds-Ru-aML" collectionClass="NSMutableArray" id="uSY-5K-Lo2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VjM-Dl-5lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -135,4 +202,9 @@
             <point key="canvasLocation" x="869.60000000000002" y="136.28185907046478"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="nav-icon-equip" width="127" height="128"/>
+        <image name="nav-icon-prin-active" width="127" height="128"/>
+        <image name="nav-icon-proj" width="127" height="128"/>
+    </resources>
 </document>

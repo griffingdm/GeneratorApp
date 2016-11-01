@@ -38,26 +38,19 @@ class EquipmentTabViewController: UIViewController {
         dotViews = [equipDot, materialDot]
         
         tapTab(tabButtons[selectedIndex])
+        
+        view.layoutIfNeeded()
+        gradientLayer = vertGradient(topColor: topColor, bottomColor: bottomColor, frame: topGradient.frame, yStart: 0.75)
+        view.layer.addSublayer(gradientLayer)
+        view.bringSubview(toFront: tabStack)
     }
     
     override func viewDidLayoutSubviews() {
-        setGradient(topColor: topColor, bottomColor: bottomColor)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func setGradient(topColor: CGColor, bottomColor: CGColor){
-        gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [topColor, bottomColor]
-        self.gradientLayer.locations = [0, 1]
-        self.gradientLayer.startPoint = CGPoint(x:0.5, y:0.75)
-        self.gradientLayer.endPoint = CGPoint(x:0.5, y: 1)
-        gradientLayer.frame = topGradient.frame
-        view.layer.addSublayer(self.gradientLayer)
-        view.bringSubview(toFront: tabStack)
     }
     
     @IBAction func tapTab(_ sender: AnyObject) {

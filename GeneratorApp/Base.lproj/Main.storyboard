@@ -28,13 +28,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tV5-zn-4ae">
-                                <rect key="frame" x="84" y="95" width="600" height="834"/>
+                                <rect key="frame" x="84" y="40" width="600" height="944"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUb-9m-R8w">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="734"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="844"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="r8m-hx-PQS">
-                                                <rect key="frame" x="2" y="2" width="596" height="730"/>
+                                                <rect key="frame" x="2" y="2" width="596" height="840"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYl-sL-flY">
                                                         <rect key="frame" x="0.0" y="0.0" width="596" height="30"/>
@@ -287,7 +287,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1P-Mw-zeJ">
-                                                        <rect key="frame" x="0.0" y="416" width="596" height="290"/>
+                                                        <rect key="frame" x="0.0" y="416" width="596" height="400"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MUST BE GROUNDED IN ACCORDANCE WITH LOCAL AND NATIONAL ELECTRICAL CODES TO PREVENT SERIOUS ELECTRICAL SHOCKZ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BPr-sH-2J0" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="10" y="10" width="576" height="40"/>
@@ -309,14 +309,14 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mex-mU-5p8">
-                                                        <rect key="frame" x="0.0" y="708" width="596" height="10"/>
+                                                        <rect key="frame" x="0.0" y="818" width="596" height="10"/>
                                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="10" id="WTR-M5-X82"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IhV-5M-ezO" customClass="DottedView" customModule="GeneratorApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="720" width="596" height="10"/>
+                                                        <rect key="frame" x="0.0" y="830" width="596" height="10"/>
                                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="10" id="dOt-GY-MxP"/>
@@ -340,7 +340,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFZ-jg-ZrS">
-                                        <rect key="frame" x="0.0" y="734" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="844" width="600" height="100"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2JN-13-llk">
                                                 <rect key="frame" x="0.0" y="25" width="600" height="50"/>
@@ -443,7 +443,7 @@
                             <constraint firstItem="tV5-zn-4ae" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="26" id="REW-43-WyP"/>
                             <constraint firstAttribute="bottom" secondItem="e3M-3O-kbZ" secondAttribute="bottom" id="eEM-Db-kSN"/>
                             <constraint firstItem="tV5-zn-4ae" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hrb-JW-uEC"/>
-                            <constraint firstItem="tV5-zn-4ae" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="jHA-eV-aYs"/>
+                            <constraint firstItem="tV5-zn-4ae" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="jHA-eV-aYs"/>
                             <constraint firstItem="tV5-zn-4ae" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="rRL-6D-9Nf"/>
                         </constraints>
                         <variation key="default">
