@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "arrow-right.pdf",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "texture-test3.png",
       "scale" : "2x"
     },
     {

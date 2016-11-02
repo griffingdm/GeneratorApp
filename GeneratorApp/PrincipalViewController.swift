@@ -31,18 +31,18 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.dataSource = self
         
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 353
+        tableView.estimatedRowHeight = 420
         
         tableView.tableHeaderView = tableView.dequeueReusableCell(withIdentifier: "header")
         
-        tableView.tableFooterView = tableView.dequeueReusableCell(withIdentifier: "footer")?.contentView
+        tableView.tableFooterView = tableView.dequeueReusableCell(withIdentifier: "footer")
     }
     
     override func viewDidLayoutSubviews() {
+        tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

@@ -15,13 +15,14 @@ class EquipmentTabViewController: UIViewController {
     @IBOutlet weak var materialDot: UIView!
     @IBOutlet weak var topGradient: UIView!
     @IBOutlet weak var tabStack: UIStackView!
+    @IBOutlet weak var parentTabStack: UIStackView!
     
     var gradientLayer: CAGradientLayer!
     let topColor: CGColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1).cgColor
     let bottomColor: CGColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 0).cgColor
     
-    var materialController: UIViewController!
-    var equipmentController: UIViewController!
+    var materialController: MaterialsViewController!
+    var equipmentController: EquipmentViewController!
     
     var dotViews: [UIView]!
     var viewControllers: [UIViewController]!
@@ -32,17 +33,20 @@ class EquipmentTabViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         let equipmentStroyboard = UIStoryboard(name: "EquipmentStoryboard", bundle: nil)
-        equipmentController = equipmentStroyboard.instantiateViewController(withIdentifier: "equipment")
-        materialController = equipmentStroyboard.instantiateViewController(withIdentifier: "materials")
+        equipmentController = equipmentStroyboard.instantiateViewController(withIdentifier: "equipment") as! EquipmentViewController
+        materialController = equipmentStroyboard.instantiateViewController(withIdentifier: "materials") as! MaterialsViewController
+        
+        equipmentController.tabController = self
+        
         viewControllers = [equipmentController, materialController]
         dotViews = [equipDot, materialDot]
         
         tapTab(tabButtons[selectedIndex])
         
         view.layoutIfNeeded()
-        gradientLayer = vertGradient(topColor: topColor, bottomColor: bottomColor, frame: topGradient.frame, yStart: 0.75)
+        gradientLayer = vertGradient(topColor: topColor, bottomColor: bottomColor, frame: topGradient.frame, yStart: 0.8)
         view.layer.addSublayer(gradientLayer)
-        view.bringSubview(toFront: tabStack)
+        view.bringSubview(toFront: parentTabStack)
     }
     
     override func viewDidLayoutSubviews() {
@@ -73,16 +77,23 @@ class EquipmentTabViewController: UIViewController {
         selectedVC.didMove(toParentViewController: self)
         
     }
-    
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "detailSegue" {
+            let destination = segue.destination as! EquipmentDetailViewController
+            let cell = sender as! EquipmentTableViewCell
+            
+            destination.view.layoutIfNeeded()
+            
+            destination.imageView.image = cell.equipImage.image
+            destination.nameLabel.text = cell.nameLabel.text
+            destination.modelLabel.text = cell.modelLabel.text
+        }
     }
-    */
-
 }

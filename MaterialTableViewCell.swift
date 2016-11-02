@@ -1,19 +1,14 @@
 //
-//  EquipmentTableViewCell.swift
+//  MaterialTableViewCell.swift
 //  GeneratorApp
 //
-//  Created by Mullins, Griffin on 10/30/16.
+//  Created by Mullins, Griffin on 10/31/16.
 //  Copyright © 2016 Mullins, Griffin. All rights reserved.
 //
 
 import UIKit
 
-class EquipmentTableViewCell: UITableViewCell {
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var modelLabel: UILabel!
-    @IBOutlet weak var equipImage: UIImageView!
-    @IBOutlet weak var quantity: UILabel!
-    
+class MaterialTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

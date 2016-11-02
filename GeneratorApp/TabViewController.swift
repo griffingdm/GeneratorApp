@@ -13,10 +13,10 @@ class TabViewController: UIViewController {
     @IBOutlet weak var bottomGradient: UIView!
     @IBOutlet var tabButtons: [UIButton]!
     @IBOutlet var tabImageViews: [UIImageView]!
+    @IBOutlet weak var textureView: UIView!
     
     
     //let textureImage = #imageLiteral(resourceName: "texture-test3")
-    var textureImageView: UIView!
     
     var gradientLayer: CAGradientLayer!
     let bottomColor: CGColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1).cgColor
@@ -52,6 +52,7 @@ class TabViewController: UIViewController {
         let gradientFrame = view.convert(bottomGradient.frame, to: bottomGradient.superview)
         let gradientLayer = vertGradient(topColor: topColor, bottomColor: bottomColor, frame: gradientFrame, yStart: 0)
         view.layer.addSublayer(gradientLayer)
+        view.bringSubview(toFront: textureView)
     }
 
     override func didReceiveMemoryWarning() {
