@@ -9,10 +9,10 @@
 import UIKit
 
 class EquipmentTableViewCell: UITableViewCell {
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var modelLabel: UILabel!
+    @IBOutlet weak var nameLabel: SpaceLabel!
+    @IBOutlet weak var modelLabel: SpaceLabel!
     @IBOutlet weak var equipImage: UIImageView!
-    @IBOutlet weak var quantity: UILabel!
+    @IBOutlet weak var quantity: SpaceLabel!
     
 
     override func awakeFromNib() {

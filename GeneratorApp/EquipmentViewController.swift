@@ -57,8 +57,8 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
         let equip = equipment[indexPath.row]
         
         cell.equipImage.image = equip.image
-        cell.modelLabel.text = equip.model
         cell.nameLabel.text = equip.name
+        cell.modelLabel.text = equip.model
         cell.quantity.text = "QTY-\(equip.qty!)"
         
         return cell

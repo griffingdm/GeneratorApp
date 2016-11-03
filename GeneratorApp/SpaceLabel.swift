@@ -20,6 +20,12 @@ class SpaceLabel: UILabel {
      }
      */
     
+    override var text: String? {
+        didSet {
+            addCharacterSpacing()
+        }
+    }
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         self.commonInit()
