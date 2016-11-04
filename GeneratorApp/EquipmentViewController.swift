@@ -72,20 +72,6 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
         tabController.performSegue(withIdentifier: "detailSegue", sender: cell)
     }
     
-    struct Equipment {
-        var name: String!
-        var model: String!
-        var image: UIImage!
-        var qty: Int!
-        
-        init(eName: String, eModel: String, eImage: UIImage, eQuant: Int) {
-            name = eName
-            model = eModel
-            image = eImage
-            qty = eQuant
-        }
-    }
-    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation

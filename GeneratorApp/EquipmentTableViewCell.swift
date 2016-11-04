@@ -10,7 +10,7 @@ import UIKit
 
 class EquipmentTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: SpaceLabel!
-    @IBOutlet weak var modelLabel: SpaceLabel!
+    @IBOutlet weak var modelLabel: UILabel!
     @IBOutlet weak var equipImage: UIImageView!
     @IBOutlet weak var quantity: SpaceLabel!
     
