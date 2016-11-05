@@ -91,9 +91,14 @@ class EquipmentTabViewController: UIViewController {
             
             destination.view.layoutIfNeeded()
             
+            var images = cell.equipment.detailImages
+            
             destination.imageView.image = cell.equipImage.image
             destination.nameLabel.text = cell.nameLabel.text
             destination.modelLabel.text = cell.modelLabel.text
+            destination.detailImageView1.image = images![0]
+            destination.detailImageView2.image = images![1]
+            destination.instructions = cell.equipment.instructionText 
         }
     }
 }

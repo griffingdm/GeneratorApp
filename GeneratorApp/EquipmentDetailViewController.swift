@@ -8,15 +8,35 @@
 
 import UIKit
 
-class EquipmentDetailViewController: UIViewController {
+class EquipmentDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: SpaceLabel!
-    @IBOutlet weak var modelLabel: SpaceLabel!
+    @IBOutlet weak var modelLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var mamaStack: UIStackView!
+    @IBOutlet weak var detailImageView1: UIImageView!
+    @IBOutlet weak var detailImageView2: UIImageView!
+    @IBOutlet weak var instructionsLabel: UILabel!
+    
+    var equipment: Equipment!
+    var instructions: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        scrollView.delegate = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        scrollView.contentSize.height = mamaStack.frame.height
+        scrollView.frame = view.frame
+    }
+    
+    func setUp(){
+        nameLabel.text = equipment.name
+        modelLabel.text = equipment.model
+        imageView.image = equipment.image
     }
 
     override func didReceiveMemoryWarning() {
