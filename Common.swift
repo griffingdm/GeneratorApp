@@ -41,3 +41,4 @@ func vertGradient(topColor: CGColor, bottomColor: CGColor, frame: CGRect, yStart
         gradientLayer.frame = frame
         return gradientLayer
 }
+

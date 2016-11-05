@@ -14,6 +14,7 @@ class EquipmentTableViewCell: UITableViewCell {
     @IBOutlet weak var equipImage: UIImageView!
     @IBOutlet weak var quantity: SpaceLabel!
     
+    var equipment: Equipment!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -12,9 +12,11 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var tableView: UITableView!
     
     var equipment: [Equipment]!
-    let threeDPrinter: Equipment = Equipment(eName: "3D PRINTER", eModel: "Flashforge Creator Pro", eImage: #imageLiteral(resourceName: "FlashforgeCreatorProNew2016_FFEU_Bild1"), eQuant: 1)
-    let vinylCutter: Equipment = Equipment(eName: "VINYL CUTTER", eModel: "Roland GS-24", eImage: #imageLiteral(resourceName: "gs24standwide"), eQuant: 1)
-    let paperCutter: Equipment = Equipment(eName: "PAPER CUTTER", eModel: "Rotatrim RCM30", eImage: #imageLiteral(resourceName: "paper cutter"), eQuant: 1)
+    
+    let threeDPrinter: Equipment = Equipment(eName: "3D PRINTER", eModel: "Flashforge Creator Pro", eImage: #imageLiteral(resourceName: "FlashforgeCreatorProNew2016_FFEU_Bild1"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "t-3d-printer2"), #imageLiteral(resourceName: "t-3d-printer3")], eInstruct: "")
+    let vinylCutter: Equipment = Equipment(eName: "VINYL CUTTER", eModel: "Roland GS-24", eImage: #imageLiteral(resourceName: "gs24standwide"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "t-vinyl-cutter2"), #imageLiteral(resourceName: "t-vinyl-cutter3")], eInstruct: "")
+    let paperCutter: Equipment = Equipment(eName: "PAPER CUTTER", eModel: "Rotatrim RCM30", eImage: #imageLiteral(resourceName: "paper cutter"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "t-paper-cutter2"), #imageLiteral(resourceName: "t-paper-cutter3")], eInstruct: "")
+    let plotter: Equipment = Equipment(eName: "Plotter", eModel: "Ricoh MP CW2200", eImage: #imageLiteral(resourceName: "lg_format_printer1"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "lg_format_printer2"), #imageLiteral(resourceName: "lg_format_printer3")], eInstruct: "")
     
     var tabController: EquipmentTabViewController!
     
@@ -56,6 +58,9 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "equipmentCell") as! EquipmentTableViewCell
         let equip = equipment[indexPath.row]
         
+        cell.equipment = equip
+        print("\(cell.equipment.name!)")
+        
         cell.equipImage.image = equip.image
         cell.nameLabel.text = equip.name
         cell.modelLabel.text = equip.model
@@ -66,7 +71,6 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! EquipmentTableViewCell
-        
         
         //print("segue!")
         tabController.performSegue(withIdentifier: "detailSegue", sender: cell)
