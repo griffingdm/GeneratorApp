@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var powerUpButtonParentView: UIView!
     @IBOutlet weak var nameStack: UIStackView!
     @IBOutlet weak var passKeyStack: UIStackView!
+    @IBOutlet weak var logoImageView: UIImageView!
     
     var ogPasskeyFrame: CGRect!
     var ogTopSectionFrame: CGRect!

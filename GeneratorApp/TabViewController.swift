@@ -22,7 +22,7 @@ class TabViewController: UIViewController {
     let bottomColor: CGColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1).cgColor
     let topColor: CGColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 0).cgColor
     
-    var principalController: UIViewController!
+    var principalController: PrincipalViewController!
     var projectsController: UIViewController!
     var equipmentController: UIViewController!
     
@@ -35,11 +35,11 @@ class TabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
         let equipmentStoryboard = UIStoryboard(name: "EquipmentStoryboard", bundle: nil)
         let principleStoryboard = UIStoryboard(name: "PrincipleStoryboard", bundle: nil)
         let projectStoryboard = UIStoryboard(name: "ProjectStoryboard", bundle: nil)
-        principalController = principleStoryboard.instantiateViewController(withIdentifier: "controller0")
+        principalController = principleStoryboard.instantiateViewController(withIdentifier: "controller0") as! PrincipalViewController
         projectsController = projectStoryboard.instantiateViewController(withIdentifier: "controller0")
         equipmentController = equipmentStoryboard.instantiateViewController(withIdentifier: "controller0")
         viewControllers = [projectsController, principalController, equipmentController]
@@ -47,6 +47,8 @@ class TabViewController: UIViewController {
         selectedImages = [#imageLiteral(resourceName: "nav-icon-proj-active") , #imageLiteral(resourceName: "nav-icon-prin-active"), #imageLiteral(resourceName: "nav-icon-equip-active")]
         
         tapTab(tabButtons[selectedIndex])
+        
+        principalController.tabViewController = self
         
         view.layoutIfNeeded()
         let gradientFrame = view.convert(bottomGradient.frame, to: bottomGradient.superview)
