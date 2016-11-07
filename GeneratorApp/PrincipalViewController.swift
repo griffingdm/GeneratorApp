@@ -15,6 +15,8 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
     var headers: [String]!
     var allLabels: [Int:[String]]!
     
+    var tabViewController: TabViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,7 +37,9 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         
         tableView.tableHeaderView = tableView.dequeueReusableCell(withIdentifier: "header")
         
-        tableView.tableFooterView = tableView.dequeueReusableCell(withIdentifier: "footer")
+        let footerView: FooterTableViewCell = tableView.dequeueReusableCell(withIdentifier: "footer") as! FooterTableViewCell
+        footerView.parentController = self
+        tableView.tableFooterView = footerView
     }
     
     override func viewDidLayoutSubviews() {

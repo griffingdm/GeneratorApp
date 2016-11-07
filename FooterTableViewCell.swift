@@ -12,6 +12,7 @@ class FooterTableViewCell: UITableViewCell {
     
     @IBOutlet var viewsToRound: [UIView]!
     
+    var parentController: PrincipalViewController!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,14 +24,12 @@ class FooterTableViewCell: UITableViewCell {
     }
     
     @IBAction func pressPowerDown(_ sender: Any) { 
-        print("pressed power down")
-        self.window?.rootViewController?.dismiss(animated: true, completion: {
-        })
+        //print("pressed power down")
+        parentController.dismiss(animated: true, completion: {})
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 

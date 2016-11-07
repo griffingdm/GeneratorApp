@@ -16,6 +16,10 @@ class MaterialsViewController: UIViewController, UICollectionViewDelegate, UICol
     let binderClips: Material = Material(picture: #imageLiteral(resourceName: "m-binder-clips1"), theLabel: "Binder Clips")
     let dryEraseMarkers: Material = Material(picture: #imageLiteral(resourceName: "m-dry-erase1"), theLabel: "Dry Erase Markers")
     let constructionPaper: Material = Material(picture: #imageLiteral(resourceName: "m-construction-paper1"), theLabel: "Construction Paper")
+    let rubberBands: Material = Material(picture: #imageLiteral(resourceName: "m-rubberbands1"), theLabel: "Rubber Bands")
+    let glueSticks: Material = Material(picture: #imageLiteral(resourceName: "m-glue-stick1"), theLabel: "Glue Sticks")
+    let pipeCleaners: Material = Material(picture: #imageLiteral(resourceName: "m-pipe-cleaners1"), theLabel: "Pipe Cleaners")
+    let postIts: Material = Material(picture: #imageLiteral(resourceName: "m-post-its1"), theLabel: "Post-Its")
     
     override func viewDidLoad() {
         super.viewDidLoad()
