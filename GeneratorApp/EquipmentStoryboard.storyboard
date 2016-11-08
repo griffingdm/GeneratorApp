@@ -582,8 +582,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GcV-7u-YjX">
-                                <rect key="frame" x="20" y="40" width="335" height="587"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GcV-7u-YjX">
+                                <rect key="frame" x="20" y="20" width="335" height="647"/>
                                 <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="HcC-Gn-Z15"/>
@@ -687,10 +687,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GcV-7u-YjX" firstAttribute="top" secondItem="lth-6B-uQt" secondAttribute="bottom" constant="20" id="2qx-i4-CUK"/>
+                            <constraint firstItem="GcV-7u-YjX" firstAttribute="top" secondItem="lth-6B-uQt" secondAttribute="bottom" id="2qx-i4-CUK"/>
                             <constraint firstItem="GcV-7u-YjX" firstAttribute="centerX" secondItem="Qp8-j8-Qua" secondAttribute="centerX" id="R4b-JX-2EE"/>
-                            <constraint firstItem="GcV-7u-YjX" firstAttribute="centerY" secondItem="Qp8-j8-Qua" secondAttribute="centerY" id="VOI-Vl-XtN"/>
                             <constraint firstItem="GcV-7u-YjX" firstAttribute="leading" secondItem="Qp8-j8-Qua" secondAttribute="leading" constant="20" id="cBv-g2-fB7"/>
+                            <constraint firstItem="vA0-kP-NhO" firstAttribute="top" secondItem="GcV-7u-YjX" secondAttribute="bottom" id="oW6-bA-4vq"/>
                         </constraints>
                         <variation key="widthClass=regular">
                             <mask key="constraints">
@@ -711,7 +711,7 @@
             <objects>
                 <navigationController storyboardIdentifier="controller0" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="rKs-AY-N8H" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uiZ-gx-i16">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uiZ-gx-i16">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

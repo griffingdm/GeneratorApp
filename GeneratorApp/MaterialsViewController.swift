@@ -14,12 +14,14 @@ class MaterialsViewController: UIViewController, UICollectionViewDelegate, UICol
     var materials: [Material]!
     let paintersTape: Material = Material(picture: #imageLiteral(resourceName: "m-blue-tape1"), theLabel: "Painter's Tape")
     let binderClips: Material = Material(picture: #imageLiteral(resourceName: "m-binder-clips1"), theLabel: "Binder Clips")
-    let dryEraseMarkers: Material = Material(picture: #imageLiteral(resourceName: "m-dry-erase1"), theLabel: "Dry Erase Markers")
-    let constructionPaper: Material = Material(picture: #imageLiteral(resourceName: "m-construction-paper1"), theLabel: "Construction Paper")
+    let dryEraseMarkers: Material = Material(picture: #imageLiteral(resourceName: "m-dry-erase1"), theLabel: "Dry-Erase Markers")
+    let paper: Material = Material(picture: #imageLiteral(resourceName: "m-construction-paper1"), theLabel: "Paper")
     let rubberBands: Material = Material(picture: #imageLiteral(resourceName: "m-rubberbands1"), theLabel: "Rubber Bands")
     let glueSticks: Material = Material(picture: #imageLiteral(resourceName: "m-glue-stick1"), theLabel: "Glue Sticks")
     let pipeCleaners: Material = Material(picture: #imageLiteral(resourceName: "m-pipe-cleaners1"), theLabel: "Pipe Cleaners")
     let postIts: Material = Material(picture: #imageLiteral(resourceName: "m-post-its1"), theLabel: "Post-Its")
+    let markers: Material = Material(picture: #imageLiteral(resourceName: "m-sharpies1"), theLabel: "Markers")
+    let xActo: Material = Material(picture: #imageLiteral(resourceName: "m-xacto1"), theLabel: "X-Acto Knives")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,7 @@ class MaterialsViewController: UIViewController, UICollectionViewDelegate, UICol
             flowLayout.estimatedItemSize = CGSize(width: 160, height: 35)
         }
         
-        materials = [paintersTape, dryEraseMarkers, binderClips, constructionPaper]
+        materials = [postIts, markers, paintersTape, dryEraseMarkers, xActo, binderClips, paper, rubberBands, glueSticks, pipeCleaners]
     }
     
     override func didReceiveMemoryWarning() {
