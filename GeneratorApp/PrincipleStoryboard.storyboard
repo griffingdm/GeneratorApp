@@ -91,13 +91,8 @@
                                             <constraint firstAttribute="height" constant="75" id="na7-im-kNg"/>
                                         </constraints>
                                     </stackView>
-<<<<<<< HEAD
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="356" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9IU-Cy-Wro">
                                         <rect key="frame" x="26" y="75" width="362" height="641"/>
-=======
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="356" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9IU-Cy-Wro">
-                                        <rect key="frame" x="84" y="75" width="600" height="909"/>
->>>>>>> master
                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="600" id="Ktk-SH-awU"/>
