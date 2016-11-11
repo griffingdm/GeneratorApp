@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rKs-AY-N8H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rKs-AY-N8H">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -558,7 +558,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyJ-1l-evd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="1536"/>
+            <point key="canvasLocation" x="1544.8" y="1535.9820089955024"/>
         </scene>
         <!--EquipmentDetailStoryboard-->
         <scene sceneID="Oa9-ha-ZGA">
@@ -619,8 +619,8 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
                                                                             <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
+                                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="155" id="4GM-60-16p"/>
                                                                                 <constraint firstAttribute="width" secondItem="FqZ-Rb-6i1" secondAttribute="height" multiplier="1:1" id="AdR-e9-2kY"/>
-                                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="155" id="Xci-3Q-9r7"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3H-fn-AMT">
@@ -632,19 +632,37 @@
                                                                         <constraint firstItem="I3H-fn-AMT" firstAttribute="width" secondItem="cT3-ic-VZi" secondAttribute="width" id="cIV-SG-4gv"/>
                                                                     </constraints>
                                                                 </stackView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3j-fX-ghl">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="k22-Kh-Qyl">
                                                                     <rect key="frame" x="10" y="155" width="135" height="31"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6FX-wB-q8B">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="135" height="5"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="5" id="vtJ-Or-NA3"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3j-fX-ghl">
+                                                                            <rect key="frame" x="0.0" y="5" width="135" height="21"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="135" id="1S1-qp-RkN"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
+                                                                            <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8r0-cy-Qol">
+                                                                            <rect key="frame" x="0.0" y="26" width="135" height="5"/>
+                                                                        </view>
+                                                                    </subviews>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="135" id="1S1-qp-RkN"/>
+                                                                        <constraint firstItem="8r0-cy-Qol" firstAttribute="height" secondItem="6FX-wB-q8B" secondAttribute="height" id="Eke-YZ-MfO"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
-                                                                    <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                </stackView>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="186" id="ARX-ta-DMN"/>
                                                                 <constraint firstItem="BtX-o7-Wl3" firstAttribute="leading" secondItem="hf1-Xf-geu" secondAttribute="leading" id="Cyv-PJ-5Lp"/>
+                                                                <constraint firstAttribute="width" constant="155" id="Zh5-pH-0HL"/>
                                                                 <constraint firstAttribute="trailing" secondItem="BtX-o7-Wl3" secondAttribute="trailing" id="iiI-M1-D47"/>
                                                             </constraints>
                                                         </stackView>

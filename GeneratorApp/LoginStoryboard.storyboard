@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R1r-ej-OHU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R1r-ej-OHU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -80,11 +80,15 @@
                                                                         <subviews>
                                                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="qme-fq-b1t">
                                                                                 <rect key="frame" x="25" y="10" width="49" height="150"/>
+                                                                                <gestureRecognizers/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="6QJ-Vd-Kxg"/>
                                                                                     <constraint firstAttribute="height" priority="750" constant="125" id="Ez0-ga-40h"/>
                                                                                     <constraint firstAttribute="width" constant="49" id="Mpe-kM-lie"/>
                                                                                 </constraints>
+                                                                                <connections>
+                                                                                    <outletCollection property="gestureRecognizers" destination="dnr-4k-VyI" appends="YES" id="EUp-ai-5CC"/>
+                                                                                </connections>
                                                                             </imageView>
                                                                         </subviews>
                                                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -114,7 +118,7 @@
                                                                                 <rect key="frame" x="10" y="10" width="198" height="98"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MFG. &amp;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CDe-ZV-TAa" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="54" height="20"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="20"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="20" id="S1t-JB-HEv"/>
                                                                                         </constraints>
@@ -123,7 +127,7 @@
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INNOVATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LeQ-j9-Okc" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                        <rect key="frame" x="0.0" y="25" width="97" height="20"/>
+                                                                                        <rect key="frame" x="0.0" y="25" width="94.5" height="20"/>
                                                                                         <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
                                                                                         <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
@@ -133,7 +137,7 @@
                                                                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                                     </view>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TX-75024" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PSD-wr-s9P" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                        <rect key="frame" x="0.0" y="78" width="71" height="20"/>
+                                                                                        <rect key="frame" x="0.0" y="78" width="70" height="20"/>
                                                                                         <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
                                                                                         <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
@@ -432,7 +436,7 @@
                                     <constraint firstAttribute="height" constant="10" id="p1P-oa-EjP"/>
                                 </constraints>
                             </view>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aef-Be-Ypf">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aef-Be-Ypf" userLabel="TextureView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="texture" translatesAutoresizingMaskIntoConstraints="NO" id="dih-dj-bmT">
@@ -472,9 +476,9 @@
                         </variation>
                         <variation key="widthClass=regular">
                             <mask key="constraints">
-                                <include reference="aAB-h6-nem"/>
                                 <exclude reference="2Ci-d2-yrx"/>
                                 <exclude reference="NBe-eI-SZm"/>
+                                <include reference="aAB-h6-nem"/>
                             </mask>
                         </variation>
                         <connections>
@@ -491,12 +495,18 @@
                         <outletCollection property="buttonViewsToRound" destination="Ifp-j4-Seh" collectionClass="NSMutableArray" id="VMu-TN-3n9"/>
                         <outletCollection property="buttonViewsToRound" destination="DZg-nH-zUB" collectionClass="NSMutableArray" id="QxC-fU-y9K"/>
                         <segue destination="Atu-GJ-h0h" kind="presentation" identifier="TabStorySegue" id="Rrf-Dv-19G"/>
+                        <segue destination="uQ4-3k-XLY" kind="presentation" identifier="GameSegue" id="kSz-IS-QRY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KpZ-cJ-6nn" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="rnZ-0d-QP3">
+                <tapGestureRecognizer id="rnZ-0d-QP3" userLabel="View Tap Gesture Recognizer">
                     <connections>
                         <action selector="tapView:" destination="R1r-ej-OHU" id="PMl-ge-dtC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dnr-4k-VyI" userLabel="Logo Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="didTapLogo:" destination="R1r-ej-OHU" id="zbg-KC-wYU"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -509,6 +519,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVy-7q-KoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="870" y="136"/>
+        </scene>
+        <!--GameStoryboard-->
+        <scene sceneID="O9u-bE-6x5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameStoryboard" id="uQ4-3k-XLY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjD-cj-8Su" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="218"/>
         </scene>
     </scenes>
     <resources>

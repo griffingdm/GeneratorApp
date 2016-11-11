@@ -40,6 +40,9 @@
 		6D9933F71DC68E7B00F697C2 /* PrincipleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9933F61DC68E7B00F697C2 /* PrincipleStoryboard.storyboard */; };
 		6D9933F91DC6918B00F697C2 /* ProjectStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9933F81DC6918B00F697C2 /* ProjectStoryboard.storyboard */; };
 		6D9933FB1DC692AF00F697C2 /* EquipmentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9933FA1DC692AF00F697C2 /* EquipmentStoryboard.storyboard */; };
+		6D9CB4081DD6638500893B18 /* GameStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9CB4071DD6638500893B18 /* GameStoryboard.storyboard */; };
+		6D9CB40A1DD6641B00893B18 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9CB4091DD6641B00893B18 /* GameViewController.swift */; };
+		6D9CB40C1DD6738300893B18 /* FullRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9CB40B1DD6738300893B18 /* FullRoundView.swift */; };
 		6DA046181DCFFAB4006D1D99 /* LaunchSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA046171DCFFAB4006D1D99 /* LaunchSplashViewController.swift */; };
 		6DAE114F1DCFFE540034D485 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAE114D1DCFFE540034D485 /* BaseTransition.swift */; };
 		6DAE11501DCFFE540034D485 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAE114E1DCFFE540034D485 /* FadeTransition.swift */; };
@@ -108,6 +111,9 @@
 		6D9933F61DC68E7B00F697C2 /* PrincipleStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PrincipleStoryboard.storyboard; sourceTree = "<group>"; };
 		6D9933F81DC6918B00F697C2 /* ProjectStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectStoryboard.storyboard; sourceTree = "<group>"; };
 		6D9933FA1DC692AF00F697C2 /* EquipmentStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EquipmentStoryboard.storyboard; sourceTree = "<group>"; };
+		6D9CB4071DD6638500893B18 /* GameStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameStoryboard.storyboard; sourceTree = "<group>"; };
+		6D9CB4091DD6641B00893B18 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		6D9CB40B1DD6738300893B18 /* FullRoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullRoundView.swift; sourceTree = "<group>"; };
 		6DA046171DCFFAB4006D1D99 /* LaunchSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchSplashViewController.swift; sourceTree = "<group>"; };
 		6DAE114D1DCFFE540034D485 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		6DAE114E1DCFFE540034D485 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 				6DE460BA1DCC30270019099B /* EquipmentClass.swift */,
 				6D97BD8A1DC10F9A00FEB78C /* SpaceLabel.swift */,
 				6D45A3051DC6ADB700124B02 /* DottedView.swift */,
+				6D9CB40B1DD6738300893B18 /* FullRoundView.swift */,
 				6D9933F51DC68C2E00F697C2 /* TableViewCells */,
 				6D914B941DBDC77B00413CA5 /* controllers */,
 				6D9933F41DC68C1100F697C2 /* StoryBoards */,
@@ -221,6 +228,7 @@
 		6D914B941DBDC77B00413CA5 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6D9CB4091DD6641B00893B18 /* GameViewController.swift */,
 				6DA046171DCFFAB4006D1D99 /* LaunchSplashViewController.swift */,
 				6D914B511DBDAEBD00413CA5 /* ViewController.swift */,
 				6DE769431DC1766A0076D12B /* PrincipalViewController.swift */,
@@ -240,6 +248,7 @@
 				6D914B581DBDAEBD00413CA5 /* LaunchScreen.storyboard */,
 				6D914B531DBDAEBD00413CA5 /* Main.storyboard */,
 				6DAE11541DD037100034D485 /* LoginStoryboard.storyboard */,
+				6D9CB4071DD6638500893B18 /* GameStoryboard.storyboard */,
 				6D9933F61DC68E7B00F697C2 /* PrincipleStoryboard.storyboard */,
 				6D9933F21DC68C0C00F697C2 /* TabViewStoryBoard.storyboard */,
 				6D9933F81DC6918B00F697C2 /* ProjectStoryboard.storyboard */,
@@ -391,6 +400,7 @@
 				6D914B8B1DBDB1E000413CA5 /* Optimist_LtIt.ttf in Resources */,
 				6D914B5A1DBDAEBD00413CA5 /* LaunchScreen.storyboard in Resources */,
 				6D914B8A1DBDB1E000413CA5 /* Optimist_Lt.ttf in Resources */,
+				6D9CB4081DD6638500893B18 /* GameStoryboard.storyboard in Resources */,
 				6D9933F71DC68E7B00F697C2 /* PrincipleStoryboard.storyboard in Resources */,
 				6D914B8F1DBDB1E000413CA5 /* Optimist_XLt.ttf in Resources */,
 				6D914B871DBDB1E000413CA5 /* Optimist_Bd.ttf in Resources */,
@@ -443,6 +453,8 @@
 				6D45A30C1DC6BCB800124B02 /* EquipmentTableViewCell.swift in Sources */,
 				6DAE114F1DCFFE540034D485 /* BaseTransition.swift in Sources */,
 				6D914B501DBDAEBD00413CA5 /* AppDelegate.swift in Sources */,
+				6D9CB40C1DD6738300893B18 /* FullRoundView.swift in Sources */,
+				6D9CB40A1DD6641B00893B18 /* GameViewController.swift in Sources */,
 				6D45A30A1DC6BBEE00124B02 /* EquipmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
