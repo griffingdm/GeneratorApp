@@ -24,14 +24,14 @@
                         <viewControllerLayoutGuide type="bottom" id="33f-tV-sA1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="h8x-0L-8Uz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZI4-oP-63Q">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Xe-wy-K88">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4qX-v1-Asu">
                                                 <rect key="frame" x="20" y="20" width="335" height="652.5"/>
@@ -149,7 +149,7 @@
                                                                                     <constraint firstItem="qId-KU-ref" firstAttribute="leading" secondItem="WjL-wJ-zCZ" secondAttribute="leading" constant="8" id="s6F-ok-VlM"/>
                                                                                 </constraints>
                                                                             </view>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqY-Eo-ZHV">
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqY-Eo-ZHV" customClass="DottedView" customModule="GeneratorApp" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="32" width="331" height="30"/>
                                                                                 <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             </view>
@@ -291,6 +291,8 @@
                             <constraint firstItem="ZI4-oP-63Q" firstAttribute="height" secondItem="h8x-0L-8Uz" secondAttribute="height" id="wpq-eO-UJz"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="900"/>
                     <connections>
                         <outlet property="detailImageView1" destination="khb-pT-2gH" id="mvZ-ye-stR"/>
                         <outlet property="detailImageView2" destination="VcX-u7-i57" id="NBE-9A-rua"/>
@@ -304,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZ4-VH-Cre" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58.399999999999999" y="145.27736131934034"/>
+            <point key="canvasLocation" x="-62" y="250"/>
         </scene>
         <!--equipmentLightbox-->
         <scene sceneID="jQZ-bs-ghF">
