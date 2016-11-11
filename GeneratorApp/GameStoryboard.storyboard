@@ -63,48 +63,44 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwj-qw-lil" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aj4-Xv-8fN" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="2" y="2" width="36" height="36"/>
-                                                                <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </view>
+                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="game-capacitor" translatesAutoresizingMaskIntoConstraints="NO" id="zQE-HK-dwC">
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                            </imageView>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="aj4-Xv-8fN" secondAttribute="bottom" constant="2" id="6h3-fn-UFd"/>
-                                                            <constraint firstItem="aj4-Xv-8fN" firstAttribute="top" secondItem="pwj-qw-lil" secondAttribute="top" constant="2" id="Agj-Zt-09e"/>
+                                                            <constraint firstItem="zQE-HK-dwC" firstAttribute="top" secondItem="pwj-qw-lil" secondAttribute="top" id="2af-R8-6N3"/>
+                                                            <constraint firstAttribute="bottom" secondItem="zQE-HK-dwC" secondAttribute="bottom" id="Fv5-bp-zNh"/>
                                                             <constraint firstAttribute="width" secondItem="pwj-qw-lil" secondAttribute="height" multiplier="1:1" id="JLL-in-pmL"/>
-                                                            <constraint firstItem="aj4-Xv-8fN" firstAttribute="leading" secondItem="pwj-qw-lil" secondAttribute="leading" constant="2" id="h7Y-lR-6Mh"/>
-                                                            <constraint firstAttribute="trailing" secondItem="aj4-Xv-8fN" secondAttribute="trailing" constant="2" id="mkd-Q6-OqP"/>
+                                                            <constraint firstItem="zQE-HK-dwC" firstAttribute="leading" secondItem="pwj-qw-lil" secondAttribute="leading" id="TvR-RZ-lJK"/>
+                                                            <constraint firstAttribute="trailing" secondItem="zQE-HK-dwC" secondAttribute="trailing" id="kIX-Ub-513"/>
                                                             <constraint firstAttribute="width" constant="40" id="vvm-SG-Yqt"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxh-zS-SSO" userLabel="ResistorStack">
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CgD-QO-qmy" userLabel="ResistorStack">
                                                 <rect key="frame" x="0.0" y="110" width="50" height="40"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bc8-9K-upK">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBR-Ub-90e">
                                                         <rect key="frame" x="0.0" y="0.0" width="10" height="40"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="dus-Fd-vKw"/>
+                                                            <constraint firstAttribute="width" constant="10" id="oxs-3x-pth"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Kf-gR-Z1u" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V96-zT-kQY" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7n-6w-rnY" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="2" y="2" width="36" height="36"/>
-                                                                <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </view>
+                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="game-capacitor" translatesAutoresizingMaskIntoConstraints="NO" id="lNQ-te-o3b">
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                            </imageView>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="8Kf-gR-Z1u" secondAttribute="height" multiplier="1:1" id="6gT-to-fpO"/>
-                                                            <constraint firstAttribute="width" constant="40" id="Kap-BA-xal"/>
-                                                            <constraint firstAttribute="bottom" secondItem="e7n-6w-rnY" secondAttribute="bottom" constant="2" id="OPO-uo-TT9"/>
-                                                            <constraint firstItem="e7n-6w-rnY" firstAttribute="top" secondItem="8Kf-gR-Z1u" secondAttribute="top" constant="2" id="X1h-E6-31H"/>
-                                                            <constraint firstAttribute="trailing" secondItem="e7n-6w-rnY" secondAttribute="trailing" constant="2" id="bD8-aD-17E"/>
-                                                            <constraint firstItem="e7n-6w-rnY" firstAttribute="leading" secondItem="8Kf-gR-Z1u" secondAttribute="leading" constant="2" id="y15-3H-dhO"/>
+                                                            <constraint firstItem="lNQ-te-o3b" firstAttribute="leading" secondItem="V96-zT-kQY" secondAttribute="leading" id="1OJ-jO-NrL"/>
+                                                            <constraint firstAttribute="width" constant="40" id="Dp6-Ta-gIS"/>
+                                                            <constraint firstAttribute="width" secondItem="V96-zT-kQY" secondAttribute="height" multiplier="1:1" id="lzr-AQ-Pdg"/>
+                                                            <constraint firstAttribute="trailing" secondItem="lNQ-te-o3b" secondAttribute="trailing" id="neT-Me-MTW"/>
+                                                            <constraint firstItem="lNQ-te-o3b" firstAttribute="top" secondItem="V96-zT-kQY" secondAttribute="top" id="o6y-Wo-wEt"/>
+                                                            <constraint firstAttribute="bottom" secondItem="lNQ-te-o3b" secondAttribute="bottom" id="ygW-db-Me1"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -390,7 +386,7 @@
                                                 <rect key="frame" x="0.0" y="2" width="375" height="70"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="k6b-fL-Kq2">
-                                                        <rect key="frame" x="37.5" y="15" width="300" height="40"/>
+                                                        <rect key="frame" x="38" y="15" width="300" height="40"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQU-Ro-ktY" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -590,7 +586,7 @@
                                                 <rect key="frame" x="2" y="0.0" width="315" height="28"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EJO-p1-N26">
-                                                        <rect key="frame" x="55.5" y="0.0" width="205" height="50"/>
+                                                        <rect key="frame" x="55" y="0.0" width="205" height="50"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTv-e6-hr1">
                                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="50"/>
@@ -925,6 +921,28 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucB-Lu-Wa2">
+                                        <rect key="frame" x="161.5" y="522" width="52" height="73"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="game-counter-shooter-left" translatesAutoresizingMaskIntoConstraints="NO" id="gN9-y4-QIa">
+                                                <rect key="frame" x="0.0" y="0.0" width="26" height="73"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="gN9-y4-QIa" secondAttribute="height" multiplier="14:39" id="20t-3c-go3"/>
+                                                    <constraint firstAttribute="height" constant="73" id="7iR-CK-j3B"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="game-counter-shooter-left" translatesAutoresizingMaskIntoConstraints="NO" id="pix-2l-ZKT">
+                                                <rect key="frame" x="26" y="0.0" width="26" height="73"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="73" id="w0M-IG-tU5"/>
+                                                    <constraint firstAttribute="width" secondItem="pix-2l-ZKT" secondAttribute="height" multiplier="14:39" id="xjF-sp-fx8"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pix-2l-ZKT" firstAttribute="width" secondItem="pix-2l-ZKT" secondAttribute="height" multiplier="14:39" id="wQe-yB-bue"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="zfU-Dj-0bq" firstAttribute="top" secondItem="wXi-9b-sxe" secondAttribute="bottom" priority="750" constant="30" id="39b-wE-hZB"/>
@@ -933,11 +951,13 @@
                                     <constraint firstAttribute="trailing" secondItem="zfU-Dj-0bq" secondAttribute="trailing" id="J2S-mS-x77"/>
                                     <constraint firstAttribute="trailing" secondItem="YCh-FY-q8j" secondAttribute="trailing" id="Qlx-n1-2jg"/>
                                     <constraint firstItem="zfU-Dj-0bq" firstAttribute="top" secondItem="YCh-FY-q8j" secondAttribute="bottom" constant="30" id="R6u-az-gEH"/>
+                                    <constraint firstItem="zfU-Dj-0bq" firstAttribute="top" secondItem="ucB-Lu-Wa2" secondAttribute="bottom" id="SFK-A2-HoW"/>
                                     <constraint firstItem="xFl-nQ-pQO" firstAttribute="leading" secondItem="sg4-V1-WKE" secondAttribute="leadingMargin" constant="20" id="Vlw-X5-91d"/>
                                     <constraint firstItem="xFl-nQ-pQO" firstAttribute="centerX" secondItem="sg4-V1-WKE" secondAttribute="centerX" id="aq1-pN-NVw"/>
                                     <constraint firstAttribute="bottom" secondItem="zfU-Dj-0bq" secondAttribute="bottom" id="bbx-kE-Q8Z"/>
                                     <constraint firstItem="xFl-nQ-pQO" firstAttribute="top" secondItem="sg4-V1-WKE" secondAttribute="top" id="dbd-qs-eJ0"/>
                                     <constraint firstItem="wXi-9b-sxe" firstAttribute="top" secondItem="xFl-nQ-pQO" secondAttribute="bottom" constant="30" id="eMZ-17-5bv"/>
+                                    <constraint firstItem="ucB-Lu-Wa2" firstAttribute="centerX" secondItem="sg4-V1-WKE" secondAttribute="centerX" id="hlw-3W-V4R"/>
                                     <constraint firstItem="zfU-Dj-0bq" firstAttribute="leading" secondItem="sg4-V1-WKE" secondAttribute="leading" id="scY-sk-KEi"/>
                                 </constraints>
                             </view>
@@ -972,6 +992,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="game-capacitor" width="96" height="96"/>
+        <image name="game-counter-shooter-left" width="56" height="156"/>
         <image name="logo-launch" width="218" height="496"/>
         <image name="texture" width="1000" height="1500"/>
     </resources>
