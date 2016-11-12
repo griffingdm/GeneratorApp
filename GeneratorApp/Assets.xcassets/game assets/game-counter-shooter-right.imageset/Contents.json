@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "game-counter-shooter-right.pdf",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "game-counter-shooter-right.pdf",
       "scale" : "2x"
     },
     {
