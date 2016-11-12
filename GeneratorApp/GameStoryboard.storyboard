@@ -24,7 +24,7 @@
                         <viewControllerLayoutGuide type="top" id="LXu-8y-Rls"/>
                         <viewControllerLayoutGuide type="bottom" id="Oht-iv-eTm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="J5k-e2-WmR">
+                    <view key="view" contentMode="scaleToFill" id="J5k-e2-WmR" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1285,6 +1285,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="zfU-Dj-0bq" firstAttribute="top" secondItem="wXi-9b-sxe" secondAttribute="bottom" priority="750" constant="30" id="39b-wE-hZB"/>
                                     <constraint firstItem="wXi-9b-sxe" firstAttribute="leading" secondItem="sg4-V1-WKE" secondAttribute="leading" id="8ml-ez-adL"/>
@@ -1314,21 +1315,6 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nj-R2-83x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view userInteractionEnabled="NO" contentMode="scaleToFill" id="xhy-jC-vNS" userLabel="TextureView">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="texture" translatesAutoresizingMaskIntoConstraints="NO" id="G0Y-PX-9B4">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        </imageView>
-                    </subviews>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="G0Y-PX-9B4" secondAttribute="bottom" id="CaK-n2-M0k"/>
-                        <constraint firstItem="G0Y-PX-9B4" firstAttribute="top" secondItem="xhy-jC-vNS" secondAttribute="top" id="kev-Cz-aoi"/>
-                        <constraint firstItem="G0Y-PX-9B4" firstAttribute="leading" secondItem="xhy-jC-vNS" secondAttribute="leading" id="nqy-MN-AtE"/>
-                        <constraint firstAttribute="trailing" secondItem="G0Y-PX-9B4" secondAttribute="trailing" id="yP9-67-Oqj"/>
-                    </constraints>
-                </view>
             </objects>
             <point key="canvasLocation" x="-12" y="119.1904047976012"/>
         </scene>
@@ -1338,6 +1324,5 @@
         <image name="game-counter-shooter-left" width="56" height="156"/>
         <image name="game-counter-shooter-right" width="56" height="156"/>
         <image name="game-logo" width="58" height="128"/>
-        <image name="texture" width="1000" height="1500"/>
     </resources>
 </document>
