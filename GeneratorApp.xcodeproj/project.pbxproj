@@ -53,6 +53,8 @@
 		6DE769441DC1766A0076D12B /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE769431DC1766A0076D12B /* PrincipalViewController.swift */; };
 		6DE769461DC17D7A0076D12B /* PrincipalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE769451DC17D7A0076D12B /* PrincipalTableViewCell.swift */; };
 		6DF300101DD69AF8004CA955 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF3000F1DD69AF8004CA955 /* GameScene.swift */; };
+		C893E21C1DD6A02100B4D4BC /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C893E21B1DD6A02100B4D4BC /* ProjectViewController.swift */; };
+		C893E21E1DD6A0C900B4D4BC /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C893E21D1DD6A0C900B4D4BC /* ProjectTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,8 @@
 		6DE769431DC1766A0076D12B /* PrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
 		6DE769451DC17D7A0076D12B /* PrincipalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalTableViewCell.swift; sourceTree = "<group>"; };
 		6DF3000F1DD69AF8004CA955 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		C893E21B1DD6A02100B4D4BC /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		C893E21D1DD6A0C900B4D4BC /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +242,7 @@
 				6D914B921DBDC77600413CA5 /* LoginViewController.swift */,
 				6D97BD8C1DC11A7800FEB78C /* TabViewController.swift */,
 				6D45A3071DC6B2DE00124B02 /* EquipmentTabViewController.swift */,
+				C893E21B1DD6A02100B4D4BC /* ProjectViewController.swift */,
 				6D45A3091DC6BBEE00124B02 /* EquipmentViewController.swift */,
 				6DDE03B51DC80FA200738582 /* MaterialsViewController.swift */,
 				6D26AA5A1DC85C5300088307 /* EquipmentDetailViewController.swift */,
@@ -268,6 +273,7 @@
 				6D9933F01DC5181200F697C2 /* FooterTableViewCell.swift */,
 				6DE769451DC17D7A0076D12B /* PrincipalTableViewCell.swift */,
 				6D45A30B1DC6BCB800124B02 /* EquipmentTableViewCell.swift */,
+				C893E21D1DD6A0C900B4D4BC /* ProjectTableViewCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C893E21E1DD6A0C900B4D4BC /* ProjectTableViewCell.swift in Sources */,
 				6D97BD8D1DC11A7800FEB78C /* TabViewController.swift in Sources */,
 				6D97BD8B1DC10F9A00FEB78C /* SpaceLabel.swift in Sources */,
 				6DAE11531DD02EB90034D485 /* LaunchTransition.swift in Sources */,
@@ -457,6 +464,7 @@
 				6DF300101DD69AF8004CA955 /* GameScene.swift in Sources */,
 				6DAE114F1DCFFE540034D485 /* BaseTransition.swift in Sources */,
 				6D914B501DBDAEBD00413CA5 /* AppDelegate.swift in Sources */,
+				C893E21C1DD6A02100B4D4BC /* ProjectViewController.swift in Sources */,
 				6D9CB40C1DD6738300893B18 /* FullRoundView.swift in Sources */,
 				6D9CB40A1DD6641B00893B18 /* GameViewController.swift in Sources */,
 				6D45A30A1DC6BBEE00124B02 /* EquipmentViewController.swift in Sources */,
