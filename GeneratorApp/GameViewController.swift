@@ -20,33 +20,34 @@ class GameViewController: UIViewController {
     @IBOutlet weak var surgerFour: UIView!
     @IBOutlet weak var surgerFive: UIView!
     
-    @IBOutlet weak var shooterOne: UIImageView!
-    @IBOutlet weak var shooterTwo: UIImageView!
-    @IBOutlet weak var shooterThree: UIImageView!
-    @IBOutlet weak var shooterFour: UIImageView!
-    @IBOutlet weak var shooterFive: UIImageView!
+    @IBOutlet weak var dotShot: FullRoundView!
+    @IBOutlet weak var dotShotTwo: FullRoundView!
+    @IBOutlet weak var dotShotthree: FullRoundView!
+    @IBOutlet weak var dotShotFour: FullRoundView!
+    @IBOutlet weak var dotShotFive: FullRoundView!
+    
     
     @IBOutlet weak var logoImageView: UIImageView!
     
     var surgers: [UIView]!
-    var shooters: [UIImageView]!
+    var dotShots: [FullRoundView]!
     
     var scene:  GameScene!
     var skView: SKView!
-
+    
     var win: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         scene = GameScene(size: view.bounds.size)
         skView = spriteView as SKView
-
+        
         skView.allowsTransparency = true
         scene.backgroundColor = UIColor.clear
-        skView.showsFPS = true
-        skView.showsNodeCount = true
+        skView.showsFPS = false
+        skView.showsNodeCount = false
         skView.ignoresSiblingOrder = true
         scene.scaleMode = .resizeFill
         skView.presentScene(scene)
@@ -54,15 +55,27 @@ class GameViewController: UIViewController {
         scene.gameController = self
         
         surgers = [surgerOne, surgerTwo, surgerThree, surgerFour, surgerFive]
-        shooters = [shooterOne, shooterTwo, shooterThree, shooterFour, shooterFive]
+        
+        dotShots = [dotShot, dotShotTwo, dotShotthree, dotShotFour, dotShotFive]
+        
+        for dot in dotShots {
+            dot.alpha = 0
+        }
         
         //view.bringSubview(toFront: logoImageView)
     }
     
-    @IBAction func shooterDown(_ sender: UIButton) {
-        let gun: UIButton = sender
-        scene.shoot(tag: gun.tag)
+    @IBAction func gunDown(_ sender: UITapGestureRecognizer) {
+        let gun: UITapGestureRecognizer = sender
+        scene.shoot(tag:  (gun.view?.tag)!)
+        
+        var theDot = dotShots[(gun.view?.tag)!]
+        theDot.alpha = 1
+        UIView.animate(withDuration: 0.25, animations:{
+            theDot.alpha = 0
+        })
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -74,7 +87,7 @@ class GameViewController: UIViewController {
         })
     }
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -87,8 +100,8 @@ class GameViewController: UIViewController {
         if win == true {
             destController.resultString = "You've Won!"
         } else {
-            destController.resultString = "It overloaded! You lose."
+            destController.resultString = "It overloaded! Try Again."
         }
     }
-
+    
 }
