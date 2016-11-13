@@ -65,6 +65,9 @@ class TabViewController: UIViewController {
     override func viewDidLayoutSubviews() {
     }
     
+    @IBAction func cancelToHome(segue:UIStoryboardSegue) {
+    }
+    
     @IBAction func tapTab(_ sender: AnyObject) {
         let previousIndex = selectedIndex
         selectedIndex = sender.tag
