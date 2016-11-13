@@ -163,7 +163,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         addChild(counter)
         
-        let actualDuration = 2.0
+        let actualDuration = 1.0
         
         let actionMove = SKAction.move(to: CGPoint(x: actualX, y: size.height + counter.size.height/2), duration: actualDuration)
         let actionMoveDone = SKAction.removeFromParent()
