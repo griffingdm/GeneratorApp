@@ -78,6 +78,10 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
+    @IBAction func tapLogo(_ sender: Any) {
+        tabViewController.performSegue(withIdentifier: "gameSegue", sender: nil)
+    }
+    
     //MARK: UITableViewDelegate
 //    func tableView(_ tableView: UITableView,
 //                            viewForHeaderInSection section: Int) -> UIView?
