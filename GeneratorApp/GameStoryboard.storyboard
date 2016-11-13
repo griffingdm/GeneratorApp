@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zHI-YB-iRK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11760" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zHI-YB-iRK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -450,7 +450,9 @@
                                                                 <gestureRecognizers/>
                                                                 <constraints>
                                                                     <constraint firstItem="HQU-Ro-ktY" firstAttribute="centerY" secondItem="omq-RV-KIG" secondAttribute="centerY" id="U0d-W8-BYw"/>
-                                                                    <constraint firstAttribute="width" constant="60" id="r48-MX-T8y"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="r48-MX-T8y">
+                                                                        <variation key="widthClass=regular" constant="75"/>
+                                                                    </constraint>
                                                                     <constraint firstItem="HQU-Ro-ktY" firstAttribute="centerX" secondItem="omq-RV-KIG" secondAttribute="centerX" id="uuj-B0-03i"/>
                                                                 </constraints>
                                                                 <connections>
@@ -495,7 +497,9 @@
                                                                 </subviews>
                                                                 <gestureRecognizers/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="60" id="D1W-kP-xJF"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="D1W-kP-xJF">
+                                                                        <variation key="widthClass=regular" constant="75"/>
+                                                                    </constraint>
                                                                     <constraint firstItem="X3d-to-gbJ" firstAttribute="centerX" secondItem="qBv-Z5-6uq" secondAttribute="centerX" id="TUU-zT-whY"/>
                                                                     <constraint firstItem="X3d-to-gbJ" firstAttribute="width" secondItem="X3d-to-gbJ" secondAttribute="height" id="oDY-Ur-Etd"/>
                                                                     <constraint firstItem="X3d-to-gbJ" firstAttribute="centerY" secondItem="qBv-Z5-6uq" secondAttribute="centerY" id="u29-FX-hHl"/>
@@ -505,13 +509,15 @@
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzY-3A-l0P" userLabel="spacerView">
-                                                                <rect key="frame" x="120" y="0.0" width="15" height="70"/>
+                                                                <rect key="frame" x="120" y="0.0" width="10" height="70"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="15" id="Hid-1H-m0o"/>
+                                                                    <constraint firstAttribute="width" constant="70" id="Hid-1H-m0o">
+                                                                        <variation key="widthClass=compact" constant="10"/>
+                                                                    </constraint>
                                                                 </constraints>
                                                             </view>
                                                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ect-i3-cyD">
-                                                                <rect key="frame" x="135" y="0.0" width="60" height="70"/>
+                                                                <rect key="frame" x="130" y="0.0" width="60" height="70"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFd-Pb-aGw" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                         <rect key="frame" x="10" y="15" width="40" height="40"/>
@@ -551,14 +557,16 @@
                                                                     <constraint firstItem="FFd-Pb-aGw" firstAttribute="centerY" secondItem="Ect-i3-cyD" secondAttribute="centerY" id="Gw2-mc-HjL"/>
                                                                     <constraint firstItem="FFd-Pb-aGw" firstAttribute="width" secondItem="FFd-Pb-aGw" secondAttribute="height" id="lIN-Uq-6Fy"/>
                                                                     <constraint firstItem="FFd-Pb-aGw" firstAttribute="centerX" secondItem="Ect-i3-cyD" secondAttribute="centerX" id="loM-6X-0pE"/>
-                                                                    <constraint firstAttribute="width" constant="60" id="tND-xY-yci"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="tND-xY-yci">
+                                                                        <variation key="widthClass=regular" constant="75"/>
+                                                                    </constraint>
                                                                 </constraints>
                                                                 <connections>
                                                                     <outletCollection property="gestureRecognizers" destination="1PW-3I-ySd" appends="YES" id="oEm-mX-Mmt"/>
                                                                 </connections>
                                                             </view>
                                                             <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3Y-lm-csd">
-                                                                <rect key="frame" x="195" y="0.0" width="60" height="70"/>
+                                                                <rect key="frame" x="190" y="0.0" width="60" height="70"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dz-52-VPZ" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                         <rect key="frame" x="10" y="15" width="40" height="40"/>
@@ -595,7 +603,9 @@
                                                                 </subviews>
                                                                 <gestureRecognizers/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="60" id="2Kv-kf-Vjw"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="2Kv-kf-Vjw">
+                                                                        <variation key="widthClass=regular" constant="75"/>
+                                                                    </constraint>
                                                                     <constraint firstItem="9dz-52-VPZ" firstAttribute="centerY" secondItem="E3Y-lm-csd" secondAttribute="centerY" id="LKr-6B-bvE"/>
                                                                     <constraint firstItem="9dz-52-VPZ" firstAttribute="centerX" secondItem="E3Y-lm-csd" secondAttribute="centerX" id="Loh-sG-opj"/>
                                                                     <constraint firstItem="9dz-52-VPZ" firstAttribute="width" secondItem="9dz-52-VPZ" secondAttribute="height" id="kwr-hU-5fa"/>
@@ -605,9 +615,11 @@
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJn-Ns-mHV" userLabel="spacerView">
-                                                                <rect key="frame" x="255" y="0.0" width="10" height="70"/>
+                                                                <rect key="frame" x="250" y="0.0" width="15" height="70"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="10" id="DoN-S0-PeC"/>
+                                                                    <constraint firstAttribute="width" constant="30" id="DoN-S0-PeC">
+                                                                        <variation key="widthClass=compact" constant="15"/>
+                                                                    </constraint>
                                                                 </constraints>
                                                             </view>
                                                             <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJV-mD-g2k">
@@ -648,7 +660,9 @@
                                                                 </subviews>
                                                                 <gestureRecognizers/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="60" id="I6y-ST-sCL"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="I6y-ST-sCL">
+                                                                        <variation key="widthClass=regular" constant="75"/>
+                                                                    </constraint>
                                                                     <constraint firstItem="s9K-oU-bEg" firstAttribute="centerY" secondItem="GJV-mD-g2k" secondAttribute="centerY" id="Xdq-oN-3ix"/>
                                                                     <constraint firstItem="s9K-oU-bEg" firstAttribute="width" secondItem="s9K-oU-bEg" secondAttribute="height" id="gKB-Px-DPf"/>
                                                                     <constraint firstItem="s9K-oU-bEg" firstAttribute="centerX" secondItem="GJV-mD-g2k" secondAttribute="centerX" id="zk2-Y1-sh5"/>
@@ -917,7 +931,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucB-Lu-Wa2" userLabel="linesStack">
-                                        <rect key="frame" x="58" y="0.0" width="260" height="595"/>
+                                        <rect key="frame" x="60.5" y="0.0" width="255" height="595"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZI-fQ-4sR">
                                                 <rect key="frame" x="0.0" y="0.0" width="5" height="595"/>
@@ -1118,13 +1132,15 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RrM-Q1-f1N">
-                                                <rect key="frame" x="85" y="0.0" width="20" height="595"/>
+                                                <rect key="frame" x="85" y="0.0" width="15" height="595"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="TXe-9N-mY2"/>
+                                                    <constraint firstAttribute="width" constant="60" id="TXe-9N-mY2">
+                                                        <variation key="widthClass=compact" constant="15"/>
+                                                    </constraint>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l4s-De-Uxg">
-                                                <rect key="frame" x="105" y="0.0" width="40" height="595"/>
+                                                <rect key="frame" x="100" y="0.0" width="40" height="595"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAF-NU-lGz">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
@@ -1220,7 +1236,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0qk-81-Ajt">
-                                                <rect key="frame" x="145" y="0.0" width="40" height="595"/>
+                                                <rect key="frame" x="140" y="0.0" width="40" height="595"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoG-1S-mYD">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
@@ -1316,7 +1332,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yk3-wm-Gs8">
-                                                <rect key="frame" x="185" y="0.0" width="35" height="595"/>
+                                                <rect key="frame" x="180" y="0.0" width="35" height="595"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HrN-Ud-JXh">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="595"/>
@@ -1330,7 +1346,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vad-Xw-Zkh" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="110" width="30" height="15"/>
                                                                 <subviews>
-                                                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2t-H3-Ovd" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                    <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2t-H3-Ovd" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                         <rect key="frame" x="2" y="2" width="26" height="11"/>
                                                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </view>
@@ -1444,13 +1460,15 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72O-FZ-eRy">
                                                         <rect key="frame" x="30" y="0.0" width="5" height="595"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="5" id="W0V-Zy-8OB"/>
+                                                            <constraint firstAttribute="width" constant="20" id="W0V-Zy-8OB">
+                                                                <variation key="widthClass=compact" constant="5"/>
+                                                            </constraint>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eiT-OU-FKi">
-                                                <rect key="frame" x="220" y="0.0" width="40" height="595"/>
+                                                <rect key="frame" x="215" y="0.0" width="40" height="595"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XpT-QP-wUU">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
@@ -1759,9 +1777,22 @@
                                 <constraints>
                                     <constraint firstItem="9F3-t1-iwE" firstAttribute="leading" secondItem="9S3-Yy-kvC" secondAttribute="leading" constant="2" id="1Ov-WG-uHv"/>
                                     <constraint firstAttribute="bottom" secondItem="9F3-t1-iwE" secondAttribute="bottom" constant="2" id="5kU-Ug-1UG"/>
+                                    <constraint firstAttribute="width" constant="500" id="MGJ-Vh-cHF">
+                                        <variation key="widthClass=regular" constant="400"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="9F3-t1-iwE" secondAttribute="trailing" constant="2" id="hXv-RB-pWP"/>
                                     <constraint firstItem="9F3-t1-iwE" firstAttribute="top" secondItem="9S3-Yy-kvC" secondAttribute="top" constant="2" id="tUp-wk-FyX"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MGJ-Vh-cHF"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="MGJ-Vh-cHF"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1770,6 +1801,11 @@
                             <constraint firstItem="9S3-Yy-kvC" firstAttribute="leading" secondItem="8GQ-gF-YqM" secondAttribute="leadingMargin" constant="50" id="WG1-YX-C0o"/>
                             <constraint firstItem="9S3-Yy-kvC" firstAttribute="centerY" secondItem="8GQ-gF-YqM" secondAttribute="centerY" id="apU-E7-kKq"/>
                         </constraints>
+                        <variation key="widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="WG1-YX-C0o"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="resultLabel" destination="DlW-c7-3gN" id="AGD-7O-IMf"/>

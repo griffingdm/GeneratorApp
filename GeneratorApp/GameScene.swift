@@ -131,7 +131,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 ])
             )
             
-            if birthInterval > 0.35{
+            if birthInterval > 0.35 {
                 self.birthInterval -= 0.025
             }
             self.birthTimer = 0
@@ -189,7 +189,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         surgesCountered += 1
         
-        if travelDuration > 0.35 {
+        if travelDuration > 0.4 {
             travelDuration -= 0.025
         }
         
