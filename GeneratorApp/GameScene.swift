@@ -21,8 +21,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //let player = SKSpriteNode(imageNamed: "game-surge")
     var gameController: GameViewController!
     var surgesCountered: Int = 0
-    var birthDuration: CGFloat = 1.0
     var travelDuration = 3.0
+    
+    var birthTimer:TimeInterval = TimeInterval(0)
+    var birthInterval:TimeInterval = TimeInterval(1)
+    
+    var delta:TimeInterval = TimeInterval(0)
+    var last_update_time:TimeInterval = TimeInterval(0)
+    
+    let fadeTime: Double = 0.5
     
     override func didMove(to view: SKView) {
         //adding background music!
@@ -39,18 +46,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func gameStart(){
         removeAllChildren()
         
-        self.scene?.view?.isPaused = false
-        
         surgesCountered = 0
-        birthDuration = 1.0
+        birthInterval = 1.0
         travelDuration = 3.0
         
-        run(SKAction.repeatForever(
-            SKAction.sequence([
-                SKAction.run(addMonster),
-                SKAction.wait(forDuration: TimeInterval(birthDuration))
-                ])
-        ))
+        self.scene?.view?.isPaused = false
     }
     
     func random() -> CGFloat {
@@ -82,17 +82,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //print("surger: \(rNumber), x: \(actualX)")
         
-        // Position the monster slightly off-screen along the right edge,
-        // and along a random position along the Y axis as calculated above
-        //monster.position = CGPoint(x: size.width + monster.size.width/2, y: actualY)
         surge.position = CGPoint(x: actualX, y: size.height + surge.size.height/2)
         
         // Add the surge to the scene
         addChild(surge)
         
-        // Determine speed of the monster
+        // Determine speed
         //let actualDuration = random(min: CGFloat(2.0), max: CGFloat(3.0))
-        
         
         // Create the actions
         let actionMove = SKAction.move(to: CGPoint(x: actualX, y: 0 - surge.size.height/2), duration: TimeInterval(travelDuration))
@@ -105,9 +101,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         surge.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
     }
-
+    
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        if self.last_update_time == 0.0 {
+            self.delta = 0
+        } else {
+            self.delta = currentTime - self.last_update_time
+        }
+        
+        self.birthTimer += self.delta
+        
+        if self.birthTimer >= birthInterval {
+            run(SKAction.sequence([
+                SKAction.run(addMonster)
+                ])
+            )
+            
+            if birthInterval > 0.35{
+            self.birthInterval -= 0.05
+            }
+            
+            self.birthTimer = 0
+        }
+        
+        self.last_update_time = currentTime
+        //self.yourSprite.update(self.delta)
     }
     
     func shoot(tag: Int){
@@ -127,7 +146,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //let surgeRect = gameController.view.convert(rSurgerFrame, to: rSurger.superview)
         let surgeRect = gameController.spriteView.convert(rSurgerFrame, from: rSurger.superview)
         let actualX = (surgeRect.midX)
-
+        
         counter.position = CGPoint(x: actualX, y: 0 - counter.size.height/2)
         
         addChild(counter)
@@ -138,11 +157,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let actionMoveDone = SKAction.removeFromParent()
         let loseAction = SKAction.run(){
             self.gameController.win = false
-            self.gameController.performSegue(withIdentifier: "gameEndSegue", sender: nil)
             self.scene?.view?.isPaused = true
-            //self.view?.presentScene(nil)
+            self.flashSurger(surger: rSurger)
+            delay(2.0, closure: {
+                self.gameController.performSegue(withIdentifier: "gameEndSegue", sender: nil)
+                UIView.animate(withDuration: self.fadeTime, animations: {
+                    rSurger.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1)
+                }){(finished: Bool) -> Void in
+                    rSurger.layer.removeAllAnimations()
+                }
+            })
         }
         counter.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
+    }
+    
+    func flashSurger(surger: UIView){
+        UIView.animate(withDuration: fadeTime, delay: 0, options: [.repeat, .autoreverse], animations: {
+            surger.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.2588235294, blue: 0.1450980392, alpha: 1)
+        }){(finished: Bool) -> Void in
+        }
     }
     
     func didCounterSurge(surge: SKSpriteNode, counter: SKSpriteNode){
@@ -151,8 +184,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         counter.removeFromParent()
         
         surgesCountered += 1
-        birthDuration -= 0.05
-        travelDuration -= 0.05
+        travelDuration -= 0.025
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
