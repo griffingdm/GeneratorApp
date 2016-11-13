@@ -19,7 +19,7 @@
         <!--Game View Controller-->
         <scene sceneID="avl-qV-OzS">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="zHI-YB-iRK" customClass="GameViewController" customModule="GeneratorApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zHI-YB-iRK" customClass="GameViewController" customModule="GeneratorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LXu-8y-Rls"/>
                         <viewControllerLayoutGuide type="bottom" id="Oht-iv-eTm"/>
@@ -43,16 +43,34 @@
                                                             <constraint firstAttribute="width" constant="10" id="zJQ-L5-Tr5"/>
                                                         </constraints>
                                                     </view>
-                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="game-logo" translatesAutoresizingMaskIntoConstraints="NO" id="w0E-Hm-a0h">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TpX-iw-nUM">
                                                         <rect key="frame" x="10" y="0.0" width="40" height="50"/>
-                                                        <gestureRecognizers/>
+                                                        <subviews>
+                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gBp-YL-pc4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
+                                                            </imageView>
+                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="game-logo" translatesAutoresizingMaskIntoConstraints="NO" id="w0E-Hm-a0h">
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
+                                                                <gestureRecognizers/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="r7i-bx-lHn"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="NHv-ic-4Ie" appends="YES" id="Tw2-cg-SuI"/>
+                                                                </connections>
+                                                            </imageView>
+                                                        </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="r7i-bx-lHn"/>
+                                                            <constraint firstItem="w0E-Hm-a0h" firstAttribute="centerX" secondItem="TpX-iw-nUM" secondAttribute="centerX" id="9wY-yj-sOT"/>
+                                                            <constraint firstItem="gBp-YL-pc4" firstAttribute="centerX" secondItem="w0E-Hm-a0h" secondAttribute="centerX" id="ArC-7N-ycR"/>
+                                                            <constraint firstItem="w0E-Hm-a0h" firstAttribute="width" secondItem="TpX-iw-nUM" secondAttribute="width" id="FYW-wD-usq"/>
+                                                            <constraint firstItem="w0E-Hm-a0h" firstAttribute="centerY" secondItem="TpX-iw-nUM" secondAttribute="centerY" id="IY8-1v-q5n"/>
+                                                            <constraint firstItem="gBp-YL-pc4" firstAttribute="height" secondItem="w0E-Hm-a0h" secondAttribute="height" id="cGU-8G-UOH"/>
+                                                            <constraint firstItem="gBp-YL-pc4" firstAttribute="width" secondItem="w0E-Hm-a0h" secondAttribute="width" id="qor-p7-33L"/>
+                                                            <constraint firstItem="gBp-YL-pc4" firstAttribute="centerY" secondItem="w0E-Hm-a0h" secondAttribute="centerY" id="rHf-k5-1Lk"/>
+                                                            <constraint firstItem="w0E-Hm-a0h" firstAttribute="height" secondItem="TpX-iw-nUM" secondAttribute="height" id="zD6-8y-bXa"/>
                                                         </constraints>
-                                                        <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="NHv-ic-4Ie" appends="YES" id="Tw2-cg-SuI"/>
-                                                        </connections>
-                                                    </imageView>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aou-cH-3Cm" userLabel="ResistorStack">
@@ -121,7 +139,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRQ-ZJ-1zD" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                         <rect key="frame" x="15" y="0.0" width="30" height="15"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8iy-wx-M7g" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8iy-wx-M7g" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="2" y="2" width="26" height="11"/>
                                                                 <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </view>
@@ -153,7 +171,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgB-2X-HCu" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                         <rect key="frame" x="15" y="0.0" width="30" height="15"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9V-9k-gvV" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9V-9k-gvV" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="2" y="2" width="26" height="11"/>
                                                                 <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </view>
@@ -185,7 +203,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3in-RY-Ll9" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                         <rect key="frame" x="15" y="0.0" width="30" height="15"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyX-DU-lhb" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyX-DU-lhb" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="2" y="2" width="26" height="11"/>
                                                                 <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </view>
@@ -714,9 +732,25 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="avt-aR-PDd">
                                                                 <rect key="frame" x="12" y="10" width="25" height="150"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSM-0c-k5w">
+                                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSM-0c-k5w">
                                                                         <rect key="frame" x="2" y="2" width="21" height="146"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STARTING!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyB-Oj-Ct9" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="-54.5" y="60.5" width="130" height="25"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="25" id="IQW-qN-LFL"/>
+                                                                                    <constraint firstAttribute="width" constant="130" id="Kfi-o1-OoU"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
+                                                                                <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
                                                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="KyB-Oj-Ct9" firstAttribute="centerY" secondItem="XSM-0c-k5w" secondAttribute="centerY" id="DGH-P1-21B"/>
+                                                                            <constraint firstItem="KyB-Oj-Ct9" firstAttribute="centerX" secondItem="XSM-0c-k5w" secondAttribute="centerX" id="RhW-Dy-NDc"/>
+                                                                        </constraints>
                                                                     </view>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -965,14 +999,24 @@
                                                                     <constraint firstAttribute="width" constant="11" id="g2F-F1-G1e"/>
                                                                 </constraints>
                                                             </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Owq-5D-jf6" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="22" y="25" width="10" height="10"/>
+                                                                <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="Owq-5D-jf6" secondAttribute="height" multiplier="1:1" id="EcG-nm-0Ck"/>
+                                                                    <constraint firstAttribute="width" constant="10" id="UHE-bW-5rA"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                         <constraints>
+                                                            <constraint firstItem="Owq-5D-jf6" firstAttribute="top" secondItem="t8S-ay-Jjd" secondAttribute="bottom" constant="13" id="6eI-be-eM3"/>
                                                             <constraint firstAttribute="trailing" secondItem="t8S-ay-Jjd" secondAttribute="trailing" constant="8" id="7pd-6u-d8u"/>
                                                             <constraint firstAttribute="trailing" secondItem="gN9-y4-QIa" secondAttribute="trailing" id="Fso-Tk-M8M"/>
                                                             <constraint firstItem="t8S-ay-Jjd" firstAttribute="top" secondItem="V85-g2-RaZ" secondAttribute="top" constant="1" id="GDD-6Z-NDA"/>
                                                             <constraint firstItem="gN9-y4-QIa" firstAttribute="top" secondItem="V85-g2-RaZ" secondAttribute="top" id="Zpm-gS-dMH"/>
                                                             <constraint firstItem="gN9-y4-QIa" firstAttribute="leading" secondItem="V85-g2-RaZ" secondAttribute="leading" id="dq5-Mz-qvp"/>
                                                             <constraint firstAttribute="bottom" secondItem="gN9-y4-QIa" secondAttribute="bottom" id="hrW-KX-Dwa"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Owq-5D-jf6" secondAttribute="trailing" constant="8" id="mhC-B3-NTT"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -1043,12 +1087,20 @@
                                                                     <constraint firstAttribute="width" constant="40" id="VTe-cL-JCT"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJz-wd-MJI" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJz-wd-MJI" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="21" y="1" width="11" height="11"/>
                                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="TJz-wd-MJI" secondAttribute="height" multiplier="1:1" id="nPi-YG-3wo"/>
                                                                     <constraint firstAttribute="width" constant="11" id="vKY-Jt-PEc"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWZ-zL-3hJ" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="22" y="25" width="10" height="10"/>
+                                                                <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="10" id="17r-xC-erA"/>
+                                                                    <constraint firstAttribute="width" secondItem="sWZ-zL-3hJ" secondAttribute="height" multiplier="1:1" id="ae2-Fb-fle"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -1057,8 +1109,10 @@
                                                             <constraint firstItem="TJz-wd-MJI" firstAttribute="top" secondItem="7zc-bA-W8I" secondAttribute="top" constant="1" id="Hjw-Dg-7T8"/>
                                                             <constraint firstItem="T2u-La-pdg" firstAttribute="leading" secondItem="7zc-bA-W8I" secondAttribute="leading" id="IPn-yh-28W"/>
                                                             <constraint firstAttribute="trailing" secondItem="TJz-wd-MJI" secondAttribute="trailing" constant="8" id="RnM-9V-VRA"/>
+                                                            <constraint firstAttribute="trailing" secondItem="sWZ-zL-3hJ" secondAttribute="trailing" constant="8" id="ZSx-Sz-7hL"/>
                                                             <constraint firstItem="T2u-La-pdg" firstAttribute="top" secondItem="7zc-bA-W8I" secondAttribute="top" id="lt3-IF-zPz"/>
                                                             <constraint firstAttribute="trailing" secondItem="T2u-La-pdg" secondAttribute="trailing" id="n2n-hq-l5b"/>
+                                                            <constraint firstItem="sWZ-zL-3hJ" firstAttribute="top" secondItem="TJz-wd-MJI" secondAttribute="bottom" constant="13" id="oWY-ud-WE4"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -1135,7 +1189,7 @@
                                                                     <constraint firstAttribute="height" constant="73" id="sYY-ew-2oN"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ocg-kt-aah" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ocg-kt-aah" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="1" width="11" height="11"/>
                                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
@@ -1143,13 +1197,23 @@
                                                                     <constraint firstAttribute="width" constant="11" id="pXi-Lc-D5P"/>
                                                                 </constraints>
                                                             </view>
+                                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQT-bj-GOq" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="8" y="25" width="10" height="10"/>
+                                                                <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="10" id="3Eo-3O-LTb"/>
+                                                                    <constraint firstAttribute="width" secondItem="KQT-bj-GOq" secondAttribute="height" multiplier="1:1" id="JEI-b8-n5i"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="Ocg-kt-aah" firstAttribute="top" secondItem="ONT-l9-4dY" secondAttribute="top" constant="1" id="31h-x8-KiH"/>
+                                                            <constraint firstItem="KQT-bj-GOq" firstAttribute="leading" secondItem="ONT-l9-4dY" secondAttribute="leading" constant="8" id="CkL-Pt-3jW"/>
                                                             <constraint firstItem="XLP-KM-ufj" firstAttribute="leading" secondItem="ONT-l9-4dY" secondAttribute="leading" id="CsE-bM-6RY"/>
                                                             <constraint firstItem="Ocg-kt-aah" firstAttribute="leading" secondItem="ONT-l9-4dY" secondAttribute="leading" constant="8" id="Rvc-cy-U5V"/>
                                                             <constraint firstAttribute="trailing" secondItem="XLP-KM-ufj" secondAttribute="trailing" id="ayN-Up-ltQ"/>
                                                             <constraint firstAttribute="bottom" secondItem="XLP-KM-ufj" secondAttribute="bottom" id="ipf-Ur-lDo"/>
+                                                            <constraint firstItem="KQT-bj-GOq" firstAttribute="top" secondItem="Ocg-kt-aah" secondAttribute="bottom" constant="13" id="lRZ-Ev-yb9"/>
                                                             <constraint firstItem="XLP-KM-ufj" firstAttribute="top" secondItem="ONT-l9-4dY" secondAttribute="top" id="z6X-0D-Mfk"/>
                                                         </constraints>
                                                     </view>
@@ -1221,7 +1285,7 @@
                                                                     <constraint firstAttribute="width" constant="40" id="qeF-kk-PsM"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bds-mD-l2K" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bds-mD-l2K" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="1" width="11" height="11"/>
                                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
@@ -1229,8 +1293,18 @@
                                                                     <constraint firstAttribute="width" secondItem="Bds-mD-l2K" secondAttribute="height" multiplier="1:1" id="bin-ZF-iut"/>
                                                                 </constraints>
                                                             </view>
+                                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xB-eF-cY7" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="8" y="25" width="10" height="10"/>
+                                                                <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="10" id="PVI-R3-Smc"/>
+                                                                    <constraint firstAttribute="width" secondItem="7xB-eF-cY7" secondAttribute="height" multiplier="1:1" id="hML-71-Lie"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                         <constraints>
+                                                            <constraint firstItem="7xB-eF-cY7" firstAttribute="leading" secondItem="Ra8-Dn-pOi" secondAttribute="leading" constant="8" id="1TV-tW-C9Q"/>
+                                                            <constraint firstItem="7xB-eF-cY7" firstAttribute="top" secondItem="Bds-mD-l2K" secondAttribute="bottom" constant="13" id="5Rf-Lt-yCk"/>
                                                             <constraint firstAttribute="bottom" secondItem="E4h-5L-Soo" secondAttribute="bottom" id="O2S-vk-q7u"/>
                                                             <constraint firstItem="Bds-mD-l2K" firstAttribute="leading" secondItem="Ra8-Dn-pOi" secondAttribute="leading" constant="8" id="TWf-7L-Dwd"/>
                                                             <constraint firstItem="Bds-mD-l2K" firstAttribute="top" secondItem="Ra8-Dn-pOi" secondAttribute="top" constant="1" id="Vga-Ps-pSJ"/>
@@ -1256,7 +1330,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vad-Xw-Zkh" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="110" width="30" height="15"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2t-H3-Ovd" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2t-H3-Ovd" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                         <rect key="frame" x="2" y="2" width="26" height="11"/>
                                                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </view>
@@ -1273,7 +1347,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQ3-eJ-SUy" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="135" width="30" height="15"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzo-Qz-mP1" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzo-Qz-mP1" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                         <rect key="frame" x="2" y="2" width="26" height="11"/>
                                                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </view>
@@ -1293,7 +1367,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aL-U4-tdQ" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="395" width="30" height="15"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAH-Rz-RRA" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAH-Rz-RRA" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                         <rect key="frame" x="2" y="2" width="26" height="11"/>
                                                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </view>
@@ -1310,7 +1384,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EI8-cy-bRM" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="420" width="30" height="15"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTh-Re-apN" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTh-Re-apN" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                         <rect key="frame" x="2" y="2" width="26" height="11"/>
                                                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </view>
@@ -1327,7 +1401,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuM-GZ-Dcg" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="445" width="30" height="15"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzH-6K-dYX" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzH-6K-dYX" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                         <rect key="frame" x="2" y="2" width="26" height="11"/>
                                                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </view>
@@ -1441,7 +1515,7 @@
                                                                     <constraint firstAttribute="height" constant="73" id="sI7-yE-Mnm"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsp-Cx-PZl" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsp-Cx-PZl" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="1" width="11" height="11"/>
                                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
@@ -1449,11 +1523,21 @@
                                                                     <constraint firstAttribute="width" constant="11" id="tb9-JC-OyN"/>
                                                                 </constraints>
                                                             </view>
+                                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsq-LC-eAF" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="8" y="25" width="10" height="10"/>
+                                                                <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="vsq-LC-eAF" secondAttribute="height" multiplier="1:1" id="jgL-V8-v9r"/>
+                                                                    <constraint firstAttribute="width" constant="10" id="t7u-rC-5ZV"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                         <constraints>
+                                                            <constraint firstItem="vsq-LC-eAF" firstAttribute="leading" secondItem="fHi-13-iTP" secondAttribute="leading" constant="8" id="1A6-ey-ktc"/>
                                                             <constraint firstAttribute="trailing" secondItem="iIv-lR-JVj" secondAttribute="trailing" id="B5G-Xb-o8n"/>
                                                             <constraint firstItem="zsp-Cx-PZl" firstAttribute="leading" secondItem="fHi-13-iTP" secondAttribute="leading" constant="8" id="MiC-Ro-mra"/>
                                                             <constraint firstItem="iIv-lR-JVj" firstAttribute="leading" secondItem="fHi-13-iTP" secondAttribute="leading" id="R9i-vo-ybi"/>
+                                                            <constraint firstItem="vsq-LC-eAF" firstAttribute="top" secondItem="zsp-Cx-PZl" secondAttribute="bottom" constant="13" id="TbN-v8-asF"/>
                                                             <constraint firstAttribute="bottom" secondItem="iIv-lR-JVj" secondAttribute="bottom" id="bpp-gm-fQf"/>
                                                             <constraint firstItem="iIv-lR-JVj" firstAttribute="top" secondItem="fHi-13-iTP" secondAttribute="top" id="cf0-ue-NJY"/>
                                                             <constraint firstItem="zsp-Cx-PZl" firstAttribute="top" secondItem="fHi-13-iTP" secondAttribute="top" constant="1" id="lye-F4-YsE"/>
@@ -1464,7 +1548,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="zfU-Dj-0bq" firstAttribute="top" secondItem="wXi-9b-sxe" secondAttribute="bottom" priority="750" constant="30" id="39b-wE-hZB"/>
                                     <constraint firstItem="wXi-9b-sxe" firstAttribute="leading" secondItem="sg4-V1-WKE" secondAttribute="leading" id="8ml-ez-adL"/>
@@ -1508,12 +1592,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="QAL-R4-tBx"/>
                     <connections>
-                        <outlet property="dotShot" destination="t8S-ay-Jjd" id="VI3-rk-nKp"/>
-                        <outlet property="dotShotFive" destination="zsp-Cx-PZl" id="Jfj-TC-aBZ"/>
-                        <outlet property="dotShotFour" destination="Bds-mD-l2K" id="FRQ-3n-3GY"/>
-                        <outlet property="dotShotTwo" destination="TJz-wd-MJI" id="5sh-E6-akn"/>
-                        <outlet property="dotShotthree" destination="Ocg-kt-aah" id="wOO-pQ-XFg"/>
                         <outlet property="lineStack" destination="ucB-Lu-Wa2" id="Sqc-WF-XBr"/>
+                        <outlet property="logoImageBackground" destination="gBp-YL-pc4" id="SzE-lm-PRg"/>
                         <outlet property="logoImageView" destination="w0E-Hm-a0h" id="3T6-a6-8Ia"/>
                         <outlet property="mamaView" destination="sg4-V1-WKE" id="Vut-1X-YMk"/>
                         <outlet property="spriteView" destination="Al7-i9-qtN" id="FK4-dJ-nIg"/>
@@ -1522,6 +1602,27 @@
                         <outlet property="surgerOne" destination="pXu-mF-sjK" id="ov6-Xj-Dde"/>
                         <outlet property="surgerThree" destination="O0Q-cB-mmK" id="UtF-HP-e21"/>
                         <outlet property="surgerTwo" destination="hgS-GD-RtC" id="cLS-WE-bcJ"/>
+                        <outlet property="surgesLabel" destination="KyB-Oj-Ct9" id="AkK-V5-BZe"/>
+                        <outletCollection property="theDots" destination="t8S-ay-Jjd" collectionClass="NSMutableArray" id="Ibg-QO-F9b"/>
+                        <outletCollection property="theDots" destination="Owq-5D-jf6" collectionClass="NSMutableArray" id="MFv-It-VUN"/>
+                        <outletCollection property="theDots" destination="TJz-wd-MJI" collectionClass="NSMutableArray" id="BwK-W6-cro"/>
+                        <outletCollection property="theDots" destination="sWZ-zL-3hJ" collectionClass="NSMutableArray" id="9Dx-r9-TW5"/>
+                        <outletCollection property="theDots" destination="Ocg-kt-aah" collectionClass="NSMutableArray" id="sil-gs-FKm"/>
+                        <outletCollection property="theDots" destination="KQT-bj-GOq" collectionClass="NSMutableArray" id="Hc7-RL-wXq"/>
+                        <outletCollection property="theDots" destination="Bds-mD-l2K" collectionClass="NSMutableArray" id="9eN-lG-L5a"/>
+                        <outletCollection property="theDots" destination="7xB-eF-cY7" collectionClass="NSMutableArray" id="HiU-V6-RiB"/>
+                        <outletCollection property="theDots" destination="zsp-Cx-PZl" collectionClass="NSMutableArray" id="jSv-g7-zxs"/>
+                        <outletCollection property="theDots" destination="vsq-LC-eAF" collectionClass="NSMutableArray" id="RN2-yH-6Eh"/>
+                        <outletCollection property="scoreIndicators" destination="ZjW-sN-3o8" collectionClass="NSMutableArray" id="QvH-Bd-Ylq"/>
+                        <outletCollection property="scoreIndicators" destination="hzH-6K-dYX" collectionClass="NSMutableArray" id="rY9-Ac-PN3"/>
+                        <outletCollection property="scoreIndicators" destination="BTh-Re-apN" collectionClass="NSMutableArray" id="gKM-Wj-h6P"/>
+                        <outletCollection property="scoreIndicators" destination="jAH-Rz-RRA" collectionClass="NSMutableArray" id="d0v-Lh-GFP"/>
+                        <outletCollection property="scoreIndicators" destination="rzo-Qz-mP1" collectionClass="NSMutableArray" id="xeH-dC-cQp"/>
+                        <outletCollection property="scoreIndicators" destination="h2t-H3-Ovd" collectionClass="NSMutableArray" id="DBK-R0-qf6"/>
+                        <outletCollection property="cannons" destination="OBO-1M-puL" collectionClass="NSMutableArray" id="NKx-Yz-cNz"/>
+                        <outletCollection property="cannons" destination="nyX-DU-lhb" collectionClass="NSMutableArray" id="9b5-sf-Y5l"/>
+                        <outletCollection property="cannons" destination="j9V-9k-gvV" collectionClass="NSMutableArray" id="cLx-xy-RIG"/>
+                        <outletCollection property="cannons" destination="8iy-wx-M7g" collectionClass="NSMutableArray" id="Vh8-Js-Cel"/>
                         <segue destination="8yf-63-c8Y" kind="presentation" identifier="gameEndSegue" id="EeN-0b-G32"/>
                     </connections>
                 </viewController>
@@ -1612,18 +1713,21 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ClF-iw-tlH">
                                                                 <rect key="frame" x="0.0" y="108" width="199" height="70"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZC-vr-5jv">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZC-vr-5jv">
                                                                         <rect key="frame" x="0.0" y="0.0" width="89.5" height="70"/>
-                                                                        <state key="normal" title="I Give Up">
+                                                                        <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
+                                                                        <state key="normal" title="GIVE UP">
                                                                             <color key="titleColor" red="0.91764705879999997" green="0.25882352939999997" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="pressGiveUp:" destination="8yf-63-c8Y" eventType="touchUpInside" id="6tp-q7-PhT"/>
+                                                                            <segue destination="hAd-L9-pVm" kind="unwind" unwindAction="cancelToHomeWithSegue:" id="j9h-Ah-AG8"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPC-M9-Bac">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPC-M9-Bac">
                                                                         <rect key="frame" x="109.5" y="0.0" width="89.5" height="70"/>
-                                                                        <state key="normal" title="Restart">
+                                                                        <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
+                                                                        <state key="normal" title="RESTART">
                                                                             <color key="titleColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </state>
                                                                         <connections>
@@ -1673,6 +1777,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHv-qR-EII" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hAd-L9-pVm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1688.8" y="118.29085457271366"/>
         </scene>
@@ -1682,6 +1787,7 @@
         <image name="game-counter-shooter-left" width="56" height="156"/>
         <image name="game-counter-shooter-right" width="56" height="156"/>
         <image name="game-logo" width="58" height="128"/>
+        <image name="logo" width="98" height="226"/>
         <image name="texture" width="1000" height="1500"/>
     </resources>
 </document>

@@ -18,7 +18,6 @@ struct PhysicsCategory {
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    //let player = SKSpriteNode(imageNamed: "game-surge")
     var gameController: GameViewController!
     var surgesCountered: Int = 0
     var travelDuration = 3.0
@@ -90,13 +89,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Determine speed
         //let actualDuration = random(min: CGFloat(2.0), max: CGFloat(3.0))
         
+        var dots: [FullRoundView]! = []
+        for dot in self.gameController.theDots {
+            if dot.tag == rNumber {
+                dots.append(dot)
+            }
+        }
+        
         // Create the actions
         let actionMove = SKAction.move(to: CGPoint(x: actualX, y: 0 - surge.size.height/2), duration: TimeInterval(travelDuration))
         let actionMoveDone = SKAction.removeFromParent()
         let loseAction = SKAction.run(){
             self.gameController.win = false
-            self.gameController.performSegue(withIdentifier: "gameEndSegue", sender: nil)
             self.scene?.view?.isPaused = true
+            
+            self.gameController.flashShooter(theDotTag: rNumber)
+            self.gameController.killIndicators(score: self.surgesCountered)
+            
+            delay(2.0, closure: {
+                self.gameController.performSegue(withIdentifier: "gameEndSegue", sender: nil)
+                self.gameController.returnShooter(theDotTag: rNumber)
+            })
             //self.view?.presentScene(nil)
         }
         surge.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
@@ -119,9 +132,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             )
             
             if birthInterval > 0.35{
-            self.birthInterval -= 0.05
+                self.birthInterval -= 0.025
             }
-            
             self.birthTimer = 0
         }
         
@@ -158,24 +170,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let loseAction = SKAction.run(){
             self.gameController.win = false
             self.scene?.view?.isPaused = true
-            self.flashSurger(surger: rSurger)
+            
+            self.gameController.flashSurger(surger: rSurger)
+            self.gameController.killIndicators(score: self.surgesCountered)
+            
             delay(2.0, closure: {
                 self.gameController.performSegue(withIdentifier: "gameEndSegue", sender: nil)
-                UIView.animate(withDuration: self.fadeTime, animations: {
-                    rSurger.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1)
-                }){(finished: Bool) -> Void in
-                    rSurger.layer.removeAllAnimations()
-                }
+                self.gameController.returnSurger(rSurger: rSurger)
             })
         }
         counter.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
-    }
-    
-    func flashSurger(surger: UIView){
-        UIView.animate(withDuration: fadeTime, delay: 0, options: [.repeat, .autoreverse], animations: {
-            surger.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.2588235294, blue: 0.1450980392, alpha: 1)
-        }){(finished: Bool) -> Void in
-        }
     }
     
     func didCounterSurge(surge: SKSpriteNode, counter: SKSpriteNode){
@@ -184,7 +188,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         counter.removeFromParent()
         
         surgesCountered += 1
-        travelDuration -= 0.025
+        
+        if travelDuration > 0.35 {
+            travelDuration -= 0.025
+        }
+        
+        gameController.surgesLabel.text = "SURGES: \(surgesCountered)"
+        gameController.indicateScore(score: surgesCountered)
     }
     
     func didBegin(_ contact: SKPhysicsContact) {

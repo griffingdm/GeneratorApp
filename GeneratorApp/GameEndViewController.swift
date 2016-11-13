@@ -32,10 +32,13 @@ class GameEndViewController: UIViewController {
     
     @IBAction func pressGiveUp(_ sender: Any) {
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: {})
+        
     }
     
     @IBAction func pressRestart(_ sender: Any) {
         dismiss(animated: true, completion:{
+            self.gameController.surgesLabel.text = "PREPARE!"
+            self.gameController.animateCircuit()
             self.gameController.scene.gameStart()
         })
         
