@@ -228,7 +228,6 @@
 		6D914B4E1DBDAEBD00413CA5 /* GeneratorApp */ = {
 			isa = PBXGroup;
 			children = (
-				6DAE11511DCFFE590034D485 /* Transition Files */,
 				6D914B4F1DBDAEBD00413CA5 /* AppDelegate.swift */,
 				6DF3000F1DD69AF8004CA955 /* GameScene.swift */,
 				6D914B951DBDC93100413CA5 /* Common.swift */,
@@ -236,6 +235,7 @@
 				6D97BD8A1DC10F9A00FEB78C /* SpaceLabel.swift */,
 				6D45A3051DC6ADB700124B02 /* DottedView.swift */,
 				6D9CB40B1DD6738300893B18 /* FullRoundView.swift */,
+				6DAE11511DCFFE590034D485 /* Transition Files */,
 				6D9933F51DC68C2E00F697C2 /* TableViewCells */,
 				6D914B941DBDC77B00413CA5 /* controllers */,
 				6D9933F41DC68C1100F697C2 /* StoryBoards */,

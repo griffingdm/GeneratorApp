@@ -488,6 +488,7 @@
                     <connections>
                         <outlet property="logoImageView" destination="qme-fq-b1t" id="DXf-bW-mHj"/>
                         <outlet property="mamaStack" destination="ieK-IU-Fl4" id="ek2-it-u4n"/>
+                        <outlet property="nameIdField" destination="RPc-Ze-lce" id="jYb-Rh-LeQ"/>
                         <outlet property="nameStack" destination="wH4-jq-W3P" id="zn8-6N-P8e"/>
                         <outlet property="passKeyStack" destination="bgZ-ya-Vdg" id="ZbW-5H-BvP"/>
                         <outlet property="powerUpButtonParentView" destination="C2Y-gw-SKu" id="GRT-0J-7Eu"/>

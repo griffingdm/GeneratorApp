@@ -750,8 +750,8 @@
                                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSM-0c-k5w">
                                                                         <rect key="frame" x="2" y="2" width="21" height="146"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STARTING!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyB-Oj-Ct9" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                <rect key="frame" x="-54.333333333333314" y="60.666666666666657" width="130" height="25"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="STARTING!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyB-Oj-Ct9" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="-54.333333333333329" y="60.666666666666664" width="140" height="25"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="25" id="IQW-qN-LFL"/>
                                                                                     <constraint firstAttribute="width" constant="130" id="Kfi-o1-OoU"/>
@@ -1726,16 +1726,16 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOV-Ad-T30">
-                                                                <rect key="frame" x="0.0" y="46" width="230" height="41.666666666666686"/>
+                                                                <rect key="frame" x="0.0" y="46" width="230" height="42"/>
                                                                 <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="32"/>
                                                                 <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ClF-iw-tlH">
-                                                                <rect key="frame" x="0.0" y="107.66666666666669" width="230" height="70.333333333333314"/>
+                                                                <rect key="frame" x="0.0" y="108" width="230" height="70"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZC-vr-5jv">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="105" height="70.333333333333314"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="105" height="70"/>
                                                                         <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                         <state key="normal" title="GIVE UP">
                                                                             <color key="titleColor" red="0.91764705879999997" green="0.25882352939999997" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1746,7 +1746,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPC-M9-Bac">
-                                                                        <rect key="frame" x="125" y="0.0" width="105" height="70.333333333333314"/>
+                                                                        <rect key="frame" x="125" y="0.0" width="105" height="70"/>
                                                                         <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                         <state key="normal" title="RESTART">
                                                                             <color key="titleColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
