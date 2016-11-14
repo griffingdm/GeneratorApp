@@ -113,7 +113,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func didTapLogo(_ sender: Any) {
         //performSegue(withIdentifier: "GameSegue", sender: nil)
-        performSegue(withIdentifier: "TabStorySegue", sender: nil)
+        //performSegue(withIdentifier: "TabStorySegue", sender: nil)
+        //dismiss(animated: true, completion:{})
     }
     
     override func didReceiveMemoryWarning() {
