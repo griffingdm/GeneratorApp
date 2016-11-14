@@ -35,7 +35,7 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
         
-        tableView.tableHeaderView = tableView.dequeueReusableCell(withIdentifier: "header")
+        //tableView.tableHeaderView = tableView.dequeueReusableCell(withIdentifier: "principlesHeader")
         
         let footerView: FooterTableViewCell = tableView.dequeueReusableCell(withIdentifier: "footer") as! FooterTableViewCell
         footerView.parentController = self
@@ -55,27 +55,43 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PrincipleCell") as! PrincipalTableViewCell
         
-        print("\(allLabels!)")
-        
-        cell.icon.image = theImages[indexPath.row]
-        
-        cell.header.text = headers[indexPath.row]
-        cell.number.text = ("0\(indexPath.row + 1)")
-        cell.layoutIfNeeded()
-        
-        for (index, labelText) in (allLabels![indexPath.row]?.enumerated())! {
-            print("\(index)")
-            print("\(labelText)")
-            cell.labels![index].text = labelText
+        switch indexPath.row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "shareCell") as! ShareTableViewCell
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "circuitBreakCell") as! CircuitBreakerUITabTableViewCell
+            cell.parentController = self
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "principlesHeader")
+            return cell!
+        default:
+            let newIndex = indexPath.row - 3
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PrincipleCell") as! PrincipalTableViewCell
+            
+            print("\(allLabels!)")
+            
+            cell.icon.image = theImages[newIndex]
+            
+            cell.header.text = headers[newIndex]
+            cell.number.text = ("0\(newIndex + 1)")
+            cell.layoutIfNeeded()
+            
+            for (index, labelText) in (allLabels![newIndex]?.enumerated())! {
+                print("\(index)")
+                print("\(labelText)")
+                cell.labels![index].text = labelText
+            }
+            
+            return cell
         }
-        
-        return cell
     }
     
     @IBAction func tapLogo(_ sender: Any) {

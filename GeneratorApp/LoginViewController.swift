@@ -44,11 +44,18 @@ class LoginViewController: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        //UIView.animate(withDuration: 0) {
+        //    self.passKeyStack.isHidden = true
+        //}
+        
+        self.passKeyStack.isHidden = true
+        
         ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
         ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
         ogNameFrame = mamaStack.convert(nameStack.frame, from: nameStack.superview)
         ogPasskeyFrame = mamaStack.convert(passKeyStack.frame, from: passKeyStack.superview)
+        
     }
     
     func showKeyboard(notification: Notification){
