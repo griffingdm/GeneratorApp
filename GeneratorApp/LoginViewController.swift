@@ -17,6 +17,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var nameStack: UIStackView!
     @IBOutlet weak var passKeyStack: UIStackView!
     @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var nameIdField: UITextField!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var ogNameFrame: CGRect!
     var ogPasskeyFrame: CGRect!
@@ -84,7 +87,15 @@ class LoginViewController: UIViewController {
     
     @IBAction func tapPowerUp(_ sender: AnyObject) {
         //performSegue(withIdentifier: "loginSegue", sender: nil)
-        performSegue(withIdentifier: "TabStorySegue", sender: nil)
+        //performSegue(withIdentifier: "TabStorySegue", sender: nil)
+        
+        if (nameIdField.text?.characters.count)! < 3 {
+            print("make it more than two letters!")
+        } else {
+            appDelegate.user = nameIdField.text
+        }
+        
+        performSegue(withIdentifier: "GameSegue", sender: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -101,7 +112,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didTapLogo(_ sender: Any) {
-        performSegue(withIdentifier: "GameSegue", sender: nil)
+        //performSegue(withIdentifier: "GameSegue", sender: nil)
+        performSegue(withIdentifier: "TabStorySegue", sender: nil)
     }
     
     override func didReceiveMemoryWarning() {

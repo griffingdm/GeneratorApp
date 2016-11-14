@@ -11,7 +11,7 @@ import UIKit
 class LaunchSplashViewController: UIViewController {
     @IBOutlet weak var logoImageView: UIImageView!
     
-    var launchTransition: LaunchTransition!
+    var fadeTransition: FadeTransition!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,20 +37,19 @@ class LaunchSplashViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let destiView = segue.destination as! LoginViewController
+        let destiView = segue.destination as! TabViewController
         
         // Set the modal presentation style of your destinationViewController to be custom.
         destiView.modalPresentationStyle = UIModalPresentationStyle.custom
         
         // Create a new instance of your fadeTransition.
-        launchTransition = LaunchTransition()
+        fadeTransition = FadeTransition()
         
         // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
-        destiView.transitioningDelegate = launchTransition
+        destiView.transitioningDelegate = fadeTransition
         
         // Adjust the transition duration. (seconds)
-        launchTransition.duration = 0.5
-
+        fadeTransition.duration = 0.5
         
     }
 }

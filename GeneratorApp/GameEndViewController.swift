@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Parse
 
 class GameEndViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var resultString: String! = ""
     var score: Int = 0
@@ -23,6 +26,29 @@ class GameEndViewController: UIViewController {
         // Do any additional setup after loading the view.
         resultLabel.text = resultString
         scoreLabel.text = "\(score) SURGES"
+        
+        saveScore(theScore: score)
+    }
+    
+    func saveScore(theScore: Int){
+        let gameScore = PFObject(className:"GameScore")
+        gameScore["score"] = score
+        switch appDelegate.user {
+        case nil:
+            print("anonymous user")
+            gameScore["playerName"] = "-"
+        default:
+            gameScore["playerName"] = appDelegate.user
+        }
+
+        gameScore.saveInBackground { (success: Bool, error: Error?) in
+            if (success) {
+                // The object has been saved.
+                print("saved!")
+            } else {
+                // There was a problem, check error.description
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
