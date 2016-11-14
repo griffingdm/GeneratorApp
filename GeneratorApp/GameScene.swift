@@ -103,6 +103,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+        run(SKAction.run {
+            self.gameController.surge(surger: rSurger)
+        })
+        
         // Create the actions
         let actionMove = SKAction.move(to: CGPoint(x: actualX, y: 0 - surge.size.height/2), duration: TimeInterval(surgeTravelDuration))
         let actionMoveDone = SKAction.removeFromParent()

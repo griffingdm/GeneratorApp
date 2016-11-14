@@ -218,23 +218,6 @@ class GameViewController: UIViewController {
         stopCircuit()
     }
     
-    func cannon(){
-        for cannon in cannons {
-            
-            let delayAmount = Double(cannon.tag) / 20.0
-            
-            UIView.animate(withDuration: 0, delay: delayAmount, options: [], animations: {
-                cannon.layer.removeAllAnimations()
-                cannon.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
-            }){(finished: Bool) -> Void in
-                UIView.animate(withDuration: 0.2, delay: 0, options: [], animations: {
-                    cannon.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1)
-                }){(finished: Bool) -> Void in
-                }
-            }
-        }
-    }
-    
     func returnShooter(theDotTag: Int){
         for dot in theDots {
             if dot.tag == theDotTag{
@@ -247,6 +230,33 @@ class GameViewController: UIViewController {
                     }){(finished: Bool) -> Void in
                         dot.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
                     }
+                }
+            }
+        }
+    }
+    
+    func surge(surger: UIView){
+            surger.layer.removeAllAnimations()
+            surger.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
+        
+            UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
+                surger.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1)
+            }){(finished: Bool) -> Void in
+            }
+    }
+    
+    func cannon(){
+        for cannon in cannons {
+            
+            let delayAmount = Double(cannon.tag) / 20.0
+            
+            UIView.animate(withDuration: 0, delay: delayAmount, options: [], animations: {
+                cannon.layer.removeAllAnimations()
+                cannon.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
+            }){(finished: Bool) -> Void in
+                UIView.animate(withDuration: 0.2, delay: 0, options: [], animations: {
+                    cannon.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1)
+                }){(finished: Bool) -> Void in
                 }
             }
         }
