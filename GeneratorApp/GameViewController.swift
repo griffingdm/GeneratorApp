@@ -28,6 +28,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var logoImageBackground: UIImageView!
     
+    var endGameTransition: EndGameTransition!
+    
     var surgers: [UIView]!
     var dotShots: [FullRoundView]!
     
@@ -278,10 +280,22 @@ class GameViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         let destController = segue.destination as! GameEndViewController
         
+        destController.modalPresentationStyle = UIModalPresentationStyle.custom
+        
         // Pass the selected object to the new view controller.
         destController.gameController = self
         destController.score = scene.surgesCountered
         
+        // Create a new instance of your fadeTransition.
+        endGameTransition = EndGameTransition()
+        
+        // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+        destController.transitioningDelegate = endGameTransition
+        
+        // Adjust the transition duration. (seconds)
+        endGameTransition.duration = 0.5
+        
+
         if win == true {
             destController.resultString = "You've Won!"
         } else {

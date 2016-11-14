@@ -24,13 +24,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var birthTimer:TimeInterval = TimeInterval(0)
     
     //GAME SETTINGS
-    var birthInterval:TimeInterval = TimeInterval(1)//starting delay between spawns
     let counterSpeed: Double = 1.0 //speed of user's projectile
-    let topBirthSpeed: Double = 0.25 //top speed (in seconds) of surge spawning
-    let eachBirthSpeedIncrease: Double = 0.025 //delay decrease b/n spawns after surge counter
-    var surgeTravelDuration = 3.0 //how long it takes for surges to travel top -> bottom
+    var birthInterval:TimeInterval = TimeInterval(0.8)
+    let topBirthSpeed: Double = 0.3 //top speed (in seconds) of surge spawning
+    let eachBirthSpeedIncrease: Double = 0.015 //delay decrease b/n spawns after surge counter
+    var surgeTravelDuration = 3.0
     let topSurgeSpeed = 0.6 //top speed (in seconds) for surge travel top -> bottom
-    let surgeSpeedIncrease: Double = 0.025 //speed increase amount after surge counter
+    let surgeSpeedIncrease: Double = 0.02 //speed increase amount after surge counter
     
     var delta:TimeInterval = TimeInterval(0)
     var last_update_time:TimeInterval = TimeInterval(0)
@@ -53,8 +53,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         removeAllChildren()
         
         surgesCountered = 0
-        birthInterval = 1.0
-        surgeTravelDuration = 3.0
+        birthInterval = 0.8 //starting delay between spawns
+        surgeTravelDuration = 3.0 //how long it takes for surges to travel top -> bottom
         
         self.scene?.view?.isPaused = false
     }
