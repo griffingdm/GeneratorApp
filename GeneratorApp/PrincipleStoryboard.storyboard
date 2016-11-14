@@ -670,7 +670,7 @@
     </scenes>
     <resources>
         <image name="gen-logo" width="513" height="177"/>
-        <image name="icon-prin-1" width="100" height="129"/>
+        <image name="icon-prin-1" width="140" height="140"/>
         <image name="lightning-left" width="89" height="39"/>
         <image name="lightning-right" width="89" height="39"/>
     </resources>
