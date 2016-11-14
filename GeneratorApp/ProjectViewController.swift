@@ -13,10 +13,9 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var equipment: [Equipment]!
     
-    let threeDPrinter: Equipment = Equipment(eName: "3D PRINTER", eModel: "Flashforge Creator Pro", eImage: #imageLiteral(resourceName: "FlashforgeCreatorProNew2016_FFEU_Bild1"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "t-3d-printer2"), #imageLiteral(resourceName: "t-3d-printer3")], eInstruct: "")
-    let vinylCutter: Equipment = Equipment(eName: "VINYL CUTTER", eModel: "Roland GS-24", eImage: #imageLiteral(resourceName: "gs24standwide"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "t-vinyl-cutter2"), #imageLiteral(resourceName: "t-vinyl-cutter3")], eInstruct: "")
-    let paperCutter: Equipment = Equipment(eName: "PAPER CUTTER", eModel: "Rotatrim RCM30", eImage: #imageLiteral(resourceName: "paper cutter"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "t-paper-cutter2"), #imageLiteral(resourceName: "t-paper-cutter3")], eInstruct: "")
-    let plotter: Equipment = Equipment(eName: "Plotter", eModel: "Ricoh MP CW2200", eImage: #imageLiteral(resourceName: "lg_format_printer1"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "lg_format_printer2"), #imageLiteral(resourceName: "lg_format_printer3")], eInstruct: "instructions")
+    let threeDPrinter: Equipment = Equipment(eName: "TROTTER HEADS", eModel: "3D Printing", eImage: #imageLiteral(resourceName: "p-trotter-heads1"), eQuant: 2, eDetailImages: [#imageLiteral(resourceName: "p-trotter-heads2"), #imageLiteral(resourceName: "p-trotter-heads3")], eInstruct: "")
+    let vinylCutter: Equipment = Equipment(eName: "GENERATOR STICKERS", eModel: "Vinyl Cutting", eImage: #imageLiteral(resourceName: "p-generator-sticker1"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "p-generator-sticker2"), #imageLiteral(resourceName: "p-generator-sticker3")], eInstruct: "")
+    let paperCutter: Equipment = Equipment(eName: "MONITOR STAND", eModel: "3D Printing", eImage: #imageLiteral(resourceName: "p-monitor-stand1"), eQuant: 4, eDetailImages: [#imageLiteral(resourceName: "p-monitor-stand2"), #imageLiteral(resourceName: "p-monitor-stand3")], eInstruct: "")
     
     var tabController: EquipmentTabViewController!
     
@@ -25,7 +24,7 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         // Do any additional setup after loading the view.
         
-        equipment = [threeDPrinter, vinylCutter, plotter, paperCutter]
+        equipment = [threeDPrinter, vinylCutter, paperCutter]
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -64,7 +63,7 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.equipImage.image = equip.image
         cell.nameLabel.text = equip.name
         cell.modelLabel.text = equip.model
-        cell.quantity.text = "QTY-\(equip.qty!)"
+        cell.quantity.text = "HRS-\(equip.qty!)"
         
         return cell
     }
