@@ -188,7 +188,6 @@ class GameViewController: UIViewController {
             surger.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.2588235294, blue: 0.1450980392, alpha: 1)
         }){(finished: Bool) -> Void in
         }
-        
         stopCircuit()
     }
     
@@ -221,11 +220,11 @@ class GameViewController: UIViewController {
     
     func cannon(){
         for cannon in cannons {
-            cannon.layer.removeAllAnimations()
             
             let delayAmount = Double(cannon.tag) / 20.0
             
             UIView.animate(withDuration: 0, delay: delayAmount, options: [], animations: {
+                cannon.layer.removeAllAnimations()
                 cannon.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
             }){(finished: Bool) -> Void in
                 UIView.animate(withDuration: 0.2, delay: 0, options: [], animations: {

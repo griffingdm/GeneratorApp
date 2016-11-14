@@ -20,10 +20,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var gameController: GameViewController!
     var surgesCountered: Int = 0
-    var travelDuration = 3.0
     
     var birthTimer:TimeInterval = TimeInterval(0)
     var birthInterval:TimeInterval = TimeInterval(1)
+    
+    //GAME SETTINGS
+    let counterSpeed: Double = 1.0 //speed of user's projectile
+    let topBirthSpeed: Double = 0.35 //top speed (in seconds) of surge spawning
+    let eachBirthSpeedIncrease: Double = 0.025 //delay decrease b/n spawns after surge counter
+    var surgeTravelDuration = 3.0 //how long it takes for surges to travel top -> bottom
+    let topSurgeSpeed = 0.4 //top speed (in seconds) for surge travel top -> bottom
+    let surgeSpeedIncrease: Double = 0.025 //speed increase amount after surge counter
     
     var delta:TimeInterval = TimeInterval(0)
     var last_update_time:TimeInterval = TimeInterval(0)
@@ -47,7 +54,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         surgesCountered = 0
         birthInterval = 1.0
-        travelDuration = 3.0
+        surgeTravelDuration = 3.0
         
         self.scene?.view?.isPaused = false
     }
@@ -97,7 +104,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         // Create the actions
-        let actionMove = SKAction.move(to: CGPoint(x: actualX, y: 0 - surge.size.height/2), duration: TimeInterval(travelDuration))
+        let actionMove = SKAction.move(to: CGPoint(x: actualX, y: 0 - surge.size.height/2), duration: TimeInterval(surgeTravelDuration))
         let actionMoveDone = SKAction.removeFromParent()
         let loseAction = SKAction.run(){
             self.gameController.win = false
@@ -130,9 +137,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 SKAction.run(addMonster)
                 ])
             )
-            
-            if birthInterval > 0.35{
-                self.birthInterval -= 0.025
+            if birthInterval > topBirthSpeed {
+                self.birthInterval -= eachBirthSpeedIncrease
             }
             self.birthTimer = 0
         }
@@ -163,7 +169,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         addChild(counter)
         
-        let actualDuration = 2.0
+        let actualDuration = counterSpeed
         
         let actionMove = SKAction.move(to: CGPoint(x: actualX, y: size.height + counter.size.height/2), duration: actualDuration)
         let actionMoveDone = SKAction.removeFromParent()
@@ -189,8 +195,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         surgesCountered += 1
         
-        if travelDuration > 0.35 {
-            travelDuration -= 0.025
+        if surgeTravelDuration > topSurgeSpeed {
+            surgeTravelDuration -= surgeSpeedIncrease
         }
         
         gameController.surgesLabel.text = "SURGES: \(surgesCountered)"
