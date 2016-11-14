@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passKeyStack: UIStackView!
     @IBOutlet weak var logoImageView: UIImageView!
     
+    var ogNameFrame: CGRect!
     var ogPasskeyFrame: CGRect!
     var ogTopSectionFrame: CGRect!
     var ogPowerButtonFrame: CGRect!
@@ -46,6 +47,7 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
         ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
+        ogNameFrame = mamaStack.convert(nameStack.frame, from: nameStack.superview)
         ogPasskeyFrame = mamaStack.convert(passKeyStack.frame, from: passKeyStack.superview)
     }
     
@@ -56,7 +58,8 @@ class LoginViewController: UIViewController {
         frame = mamaStack.convert(frame, from: view)
         
         let powerButtonY: CGFloat = frame.origin.y - ogPowerButtonFrame.height
-        let topSectionY: CGFloat = powerButtonY - ogPasskeyFrame.origin.y - ogPasskeyFrame.height - 2
+        //let topSectionY: CGFloat = powerButtonY - ogPasskeyFrame.origin.y - ogPasskeyFrame.height - 2
+        let topSectionY: CGFloat = powerButtonY - ogNameFrame.origin.y - ogNameFrame.height - 2
         
         print("going up!")
         UIView.animate(withDuration: aniDuration, animations: {
