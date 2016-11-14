@@ -102,7 +102,7 @@
                                             <constraint firstAttribute="width" constant="600" id="Ktk-SH-awU"/>
                                         </constraints>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="shareCell" rowHeight="150" id="R7n-yx-vZo" customClass="ShareTableViewCell" customModule="GeneratorApp" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="shareCell" rowHeight="150" id="R7n-yx-vZo" customClass="ShareTableViewCell" customModule="GeneratorApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="323" height="150"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R7n-yx-vZo" id="mRN-tl-lzI">
@@ -205,7 +205,7 @@
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="circuitBreakCell" rowHeight="550" id="NWr-0c-deI" customClass="CircuitBreakerUITabTableViewCell" customModule="GeneratorApp" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="circuitBreakCell" rowHeight="550" id="NWr-0c-deI" customClass="CircuitBreakerUITabTableViewCell" customModule="GeneratorApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="178" width="323" height="550"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NWr-0c-deI" id="wsP-ds-hGO">
@@ -589,6 +589,9 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                                </accessibility>
                                                 <connections>
                                                     <outlet property="CircuitBreakLabel" destination="Xwk-0L-04i" id="M5X-Vg-iee"/>
                                                     <outlet property="circuitBreakImageView" destination="nxm-Ba-HYQ" id="egO-VY-iam"/>
@@ -999,7 +1002,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="323" height="100"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXt-ef-mPX">
-                                                                    <rect key="frame" x="0.0" y="25" width="323" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="323" height="50"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWi-pz-cOf">
                                                                             <rect key="frame" x="2" y="2" width="319" height="46"/>
@@ -1058,9 +1061,8 @@
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstItem="MXt-ef-mPX" firstAttribute="top" secondItem="CJo-wz-fuW" secondAttribute="top" constant="25" id="Kwf-SG-W76"/>
+                                                                <constraint firstItem="MXt-ef-mPX" firstAttribute="top" secondItem="CJo-wz-fuW" secondAttribute="top" id="Kwf-SG-W76"/>
                                                                 <constraint firstItem="MXt-ef-mPX" firstAttribute="centerX" secondItem="CJo-wz-fuW" secondAttribute="centerX" id="caO-Js-ykx"/>
-                                                                <constraint firstItem="MXt-ef-mPX" firstAttribute="centerY" secondItem="CJo-wz-fuW" secondAttribute="centerY" id="i4d-iZ-TWD"/>
                                                                 <constraint firstItem="MXt-ef-mPX" firstAttribute="leading" secondItem="CJo-wz-fuW" secondAttribute="leading" id="jVe-Bd-3JX"/>
                                                             </constraints>
                                                         </view>
