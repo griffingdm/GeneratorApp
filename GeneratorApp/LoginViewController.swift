@@ -44,12 +44,10 @@ class LoginViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         //UIView.animate(withDuration: 0) {
         //    self.passKeyStack.isHidden = true
         //}
-        
-        self.passKeyStack.isHidden = true
         
         ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
         ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
@@ -90,6 +88,8 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        self.passKeyStack.isHidden = true
+        view.layoutIfNeeded()
         for buttonView in buttonViewsToRound{
             let cornerRadius: CGFloat = buttonView.frame.height / 2
             roundCorners(view: buttonView, radius: cornerRadius)
