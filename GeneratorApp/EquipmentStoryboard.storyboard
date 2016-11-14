@@ -647,7 +647,7 @@
                                                                                 <constraint firstAttribute="width" constant="135" id="1S1-qp-RkN"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
-                                                                            <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8r0-cy-Qol">
@@ -667,7 +667,7 @@
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="hf1-Xf-geu" firstAttribute="leading" secondItem="Qix-15-f2z" secondAttribute="leading" id="3rD-nB-hgN"/>
                                                         <constraint firstAttribute="bottom" secondItem="hf1-Xf-geu" secondAttribute="bottom" id="Q8g-PT-BeB"/>
@@ -729,7 +729,7 @@
             <objects>
                 <navigationController storyboardIdentifier="controller0" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="rKs-AY-N8H" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uiZ-gx-i16">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uiZ-gx-i16">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

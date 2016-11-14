@@ -52,6 +52,8 @@
 		6DE460BB1DCC30270019099B /* EquipmentClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE460BA1DCC30270019099B /* EquipmentClass.swift */; };
 		6DE769441DC1766A0076D12B /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE769431DC1766A0076D12B /* PrincipalViewController.swift */; };
 		6DE769461DC17D7A0076D12B /* PrincipalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE769451DC17D7A0076D12B /* PrincipalTableViewCell.swift */; };
+		6DF300101DD69AF8004CA955 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF3000F1DD69AF8004CA955 /* GameScene.swift */; };
+		6DF300121DD7CE67004CA955 /* GameEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF300111DD7CE67004CA955 /* GameEndViewController.swift */; };
 		C893E21C1DD6A02100B4D4BC /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C893E21B1DD6A02100B4D4BC /* ProjectViewController.swift */; };
 		C893E21E1DD6A0C900B4D4BC /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C893E21D1DD6A0C900B4D4BC /* ProjectTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -125,6 +127,8 @@
 		6DE460BA1DCC30270019099B /* EquipmentClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentClass.swift; sourceTree = "<group>"; };
 		6DE769431DC1766A0076D12B /* PrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
 		6DE769451DC17D7A0076D12B /* PrincipalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalTableViewCell.swift; sourceTree = "<group>"; };
+		6DF3000F1DD69AF8004CA955 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		6DF300111DD7CE67004CA955 /* GameEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEndViewController.swift; sourceTree = "<group>"; };
 		C893E21B1DD6A02100B4D4BC /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		C893E21D1DD6A0C900B4D4BC /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +184,7 @@
 			children = (
 				6DAE11511DCFFE590034D485 /* Transition Files */,
 				6D914B4F1DBDAEBD00413CA5 /* AppDelegate.swift */,
+				6DF3000F1DD69AF8004CA955 /* GameScene.swift */,
 				6D914B951DBDC93100413CA5 /* Common.swift */,
 				6DE460BA1DCC30270019099B /* EquipmentClass.swift */,
 				6D97BD8A1DC10F9A00FEB78C /* SpaceLabel.swift */,
@@ -232,6 +237,7 @@
 		6D914B941DBDC77B00413CA5 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6DF300111DD7CE67004CA955 /* GameEndViewController.swift */,
 				6D9CB4091DD6641B00893B18 /* GameViewController.swift */,
 				6DA046171DCFFAB4006D1D99 /* LaunchSplashViewController.swift */,
 				6D914B511DBDAEBD00413CA5 /* ViewController.swift */,
@@ -445,6 +451,7 @@
 				6DAE11531DD02EB90034D485 /* LaunchTransition.swift in Sources */,
 				6D914B961DBDC93100413CA5 /* Common.swift in Sources */,
 				6DDE03B61DC80FA200738582 /* MaterialsViewController.swift in Sources */,
+				6DF300121DD7CE67004CA955 /* GameEndViewController.swift in Sources */,
 				6D914B931DBDC77600413CA5 /* LoginViewController.swift in Sources */,
 				6DE769461DC17D7A0076D12B /* PrincipalTableViewCell.swift in Sources */,
 				6DAE11501DCFFE540034D485 /* FadeTransition.swift in Sources */,
@@ -458,6 +465,7 @@
 				6D72B4231DCD337F00FA3F3E /* MaterialCollectionViewCell.swift in Sources */,
 				6D45A3081DC6B2DE00124B02 /* EquipmentTabViewController.swift in Sources */,
 				6D45A30C1DC6BCB800124B02 /* EquipmentTableViewCell.swift in Sources */,
+				6DF300101DD69AF8004CA955 /* GameScene.swift in Sources */,
 				6DAE114F1DCFFE540034D485 /* BaseTransition.swift in Sources */,
 				6D914B501DBDAEBD00413CA5 /* AppDelegate.swift in Sources */,
 				C893E21C1DD6A02100B4D4BC /* ProjectViewController.swift in Sources */,

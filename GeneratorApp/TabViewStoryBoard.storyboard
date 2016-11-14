@@ -214,11 +214,20 @@
                         <outletCollection property="tabImageViews" destination="NCk-X8-Mx4" collectionClass="NSMutableArray" id="YW9-LV-fNL"/>
                         <outletCollection property="tabImageViews" destination="PV5-tc-Ba2" collectionClass="NSMutableArray" id="EuD-07-cRE"/>
                         <outletCollection property="tabImageViews" destination="Bds-Ru-aML" collectionClass="NSMutableArray" id="uSY-5K-Lo2"/>
+                        <segue destination="hae-4B-55c" kind="presentation" identifier="gameSegue" modalPresentationStyle="overCurrentContext" id="RKH-Q5-H8w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VjM-Dl-5lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="869.60000000000002" y="136.28185907046478"/>
+        </scene>
+        <!--GameStoryboard-->
+        <scene sceneID="9AQ-7c-pib">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameStoryboard" id="hae-4B-55c" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujp-IL-Az9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1460" y="136"/>
         </scene>
     </scenes>
     <resources>
