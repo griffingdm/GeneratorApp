@@ -1,0 +1,6 @@
+framework module Pods_GeneratorApp {
+  umbrella header "Pods-GeneratorApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
