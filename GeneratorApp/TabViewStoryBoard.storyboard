@@ -221,10 +221,10 @@
             </objects>
             <point key="canvasLocation" x="869.60000000000002" y="136.28185907046478"/>
         </scene>
-        <!--GameStoryboard-->
+        <!--LoginStoryboard-->
         <scene sceneID="9AQ-7c-pib">
             <objects>
-                <viewControllerPlaceholder storyboardName="GameStoryboard" id="hae-4B-55c" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="LoginStoryboard" id="hae-4B-55c" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujp-IL-Az9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1460" y="136"/>

@@ -7,16 +7,24 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
     var user: String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "qwertyuiop"
+            $0.clientKey = "qwertyuiop"
+            $0.server = "http://generatorgator.herokuapp.com/parse"
+        }
+        // Swift 3.0
+        Parse.initialize(with: configuration)
+        
         return true
     }
 
