@@ -32,7 +32,7 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.contentInset.top = 100.0
+        tableView.contentInset.top = 75.0
         tableView.contentInset.bottom = 20
         
         tableView.estimatedRowHeight = 195
