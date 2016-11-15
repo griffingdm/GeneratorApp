@@ -25,12 +25,30 @@ class EquipmentDetailViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        scrollView.delegate = self
+        //scrollView.frame = mamaStack.frame
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if instructions != nil {
+            let path = Bundle.main.path(forResource: instructions, ofType: "txt")!
+            print(instructions)
+            instructionsLabel.text = instructions
+            instructions = try! String(contentsOfFile: path)
+            instructionsLabel.text = instructions
+        }
+        
+        view.layoutIfNeeded()
+        
+        delay(0.1, closure: {
+            self.scrollView.contentSize.height = self.mamaStack.frame.origin.y + self.mamaStack.frame.height + 40
+
+        })
+    }
+    
+    override func viewWillLayoutSubviews() {
     }
     
     override func viewDidLayoutSubviews() {
-        scrollView.contentSize.height = mamaStack.frame.height
-        scrollView.frame = view.frame
     }
     
     func setUp(){
