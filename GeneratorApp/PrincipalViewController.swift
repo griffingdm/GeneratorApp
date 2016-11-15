@@ -37,9 +37,9 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         
         //tableView.tableHeaderView = tableView.dequeueReusableCell(withIdentifier: "principlesHeader")
         
-        let footerView: FooterTableViewCell = tableView.dequeueReusableCell(withIdentifier: "footer") as! FooterTableViewCell
-        footerView.parentController = self
-        tableView.tableFooterView = footerView
+        //let footerView: FooterTableViewCell = tableView.dequeueReusableCell(withIdentifier: "footer") as! FooterTableViewCell
+        //footerView.parentController = self
+        //tableView.tableFooterView = footerView
     }
     
     override func viewDidLayoutSubviews() {

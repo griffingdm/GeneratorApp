@@ -118,7 +118,7 @@
                                                                                 <rect key="frame" x="10" y="10" width="198" height="98"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MFG. &amp;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CDe-ZV-TAa" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="54" height="20"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="20"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="20" id="S1t-JB-HEv"/>
                                                                                         </constraints>
@@ -127,7 +127,7 @@
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INNOVATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LeQ-j9-Okc" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                        <rect key="frame" x="0.0" y="25" width="97" height="20"/>
+                                                                                        <rect key="frame" x="0.0" y="25" width="94.5" height="20"/>
                                                                                         <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
                                                                                         <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
@@ -137,7 +137,7 @@
                                                                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                                     </view>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TX-75024" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PSD-wr-s9P" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                        <rect key="frame" x="0.0" y="78" width="71" height="20"/>
+                                                                                        <rect key="frame" x="0.0" y="78" width="70" height="20"/>
                                                                                         <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
                                                                                         <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
@@ -500,6 +500,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KpZ-cJ-6nn" sceneMemberID="firstResponder"/>
+                <exit id="q3I-Fy-01G" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="rnZ-0d-QP3" userLabel="View Tap Gesture Recognizer">
                     <connections>
                         <action selector="tapView:" destination="R1r-ej-OHU" id="PMl-ge-dtC"/>
@@ -507,7 +508,7 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="dnr-4k-VyI" userLabel="Logo Tap Gesture Recognizer">
                     <connections>
-                        <action selector="didTapLogo:" destination="R1r-ej-OHU" id="zbg-KC-wYU"/>
+                        <segue destination="q3I-Fy-01G" kind="unwind" unwindAction="cancelToHomeWithSegue:" id="XJk-wz-VPO"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
