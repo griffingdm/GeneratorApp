@@ -90,8 +90,8 @@ class TabViewController: UIViewController {
         //tabButtons[previousIndex].isSelected = false
         let previousVC = viewControllers[previousIndex]
         previousVC.willMove(toParentViewController: nil)
-        previousVC.view.removeFromSuperview()
-        previousVC.removeFromParentViewController()
+        //previousVC.view.removeFromSuperview()
+        //previousVC.removeFromParentViewController()
         
         //tabButtons[selectedIndex].isSelected = true
         let selectedVC = viewControllers[selectedIndex]
