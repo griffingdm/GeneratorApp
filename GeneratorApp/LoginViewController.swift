@@ -93,9 +93,8 @@ class LoginViewController: UIViewController {
             print("make it more than two letters!")
         } else {
             appDelegate.user = nameIdField.text
+            performSegue(withIdentifier: "GameSegue", sender: nil)
         }
-        
-        performSegue(withIdentifier: "GameSegue", sender: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -105,16 +104,14 @@ class LoginViewController: UIViewController {
             let cornerRadius: CGFloat = buttonView.frame.height / 2
             roundCorners(view: buttonView, radius: cornerRadius)
         }
+        
+        if appDelegate.user != nil {
+            nameIdField.text = appDelegate.user
+        }
     }
     
     @IBAction func tapView(_ sender: Any) {
         view.endEditing(true)
-    }
-    
-    @IBAction func didTapLogo(_ sender: Any) {
-        //performSegue(withIdentifier: "GameSegue", sender: nil)
-        //performSegue(withIdentifier: "TabStorySegue", sender: nil)
-        //dismiss(animated: true, completion:{})
     }
     
     override func didReceiveMemoryWarning() {

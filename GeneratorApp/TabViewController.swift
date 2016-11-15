@@ -32,6 +32,9 @@ class TabViewController: UIViewController {
     var viewControllers: [UIViewController]!
     var selectedIndex: Int = 1
     
+    var gradientFrame: CGRect!
+    var theGradientLayer: CAGradientLayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,10 +54,14 @@ class TabViewController: UIViewController {
         principalController.tabViewController = self
         
         view.layoutIfNeeded()
-        let gradientFrame = view.convert(bottomGradient.frame, to: bottomGradient.superview)
-        let gradientLayer = vertGradient(topColor: topColor, bottomColor: bottomColor, frame: gradientFrame, yStart: 0)
-        view.layer.addSublayer(gradientLayer)
+        makeGradient()
+        view.layer.addSublayer(theGradientLayer)
         view.bringSubview(toFront: textureView)
+    }
+    
+    func makeGradient(){
+        gradientFrame = view.convert(bottomGradient.frame, to: bottomGradient.superview)
+        theGradientLayer = vertGradient(topColor: topColor, bottomColor: bottomColor, frame: gradientFrame, yStart: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,6 +101,25 @@ class TabViewController: UIViewController {
         selectedVC.didMove(toParentViewController: self)
     }
     
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        
+        makeGradient()
+        
+        var text=""
+        switch UIDevice.current.orientation{
+        case .portrait:
+            text="Portrait"
+        case .portraitUpsideDown:
+            text="PortraitUpsideDown"
+        case .landscapeLeft:
+            text="LandscapeLeft"
+        case .landscapeRight:
+            text="LandscapeRight"
+        default:
+            text="Another"
+        }
+        NSLog("You have moved: \(text)")        
+    }
 
     /*
     // MARK: - Navigation

@@ -11,20 +11,18 @@ import UIKit
 class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
-    var equipment: [Equipment]!
+    var equipment: [Project]!
     
-    let threeDPrinter: Equipment = Equipment(eName: "TROTTER HEADS", eModel: "3D Printing", eImage: #imageLiteral(resourceName: "p-trotter-heads1"), eQuant: 2, eDetailImages: [#imageLiteral(resourceName: "p-trotter-heads2"), #imageLiteral(resourceName: "p-trotter-heads3")], eInstruct: "")
-    let vinylCutter: Equipment = Equipment(eName: "GENERATOR STICKERS", eModel: "Vinyl Cutting", eImage: #imageLiteral(resourceName: "p-generator-sticker1"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "p-generator-sticker2"), #imageLiteral(resourceName: "p-generator-sticker3")], eInstruct: "")
-    let paperCutter: Equipment = Equipment(eName: "MONITOR STAND", eModel: "3D Printing", eImage: #imageLiteral(resourceName: "p-monitor-stand1"), eQuant: 4, eDetailImages: [#imageLiteral(resourceName: "p-monitor-stand2"), #imageLiteral(resourceName: "p-monitor-stand3")], eInstruct: "")
-    
-    var tabController: EquipmentTabViewController!
+    let trotterHeads: Project = Project(eName: "TROTTER HEADS", eModel: "3D Printing", eImage: #imageLiteral(resourceName: "p-trotter-heads1"), eQuant: 2, eDetailImages: [#imageLiteral(resourceName: "p-trotter-heads2"), #imageLiteral(resourceName: "p-trotter-heads3")], eInstruct: "")
+    let generatorStickers: Project = Project(eName: "GENERATOR STICKERS", eModel: "Vinyl Cutting", eImage: #imageLiteral(resourceName: "p-generator-sticker1"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "p-generator-sticker2"), #imageLiteral(resourceName: "p-generator-sticker3")], eInstruct: "")
+    let monitorStand: Project = Project(eName: "MONITOR STAND", eModel: "3D Printing", eImage: #imageLiteral(resourceName: "p-monitor-stand1"), eQuant: 4, eDetailImages: [#imageLiteral(resourceName: "p-monitor-stand2"), #imageLiteral(resourceName: "p-monitor-stand3")], eInstruct: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
-        equipment = [threeDPrinter, vinylCutter, paperCutter]
+        equipment = [trotterHeads, generatorStickers, monitorStand]
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -57,8 +55,8 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell") as! ProjectTableViewCell
         let equip = equipment[indexPath.row]
         
-        cell.equipment = equip
-        print("\(cell.equipment.name!)")
+        cell.project = equip
+        print("\(cell.project.name!)")
         
         cell.equipImage.image = equip.image
         cell.nameLabel.text = equip.name
@@ -69,10 +67,10 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! EquipmentTableViewCell
+        let cell = tableView.cellForRow(at: indexPath) as! ProjectTableViewCell
         
         //print("segue!")
-        tabController.performSegue(withIdentifier: "detailSegue", sender: cell)
+        performSegue(withIdentifier: "projectDetailSegue", sender: cell)
     }
     
     // MARK: - Navigation
@@ -81,5 +79,21 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "projectDetailSegue" {
+            let destination = segue.destination as! ProjectDetailViewController
+            let cell = sender as! ProjectTableViewCell
+            
+            destination.view.layoutIfNeeded()
+            
+            var images = cell.project.detailImages
+            
+            destination.imageView.image = cell.equipImage.image
+            destination.nameLabel.text = cell.nameLabel.text
+            destination.modelLabel.text = cell.modelLabel.text
+            destination.detailImageView1.image = images![0]
+            destination.detailImageView2.image = images![1]
+            destination.instructions = cell.project.instructionText
+        }
     }
 }
