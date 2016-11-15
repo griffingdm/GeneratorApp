@@ -72,6 +72,10 @@ class TabViewController: UIViewController {
     override func viewDidLayoutSubviews() {
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
     @IBAction func cancelToHome(segue:UIStoryboardSegue) {
     }
     
