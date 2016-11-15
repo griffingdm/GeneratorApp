@@ -13,10 +13,13 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var equipment: [Equipment]!
     
-    let threeDPrinter: Equipment = Equipment(eName: "3D PRINTER", eModel: "Flashforge Creator Pro", eImage: #imageLiteral(resourceName: "FlashforgeCreatorProNew2016_FFEU_Bild1"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "t-3d-printer2"), #imageLiteral(resourceName: "t-3d-printer3")], eInstruct: "")
-    let vinylCutter: Equipment = Equipment(eName: "VINYL CUTTER", eModel: "Roland GS-24", eImage: #imageLiteral(resourceName: "gs24standwide"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "t-vinyl-cutter2"), #imageLiteral(resourceName: "t-vinyl-cutter3")], eInstruct: "")
-    let paperCutter: Equipment = Equipment(eName: "PAPER CUTTER", eModel: "Rotatrim RCM30", eImage: #imageLiteral(resourceName: "paper cutter"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "t-paper-cutter2"), #imageLiteral(resourceName: "t-paper-cutter3")], eInstruct: "")
-    let plotter: Equipment = Equipment(eName: "PLOTTER", eModel: "Ricoh MP CW2200", eImage: #imageLiteral(resourceName: "lg_format_printer1"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "lg_format_printer2"), #imageLiteral(resourceName: "lg_format_printer3")], eInstruct: "instructions")
+    let threeDPrinter: Equipment = Equipment(eName: "3D PRINTER", eModel: "Flashforge Creator Pro", eImage: #imageLiteral(resourceName: "FlashforgeCreatorProNew2016_FFEU_Bild1"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "t-3d-printer2"), #imageLiteral(resourceName: "t-3d-printer3")], eInstruct: "3D PRINTER")
+    
+    let vinylCutter: Equipment = Equipment(eName: "VINYL CUTTER", eModel: "Roland GS-24", eImage: #imageLiteral(resourceName: "gs24standwide"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "t-vinyl-cutter2"), #imageLiteral(resourceName: "t-vinyl-cutter3")], eInstruct: "VINYL CUTTER")
+    
+    let paperCutter: Equipment = Equipment(eName: "PAPER CUTTER", eModel: "Rotatrim RCM30", eImage: #imageLiteral(resourceName: "paper cutter"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "t-paper-cutter2"), #imageLiteral(resourceName: "t-paper-cutter3")], eInstruct: "PAPER CUTTER")
+    
+    let plotter: Equipment = Equipment(eName: "PLOTTER", eModel: "Ricoh MP CW2200", eImage: #imageLiteral(resourceName: "lg_format_printer1"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "lg_format_printer2"), #imageLiteral(resourceName: "lg_format_printer3")], eInstruct: "PLOTTER")
     
     var tabController: EquipmentTabViewController!
     
@@ -59,7 +62,7 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
         let equip = equipment[indexPath.row]
         
         cell.equipment = equip
-        print("\(cell.equipment.name!)")
+        //print("\(cell.equipment.name!)")
         
         cell.equipImage.image = equip.image
         cell.nameLabel.text = equip.name

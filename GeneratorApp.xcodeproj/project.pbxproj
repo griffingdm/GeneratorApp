@@ -17,6 +17,10 @@
 		6D72B4231DCD337F00FA3F3E /* MaterialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D72B4221DCD337F00FA3F3E /* MaterialCollectionViewCell.swift */; };
 		6D74930C1DDAA56700F48DF2 /* ProjectDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D74930B1DDAA56700F48DF2 /* ProjectDetailStoryboard.storyboard */; };
 		6D74930E1DDAA85200F48DF2 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D74930D1DDAA85200F48DF2 /* ProjectDetailViewController.swift */; };
+		6D7493151DDAB37B00F48DF2 /* PLOTTER.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6D7493141DDAB37B00F48DF2 /* PLOTTER.txt */; };
+		6D7493171DDAB4C500F48DF2 /* PAPER CUTTER.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6D7493161DDAB4C500F48DF2 /* PAPER CUTTER.txt */; };
+		6D7493191DDAB4D700F48DF2 /* VINYL CUTTER.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6D7493181DDAB4D700F48DF2 /* VINYL CUTTER.txt */; };
+		6D74931B1DDAB4E900F48DF2 /* 3D PRINTER.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6D74931A1DDAB4E900F48DF2 /* 3D PRINTER.txt */; };
 		6D914B501DBDAEBD00413CA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D914B4F1DBDAEBD00413CA5 /* AppDelegate.swift */; };
 		6D914B521DBDAEBD00413CA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D914B511DBDAEBD00413CA5 /* ViewController.swift */; };
 		6D914B551DBDAEBD00413CA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D914B531DBDAEBD00413CA5 /* Main.storyboard */; };
@@ -98,6 +102,10 @@
 		6D72B4221DCD337F00FA3F3E /* MaterialCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaterialCollectionViewCell.swift; path = ../MaterialCollectionViewCell.swift; sourceTree = "<group>"; };
 		6D74930B1DDAA56700F48DF2 /* ProjectDetailStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		6D74930D1DDAA85200F48DF2 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
+		6D7493141DDAB37B00F48DF2 /* PLOTTER.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PLOTTER.txt; sourceTree = "<group>"; };
+		6D7493161DDAB4C500F48DF2 /* PAPER CUTTER.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "PAPER CUTTER.txt"; sourceTree = "<group>"; };
+		6D7493181DDAB4D700F48DF2 /* VINYL CUTTER.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "VINYL CUTTER.txt"; sourceTree = "<group>"; };
+		6D74931A1DDAB4E900F48DF2 /* 3D PRINTER.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "3D PRINTER.txt"; sourceTree = "<group>"; };
 		6D914B4C1DBDAEBD00413CA5 /* GeneratorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeneratorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D914B4F1DBDAEBD00413CA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D914B511DBDAEBD00413CA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -208,9 +216,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6D7493131DDAB2D200F48DF2 /* EquipmentInstructions */ = {
+			isa = PBXGroup;
+			children = (
+				6D74931A1DDAB4E900F48DF2 /* 3D PRINTER.txt */,
+				6D7493141DDAB37B00F48DF2 /* PLOTTER.txt */,
+				6D7493161DDAB4C500F48DF2 /* PAPER CUTTER.txt */,
+				6D7493181DDAB4D700F48DF2 /* VINYL CUTTER.txt */,
+			);
+			name = EquipmentInstructions;
+			sourceTree = "<group>";
+		};
 		6D914B431DBDAEBC00413CA5 = {
 			isa = PBXGroup;
 			children = (
+				6D7493131DDAB2D200F48DF2 /* EquipmentInstructions */,
 				6D914B4E1DBDAEBD00413CA5 /* GeneratorApp */,
 				6D914B631DBDAEBD00413CA5 /* GeneratorAppTests */,
 				6D914B6E1DBDAEBD00413CA5 /* GeneratorAppUITests */,
@@ -469,6 +489,7 @@
 			files = (
 				6D914B8C1DBDB1E000413CA5 /* Optimist_Rg.ttf in Resources */,
 				6D914B891DBDB1E000413CA5 /* Optimist_It.ttf in Resources */,
+				6D74931B1DDAB4E900F48DF2 /* 3D PRINTER.txt in Resources */,
 				6D914B8E1DBDB1E000413CA5 /* Optimist_SBdIt.ttf in Resources */,
 				6D9933F91DC6918B00F697C2 /* ProjectStoryboard.storyboard in Resources */,
 				6D914B881DBDB1E000413CA5 /* Optimist_BdIt.ttf in Resources */,
@@ -477,8 +498,10 @@
 				6D9933F31DC68C0C00F697C2 /* TabViewStoryBoard.storyboard in Resources */,
 				6D914B8D1DBDB1E000413CA5 /* Optimist_SBd.ttf in Resources */,
 				6D914B8B1DBDB1E000413CA5 /* Optimist_LtIt.ttf in Resources */,
+				6D7493151DDAB37B00F48DF2 /* PLOTTER.txt in Resources */,
 				6D914B5A1DBDAEBD00413CA5 /* LaunchScreen.storyboard in Resources */,
 				6D914B8A1DBDB1E000413CA5 /* Optimist_Lt.ttf in Resources */,
+				6D7493171DDAB4C500F48DF2 /* PAPER CUTTER.txt in Resources */,
 				6D9CB4081DD6638500893B18 /* GameStoryboard.storyboard in Resources */,
 				6D9933F71DC68E7B00F697C2 /* PrincipleStoryboard.storyboard in Resources */,
 				6D914B8F1DBDB1E000413CA5 /* Optimist_XLt.ttf in Resources */,
@@ -488,6 +511,7 @@
 				6D26AA591DC85C2200088307 /* EquipmentDetailStoryboard.storyboard in Resources */,
 				6D914B901DBDB1E000413CA5 /* Optimist_XLtIt.ttf in Resources */,
 				6D9933FB1DC692AF00F697C2 /* EquipmentStoryboard.storyboard in Resources */,
+				6D7493191DDAB4D700F48DF2 /* VINYL CUTTER.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,6 @@ class Equipment {
     var detailImages: [UIImage]!
     var instructionText: String!
     
-    
     init(eName: String, eModel: String, eImage: UIImage, eQuant: Int, eDetailImages: [UIImage], eInstruct: String) {
         name = eName
         model = eModel
