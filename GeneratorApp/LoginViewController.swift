@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     //@IBOutlet weak var passKeyStack: UIStackView!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var nameIdField: UITextField!
+    @IBOutlet weak var nameFieldLabel: SpaceLabel!
+    @IBOutlet weak var pageHeader: SpaceLabel!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -57,6 +59,8 @@ class LoginViewController: UIViewController {
         ogNameFrame = mamaStack.convert(nameStack.frame, from: nameStack.superview)
         //ogPasskeyFrame = mamaStack.convert(passKeyStack.frame, from: passKeyStack.superview)
         
+        nameIdField.becomeFirstResponder()
+        
     }
     
     func showKeyboard(notification: Notification){
@@ -89,12 +93,46 @@ class LoginViewController: UIViewController {
         //performSegue(withIdentifier: "loginSegue", sender: nil)
         //performSegue(withIdentifier: "TabStorySegue", sender: nil)
         
-        if (nameIdField.text?.characters.count)! < 3 {
+        if (nameIdField.text?.characters.count)! < 1 {
             print("make it more than two letters!")
+            makeNameError()
         } else {
             appDelegate.user = nameIdField.text
             performSegue(withIdentifier: "GameSegue", sender: nil)
         }
+    }
+    
+    func makeNameError(){
+        if pageHeader.superview?.layer.animationKeys()?.count == nil && pageHeader.text == "CIRCUIT BREAKER" {
+            UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
+                self.pageHeader.superview?.isHidden = true
+                self.pageHeader.alpha = 0
+            }, completion: {(Bool) in
+                self.pageHeader.text = "ENTER A NAME!"
+                UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
+                    self.pageHeader.superview?.isHidden = false
+                    self.pageHeader.alpha = 1
+                }, completion: {(Bool) in
+                    delay(1, closure: {
+                        self.returnNameError()
+                    })
+                })
+            })
+        }
+    }
+    
+    func returnNameError(){
+        UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
+            self.pageHeader.superview?.isHidden = true
+            self.pageHeader.alpha = 0
+        }, completion: {(Bool) in
+            self.pageHeader.text = "CIRCUIT BREAKER"
+            UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
+                self.pageHeader.superview?.isHidden = false
+                self.pageHeader.alpha = 1
+            }, completion: {(Bool) in
+            })
+        })
     }
     
     override func viewDidLayoutSubviews() {
