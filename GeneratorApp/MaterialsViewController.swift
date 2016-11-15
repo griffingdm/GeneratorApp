@@ -29,7 +29,7 @@ class MaterialsViewController: UIViewController, UICollectionViewDelegate, UICol
         // Do any additional setup after loading the view.
         theCollectionView.delegate = self
         theCollectionView.dataSource = self
-        theCollectionView.contentInset.top = 100.0
+        theCollectionView.contentInset.top = 75.0
         theCollectionView.contentInset.bottom = 20
         if let flowLayout = theCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = CGSize(width: 160, height: 35)
