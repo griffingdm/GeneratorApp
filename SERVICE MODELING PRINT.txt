@@ -1,0 +1,17 @@
+1. Assuming you have completed the Large Format Printer setup in the 'Tools' section
+
+2. Send this file to your email
+
+3. Open file in acrobat
+
+4. Select PPCPPSV01-PC4-3rdFloor-WideFormat as the printer
+
+5. Click Page Setup
+
+6. Under 'Paper Size' select 'Manage Custom Sizes'
+
+7. Add a custom size that is 36 in wide with a height of 24 in. and click 'OK'
+
+8. Make sure custom size is selected and click 'OK'
+
+9. Click 'Print' and wait a few minutes for the print to send

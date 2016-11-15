@@ -1,0 +1,23 @@
+1. Ensure the vinyl cutter and the attached PC are powered on
+
+2. Open the Roland Cut Studio software
+
+3. Locate the 'generator_logo.png' file in the 'Projects' folder on the desktop
+
+4. Drag the png onto the canvas in Cut Studio and center at the bottom
+
+5. Right click the png and select 'Image Outline'
+
+6. Click 'Extract Contour Lines' and deselect 'View Image'
+
+7. From the top menu click 'Cutting' and then click 'OK'
+
+8. Allow the cut to finish then lift the back lever and pull the roll out and trim off the cut logos
+
+9. Peel off the excess material around the cut logos
+
+10. Adhere the blue checkered transfer tape to the cut logos and squeegee with scraper to ensure full contact
+
+11. Cut the sandwiched logos apart to separate
+
+12. When ready to apply, peel the transfer tape back, removing the cut out logo
