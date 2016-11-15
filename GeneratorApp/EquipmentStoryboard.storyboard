@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11760" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rKs-AY-N8H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rKs-AY-N8H">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,7 +84,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="134.5" height="34"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOOLS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3u-al-CgL" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="9.5" width="134.5" height="16.5"/>
+                                                                        <rect key="frame" x="0.0" y="8.5" width="134.5" height="18.5"/>
                                                                         <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                         <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -135,7 +135,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="134.5" height="34"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MATERIALS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beR-ZC-aVN" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="9.5" width="134.5" height="16.5"/>
+                                                                        <rect key="frame" x="0.0" y="8.5" width="134.5" height="18.5"/>
                                                                         <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                         <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -377,7 +377,7 @@
                                                                                             <rect key="frame" x="0.0" y="0.0" width="197" height="76"/>
                                                                                             <subviews>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaI-5p-yqm" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                                    <rect key="frame" x="10" y="10" width="177" height="21"/>
+                                                                                                    <rect key="frame" x="10" y="10" width="177" height="23.5"/>
                                                                                                     <attributedString key="attributedText">
                                                                                                         <fragment content="SOLDERING IRON">
                                                                                                             <attributes>
@@ -400,7 +400,7 @@
                                                                                             <rect key="frame" x="0.0" y="78" width="197" height="30"/>
                                                                                             <subviews>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flashforge Creator Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRr-uS-ycU">
-                                                                                                    <rect key="frame" x="10" y="9.5" width="101.5" height="12"/>
+                                                                                                    <rect key="frame" x="10" y="9" width="107" height="13"/>
                                                                                                     <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="10"/>
                                                                                                     <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                     <nil key="highlightedColor"/>
@@ -431,7 +431,7 @@
                                                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QTY-1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTp-YC-2mB" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                            <rect key="frame" x="10" y="8" width="34" height="14"/>
+                                                                                            <rect key="frame" x="10" y="7" width="33.5" height="16"/>
                                                                                             <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="12"/>
                                                                                             <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                             <nil key="highlightedColor"/>
@@ -448,16 +448,16 @@
                                                                                     <rect key="frame" x="122" y="0.0" width="197" height="30"/>
                                                                                     <subviews>
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="6tO-dw-x0r">
-                                                                                            <rect key="frame" x="10" y="7.5" width="177" height="15"/>
+                                                                                            <rect key="frame" x="10" y="7" width="177" height="16"/>
                                                                                             <subviews>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="READ MANUAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDZ-mV-K8t" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                                    <rect key="frame" x="0.0" y="1" width="150" height="14"/>
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="16"/>
                                                                                                     <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="12"/>
                                                                                                     <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
                                                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="rAu-v0-XgX">
-                                                                                                    <rect key="frame" x="150" y="0.0" width="27" height="15"/>
+                                                                                                    <rect key="frame" x="150" y="1" width="27" height="15"/>
                                                                                                     <constraints>
                                                                                                         <constraint firstAttribute="width" constant="27" id="9Yb-Ev-0Gt"/>
                                                                                                     </constraints>
@@ -729,7 +729,7 @@
             <objects>
                 <navigationController storyboardIdentifier="controller0" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="rKs-AY-N8H" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uiZ-gx-i16">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uiZ-gx-i16">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
