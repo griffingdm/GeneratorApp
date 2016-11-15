@@ -332,7 +332,7 @@
                                                                                 </subviews>
                                                                             </stackView>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstItem="XJ6-py-fKF" firstAttribute="height" secondItem="Lt6-tl-mCv" secondAttribute="height" id="9NK-jJ-Hvy"/>
                                                                             <constraint firstItem="XJ6-py-fKF" firstAttribute="centerY" secondItem="Lt6-tl-mCv" secondAttribute="centerY" id="Tdb-5e-E08"/>
