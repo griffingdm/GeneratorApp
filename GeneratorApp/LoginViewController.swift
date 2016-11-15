@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var buttonViewsToRound: [UIView]!
     @IBOutlet weak var powerUpButtonParentView: UIView!
     @IBOutlet weak var nameStack: UIStackView!
-    @IBOutlet weak var passKeyStack: UIStackView!
+    //@IBOutlet weak var passKeyStack: UIStackView!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var nameIdField: UITextField!
     
@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
         ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
         ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
         ogNameFrame = mamaStack.convert(nameStack.frame, from: nameStack.superview)
-        ogPasskeyFrame = mamaStack.convert(passKeyStack.frame, from: passKeyStack.superview)
+        //ogPasskeyFrame = mamaStack.convert(passKeyStack.frame, from: passKeyStack.superview)
         
     }
     
@@ -98,7 +98,7 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        self.passKeyStack.isHidden = true
+        //self.passKeyStack.isHidden = true
         view.layoutIfNeeded()
         for buttonView in buttonViewsToRound{
             let cornerRadius: CGFloat = buttonView.frame.height / 2
