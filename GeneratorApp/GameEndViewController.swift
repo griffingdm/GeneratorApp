@@ -9,9 +9,10 @@
 import UIKit
 import Parse
 
-class GameEndViewController: UIViewController {
+class GameEndViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var scoreTableView: UITableView!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -51,6 +52,32 @@ class GameEndViewController: UIViewController {
         }
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell") as! ProjectTableViewCell
+        //let equip = equipment[indexPath.row]
+        
+//        cell.project = equip
+//        print("\(cell.project.name!)")
+//        
+//        cell.equipImage.image = equip.image
+//        cell.nameLabel.text = equip.name
+//        cell.modelLabel.text = equip.model
+//        cell.quantity.text = "HRS-\(equip.qty!)"
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! ProjectTableViewCell
+        
+        //print("segue!")
+        performSegue(withIdentifier: "projectDetailSegue", sender: cell)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -61,7 +88,7 @@ class GameEndViewController: UIViewController {
         
     }
     
-    @IBAction func pressRestart(_ sender: Any) {
+    @IBAction func pressRestart(_ sender: UIButton) {
         dismiss(animated: true, completion:{
             self.gameController.surgesLabel.text = "PREPARE!"
             self.gameController.animateCircuit()
