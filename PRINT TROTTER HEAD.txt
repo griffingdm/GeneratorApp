@@ -1,0 +1,7 @@
+1. Make sure printer is powered on
+2. Clean printing surface with clean cloth and alcohol to ensure good contact
+3. Ensure Generator SD card is inserted behind control panel
+4. Select 'Build from SD' from the menu
+5. Select 'Trotter head' from the list
+6. Allow the print to finish and completely cool before removing
+7. Carefully remove the object without scratching the print surface

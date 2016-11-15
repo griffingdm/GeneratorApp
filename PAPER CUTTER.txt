@@ -1,22 +1,22 @@
-*Assuming you have a Mac*
+*How to handle the paper cutter*
 
-1.	 Download the driver using this link (if in chrome, you may need to click ‘Keep’ at bottom of browser): http://support.ricoh.com/bb/pub_e/dr_ut_e/0001274/0001274189/V2600/Ricoh_PS_Printers_Vol3_EXP_LIO_2.6.0.0.dmg
+• ALWAYS hold the cutter with two hands by the baseboard.
 
-2.	Double Click the .pkg file to install
+• NEVER hold the cutter by its bar.
 
-3.	Open Printers & Scanners (In your system preferences)
 
-4.	Click the '+' in the bottom left corner of the window - "Add Printer or Scanner”
 
-5.	Stay in the Default tab and search for "PC4-3rdFloor-WideFormat”
+*How to use the paper cutter*
 
-6.	Click on the printer and make sure the ‘Use’ dropdown has “RICOH MP CW2200 PS”
-	1.	If not, click “Select Software”
-	2.	Search for and select "RICOH MP CW2200 PS”
-	7.	Click add to finish adding your printer
+• Always place the cutter on a flat surface to prevent movement.
 
-*Tips and Other Info*
-	•	The roll is 36” wide.
-	•	If printing tall images, it's a good idea to change them to landscape to minimize paper cutting headaches.
-	•	You can create, save, and use custom paper sizes in the regular print dialog.
-	•	Be patient, it takes a minute or two for your computer to send data to the plotter
+• Position the cutting head to the right hand side of the trimmer before inserting material.
+
+• Insert your material to the left hand side of the trimmer, placing the work under the clear clampstrip (to
+ensure a square cut). Butt your work up to the side and position the cursor to the desired measurement.
+
+• Slide the cutting head right to left to smoothly cut through your work, replacing the cutting head to the right
+hand side before removing your work to ensure a clean cut edge.
+
+• NEVER exceed the recommended cut capacity for the trimmer - this may lead to overloading and could effect the
+warranty of the trimmer.

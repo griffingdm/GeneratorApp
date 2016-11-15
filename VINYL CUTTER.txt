@@ -1,22 +1,28 @@
-*Assuming you have a Mac*
+*Windows*
 
-1.	 Download the driver using this link (if in chrome, you may need to click ‘Keep’ at bottom of browser): http://support.ricoh.com/bb/pub_e/dr_ut_e/0001274/0001274189/V2600/Ricoh_PS_Printers_Vol3_EXP_LIO_2.6.0.0.dmg
+•	Roland CutStudio Online Help (Windows)
+After you start CutStudio, go to the menu bar and click [Help], then [Contents].
+Alternatively, click [Start], point to [Programs] (or [All Programs]), then point to [Roland CutStudio].
+Click [CutStudio Help].
 
-2.	Double Click the .pkg file to install
+•	CAMM-1 Driver Online Help (Windows)
+Go to the driver's window and click the [Help] button.
 
-3.	Open Printers & Scanners (In your system preferences)
+•	CutStudio Plug-in for Adobe Illustrator Online Help
+At the [Roland CutStudio] palette, click the button, then click [Help].
+For more information, refer to the "CutStudio Plug-in for Adobe Illustrator/CorelDRAW Setup Guide."
 
-4.	Click the '+' in the bottom left corner of the window - "Add Printer or Scanner”
+•	Operation Manuals
+Click [Start], point to [Programs] (or [All Programs]), then point to [Roland GX-24 Operation Manuals].
+Click the electronic-format manual you want to view.
 
-5.	Stay in the Default tab and search for "PC4-3rdFloor-WideFormat”
 
-6.	Click on the printer and make sure the ‘Use’ dropdown has “RICOH MP CW2200 PS”
-	1.	If not, click “Select Software”
-	2.	Search for and select "RICOH MP CW2200 PS”
-	7.	Click add to finish adding your printer
+*Macintosh*
 
-*Tips and Other Info*
-	•	The roll is 36” wide.
-	•	If printing tall images, it's a good idea to change them to landscape to minimize paper cutting headaches.
-	•	You can create, save, and use custom paper sizes in the regular print dialog.
-	•	Be patient, it takes a minute or two for your computer to send data to the plotter
+•	CutStudio Plug-in for Adobe Illustrator Online Help
+Download CutStudio Plug-in
+At the [Roland CutStudio] palette, click the button, then click [Help].
+For more information, refer to the "Macintosh Cutting Guide."
+
+•	Operation Manuals
+On the desktop, double-click the icon for the manual.
