@@ -11,8 +11,11 @@ import UIKit
 class CircuitBreakerUITabTableViewCell: UITableViewCell {
     @IBOutlet weak var circuitBreakImageView: UIImageView!
     @IBOutlet weak var CircuitBreakLabel: SpaceLabel!
-    @IBOutlet var circuitBreakDetailLabels: [UILabel]!
+    @IBOutlet weak var topThreeStack: UIStackView!
 
+    @IBOutlet var topPlayerLabels: [SpaceLabel]!
+    @IBOutlet var topScoreLabels: [SpaceLabel]!
+    
     var parentController: PrincipalViewController!
     
     override func awakeFromNib() {

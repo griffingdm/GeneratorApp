@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class PrincipalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
@@ -16,6 +17,8 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
     var allLabels: [Int:[String]]!
     
     var tabViewController: TabViewController!
+    
+    var gameScores: [GameScore]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +37,8 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
+        
+        getTheScores()
         
         //tableView.tableHeaderView = tableView.dequeueReusableCell(withIdentifier: "principlesHeader")
         
@@ -67,6 +72,21 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "circuitBreakCell") as! CircuitBreakerUITabTableViewCell
             cell.parentController = self
+            
+            if gameScores.count > 0 {
+                for (index, pLabel) in cell.topPlayerLabels.enumerated(){
+                    if gameScores[index].playerName != nil {
+                        pLabel.text = gameScores[index].playerName!
+                    }
+                }
+                
+                for (index, sLabel) in cell.topScoreLabels.enumerated(){
+                    if gameScores[index].score != nil {
+                        sLabel.text = "\(gameScores[index].score!)"
+                    }
+                }
+            }
+            
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "principlesHeader")
@@ -96,6 +116,50 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBAction func tapLogo(_ sender: Any) {
         tabViewController.performSegue(withIdentifier: "gameSegue", sender: nil)
+    }
+    
+    @IBAction func getTheScores() {
+        
+        
+        let query = PFQuery(className:"GameScore")
+        query.order(byDescending: "score")
+        query.limit = 3
+        
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if error == nil {
+                
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) scores.")
+                // Do something with the found objects
+                if let objects = objects {
+                    for object in objects {
+                        print(object.objectId ?? "-")
+                        let thisName = object["playerName"] as! String
+                        let thisScore = object["score"] as! Int
+                        
+                        let newGameScore = GameScore(playerName: thisName, score: thisScore)
+                        
+                        //print(object["playerName"])
+                        
+                        self.gameScores.append(newGameScore)
+                    }
+                    
+                    self.tableView.reloadData()
+                    //self.activityIndicator.stopAnimating()
+                    //self.activityIndicator.superview?.alpha = 0
+                    //self.scoreTableView.reloadData()
+                }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!)")
+                print("THAT DIDNT WORK")
+            }
+        }
+    }
+    
+    struct GameScore {
+        var playerName: String!
+        var score: Int!
     }
     
     //MARK: UITableViewDelegate
