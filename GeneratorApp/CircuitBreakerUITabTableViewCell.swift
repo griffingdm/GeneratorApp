@@ -24,6 +24,7 @@ class CircuitBreakerUITabTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        getTheScores()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,9 +38,9 @@ class CircuitBreakerUITabTableViewCell: UITableViewCell {
     }
     
     func getTheScores() {
-        if gameScores.count == 0 {
-            topThreeStack.isHidden = true
-            
+        gameScores = []
+        
+        //if gameScores.count < 3 {
             let query = PFQuery(className:"GameScore")
             query.order(byDescending: "score")
             query.limit = 3
@@ -74,24 +75,38 @@ class CircuitBreakerUITabTableViewCell: UITableViewCell {
                     print("THAT DIDNT WORK")
                 }
             }
-        }
+        //}
     }
     
     func setTheScores(){
+        var sames: Int = 0
+        
         if gameScores.count > 0 {
             for (index, pLabel) in topPlayerLabels.enumerated(){
-                if gameScores[index].playerName != nil {
-                    pLabel.text = gameScores[index].playerName!
+                if gameScores.count > index {
+                    if pLabel.text != gameScores[index].playerName!{
+                        pLabel.text = gameScores[index].playerName!
+                        sames += 1
+                    }
                 }
             }
             
             for (index, sLabel) in topScoreLabels.enumerated(){
-                if gameScores[index].score != nil {
-                    sLabel.text = "\(gameScores[index].score!)"
+                if gameScores.count > index {
+                    if sLabel.text != "\(gameScores[index].score!)" {
+                        sLabel.text = "\(gameScores[index].score!)"
+                        sames += 1
+                    }
                 }
             }
             
             self.topThreeStack.isHidden = false
+            
+            if sames != 6 {
+                self.parentController.tableView.reloadData()   
+            }
+        } else {
+            topThreeStack.isHidden = true
             self.parentController.tableView.reloadData()
         }
     }

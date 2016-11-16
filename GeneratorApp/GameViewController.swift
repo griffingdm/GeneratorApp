@@ -310,6 +310,15 @@ class GameViewController: UIViewController {
         }
     }
     
+    @IBAction func topScoreShortcut(_ sender: Any) {
+        win = false
+        scene.view?.isPaused = true
+        
+        killIndicators(score: scene.surgesCountered)
+        performSegue(withIdentifier: "gameEndSegue", sender: nil)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -340,7 +349,6 @@ class GameViewController: UIViewController {
         
         // Adjust the transition duration. (seconds)
         endGameTransition.duration = 0.5
-        
         
         if win == true {
             destController.resultString = "You've Won!"
