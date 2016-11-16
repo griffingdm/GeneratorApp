@@ -50,17 +50,12 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        nameIdField.becomeFirstResponder()
         //UIView.animate(withDuration: 0) {
         //    self.passKeyStack.isHidden = true
         //}
         
-        ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
-        ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
-        ogNameFrame = mamaStack.convert(nameStack.frame, from: nameStack.superview)
         //ogPasskeyFrame = mamaStack.convert(passKeyStack.frame, from: passKeyStack.superview)
-        
-        nameIdField.becomeFirstResponder()
-        
     }
     
     func showKeyboard(notification: Notification){
@@ -146,6 +141,10 @@ class LoginViewController: UIViewController {
         if appDelegate.user != nil {
             nameIdField.text = appDelegate.user
         }
+        
+        ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
+        ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
+        ogNameFrame = mamaStack.convert(nameStack.frame, from: nameStack.superview)
     }
     
     @IBAction func tapView(_ sender: Any) {

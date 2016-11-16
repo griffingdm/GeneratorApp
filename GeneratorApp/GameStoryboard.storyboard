@@ -28,12 +28,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Al7-i9-qtN" customClass="SKView">
-                                <rect key="frame" x="0.0" y="70" width="375" height="452"/>
-                            </view>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" image="texture" translatesAutoresizingMaskIntoConstraints="NO" id="3Ug-SA-jlA">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sg4-V1-WKE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
@@ -1597,6 +1591,12 @@
                                     <constraint firstItem="zfU-Dj-0bq" firstAttribute="leading" secondItem="sg4-V1-WKE" secondAttribute="leading" id="scY-sk-KEi"/>
                                 </constraints>
                             </view>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Al7-i9-qtN" customClass="SKView">
+                                <rect key="frame" x="0.0" y="70" width="375" height="452"/>
+                            </view>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" image="texture" translatesAutoresizingMaskIntoConstraints="NO" id="3Ug-SA-jlA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -2204,13 +2204,20 @@
                                     </mask>
                                 </variation>
                             </stackView>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" image="texture" translatesAutoresizingMaskIntoConstraints="NO" id="LZW-gI-JHU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xcn-2B-JYV" firstAttribute="top" secondItem="t4Y-5J-adZ" secondAttribute="bottom" constant="20" id="06M-Lh-4dS"/>
+                            <constraint firstItem="xcn-2B-JYV" firstAttribute="top" secondItem="LZW-gI-JHU" secondAttribute="bottom" id="Dw6-Ow-Ux9"/>
+                            <constraint firstItem="LZW-gI-JHU" firstAttribute="leading" secondItem="8GQ-gF-YqM" secondAttribute="leading" id="EYZ-Cd-dWU"/>
                             <constraint firstItem="t4Y-5J-adZ" firstAttribute="leading" secondItem="8GQ-gF-YqM" secondAttribute="leading" constant="26" id="Ex9-U6-P3j"/>
                             <constraint firstItem="t4Y-5J-adZ" firstAttribute="centerY" secondItem="8GQ-gF-YqM" secondAttribute="centerY" id="j6s-qd-uGs"/>
                             <constraint firstItem="t4Y-5J-adZ" firstAttribute="centerX" secondItem="8GQ-gF-YqM" secondAttribute="centerX" id="qxJ-p9-OSb"/>
+                            <constraint firstAttribute="trailing" secondItem="LZW-gI-JHU" secondAttribute="trailing" id="tAe-2O-yKx"/>
+                            <constraint firstItem="LZW-gI-JHU" firstAttribute="top" secondItem="8GQ-gF-YqM" secondAttribute="top" id="tWk-39-Izw"/>
                         </constraints>
                         <variation key="widthClass=regular">
                             <mask key="constraints">
