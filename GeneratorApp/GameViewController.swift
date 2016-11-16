@@ -25,6 +25,8 @@ class GameViewController: UIViewController {
     @IBOutlet var scoreIndicators: [FullRoundView]!
     @IBOutlet var cannons: [FullRoundView]!
     
+    @IBOutlet var numberButtons: [FullRoundView]!
+    
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var logoImageBackground: UIImageView!
     
@@ -96,7 +98,39 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func gunDown(_ sender: UITapGestureRecognizer) {
-        let gun: UITapGestureRecognizer = sender
+            let gun: UITapGestureRecognizer = sender
+            scene.shoot(tag:  (gun.view?.tag)!)
+            
+            if scene.view?.isPaused == false {
+                for dot in theDots{
+                    if dot.tag == gun.view?.tag{
+                        dot.alpha = 1
+                        
+                        UIView.animate(withDuration: 0.25, animations:{
+                            dot.alpha = 0
+                        })
+                    }
+                }
+                
+                for numberButton in numberButtons {
+                    if numberButton.tag == gun.view?.tag{
+                        numberButton.layer.removeAllAnimations()
+                        numberButton.alpha = 0
+                        
+                        UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
+                            numberButton.alpha = 1
+                        }){(finished: Bool) -> Void in
+                        }
+                    }
+                }
+                
+                cannon()
+            }
+    }
+    
+    @IBAction func touchDownGun(_ sender: TouchDownGestureRecognizer) {
+        let gun: TouchDownGestureRecognizer = sender
+        
         scene.shoot(tag:  (gun.view?.tag)!)
         
         if scene.view?.isPaused == false {
@@ -107,6 +141,18 @@ class GameViewController: UIViewController {
                     UIView.animate(withDuration: 0.25, animations:{
                         dot.alpha = 0
                     })
+                }
+            }
+            
+            for numberButton in numberButtons {
+                if numberButton.tag == gun.view?.tag{
+                    numberButton.layer.removeAllAnimations()
+                    numberButton.alpha = 0
+                    
+                    UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
+                        numberButton.alpha = 1
+                    }){(finished: Bool) -> Void in
+                    }
                 }
             }
             
@@ -238,13 +284,13 @@ class GameViewController: UIViewController {
     }
     
     func surge(surger: UIView){
-            surger.layer.removeAllAnimations()
-            surger.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
+        surger.layer.removeAllAnimations()
+        surger.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
         
-            UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
-                surger.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1)
-            }){(finished: Bool) -> Void in
-            }
+        UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
+            surger.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1)
+        }){(finished: Bool) -> Void in
+        }
     }
     
     func cannon(){
@@ -295,7 +341,7 @@ class GameViewController: UIViewController {
         // Adjust the transition duration. (seconds)
         endGameTransition.duration = 0.5
         
-
+        
         if win == true {
             destController.resultString = "You've Won!"
         } else {

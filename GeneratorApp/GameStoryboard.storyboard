@@ -28,6 +28,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Al7-i9-qtN" customClass="SKView">
+                                <rect key="frame" x="0.0" y="70" width="375" height="452"/>
+                            </view>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" image="texture" translatesAutoresizingMaskIntoConstraints="NO" id="3Ug-SA-jlA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sg4-V1-WKE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
@@ -410,16 +416,16 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6b-fL-Kq2">
                                                         <rect key="frame" x="25" y="0.0" width="325" height="70"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omq-RV-KIG">
+                                                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omq-RV-KIG">
                                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="70"/>
                                                                 <subviews>
                                                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQU-Ro-ktY" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                         <rect key="frame" x="10" y="15" width="40" height="40"/>
                                                                         <subviews>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDd-AH-lMO" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDd-AH-lMO" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                                 <rect key="frame" x="2" y="2" width="36" height="36"/>
                                                                                 <subviews>
-                                                                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLz-m2-Q8B">
+                                                                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLz-m2-Q8B">
                                                                                         <rect key="frame" x="-2" y="-2" width="40" height="40"/>
                                                                                         <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="20"/>
                                                                                         <state key="normal" title="1">
@@ -456,16 +462,16 @@
                                                                     <constraint firstItem="HQU-Ro-ktY" firstAttribute="centerX" secondItem="omq-RV-KIG" secondAttribute="centerX" id="uuj-B0-03i"/>
                                                                 </constraints>
                                                                 <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="R1q-qm-aLM" appends="YES" id="IBV-Ng-cLm"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="zV6-bj-H3C" appends="YES" id="9fY-hl-29B"/>
                                                                 </connections>
                                                             </view>
-                                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBv-Z5-6uq">
+                                                            <view multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBv-Z5-6uq">
                                                                 <rect key="frame" x="60" y="0.0" width="60" height="70"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3d-to-gbJ" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3d-to-gbJ" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                         <rect key="frame" x="10" y="15" width="40" height="40"/>
                                                                         <subviews>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60x-s4-tis" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                            <view userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60x-s4-tis" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                                 <rect key="frame" x="2" y="2" width="36" height="36"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o08-fR-JKj">
@@ -505,7 +511,7 @@
                                                                     <constraint firstItem="X3d-to-gbJ" firstAttribute="centerY" secondItem="qBv-Z5-6uq" secondAttribute="centerY" id="u29-FX-hHl"/>
                                                                 </constraints>
                                                                 <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="vtb-RI-nCp" appends="YES" id="Vj3-Hx-ZPL"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="RJo-8j-Ey5" appends="YES" id="2g3-6D-dyb"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzY-3A-l0P" userLabel="spacerView">
@@ -517,13 +523,13 @@
                                                                     </constraint>
                                                                 </constraints>
                                                             </view>
-                                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ect-i3-cyD">
+                                                            <view multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ect-i3-cyD">
                                                                 <rect key="frame" x="130" y="0.0" width="60" height="70"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFd-Pb-aGw" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFd-Pb-aGw" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                         <rect key="frame" x="10" y="15" width="40" height="40"/>
                                                                         <subviews>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phS-YM-RTd" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phS-YM-RTd" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                                 <rect key="frame" x="2" y="2" width="36" height="36"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqh-Ok-QrK">
@@ -563,20 +569,23 @@
                                                                     </constraint>
                                                                 </constraints>
                                                                 <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="1PW-3I-ySd" appends="YES" id="oEm-mX-Mmt"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="ODX-mD-fbm" appends="YES" id="pY9-r1-RFp"/>
                                                                 </connections>
                                                             </view>
-                                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3Y-lm-csd">
+                                                            <view multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3Y-lm-csd">
                                                                 <rect key="frame" x="190" y="0.0" width="60" height="70"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dz-52-VPZ" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dz-52-VPZ" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                         <rect key="frame" x="10" y="15" width="40" height="40"/>
                                                                         <subviews>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pu2-ll-NWb" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                            <view userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pu2-ll-NWb" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                                 <rect key="frame" x="2" y="2" width="36" height="36"/>
                                                                                 <subviews>
-                                                                                    <button opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwq-6S-aZ2">
+                                                                                    <button opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwq-6S-aZ2">
                                                                                         <rect key="frame" x="-2" y="-2" width="40" height="40"/>
+                                                                                        <accessibility key="accessibilityConfiguration">
+                                                                                            <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                                                                        </accessibility>
                                                                                         <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="20"/>
                                                                                         <state key="normal" title="4">
                                                                                             <color key="titleColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -612,7 +621,7 @@
                                                                     <constraint firstItem="9dz-52-VPZ" firstAttribute="width" secondItem="9dz-52-VPZ" secondAttribute="height" id="kwr-hU-5fa"/>
                                                                 </constraints>
                                                                 <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="K7i-W0-NxN" appends="YES" id="fyI-1Z-k8b"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="fdu-zu-0vU" appends="YES" id="uA8-QQ-LQK"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJn-Ns-mHV" userLabel="spacerView">
@@ -623,16 +632,16 @@
                                                                     </constraint>
                                                                 </constraints>
                                                             </view>
-                                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJV-mD-g2k">
+                                                            <view multipleTouchEnabled="YES" tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJV-mD-g2k">
                                                                 <rect key="frame" x="265" y="0.0" width="60" height="70"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9K-oU-bEg" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9K-oU-bEg" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                         <rect key="frame" x="10" y="15" width="40" height="40"/>
                                                                         <subviews>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHH-Ig-QTc" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                            <view userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHH-Ig-QTc" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
                                                                                 <rect key="frame" x="2" y="2" width="36" height="36"/>
                                                                                 <subviews>
-                                                                                    <button opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pha-OM-4ss">
+                                                                                    <button opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pha-OM-4ss">
                                                                                         <rect key="frame" x="-2" y="-2" width="40" height="40"/>
                                                                                         <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="20"/>
                                                                                         <state key="normal" title="5">
@@ -669,7 +678,7 @@
                                                                     <constraint firstItem="s9K-oU-bEg" firstAttribute="centerX" secondItem="GJV-mD-g2k" secondAttribute="centerX" id="zk2-Y1-sh5"/>
                                                                 </constraints>
                                                                 <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="ShP-Wz-19w" appends="YES" id="ZgO-hB-8bs"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="P3P-lm-V6X" appends="YES" id="tC9-kl-xaq"/>
                                                                 </connections>
                                                             </view>
                                                         </subviews>
@@ -1588,12 +1597,6 @@
                                     <constraint firstItem="zfU-Dj-0bq" firstAttribute="leading" secondItem="sg4-V1-WKE" secondAttribute="leading" id="scY-sk-KEi"/>
                                 </constraints>
                             </view>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Al7-i9-qtN" customClass="SKView">
-                                <rect key="frame" x="0.0" y="70" width="375" height="452"/>
-                            </view>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" image="texture" translatesAutoresizingMaskIntoConstraints="NO" id="3Ug-SA-jlA">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1644,6 +1647,11 @@
                         <outletCollection property="cannons" destination="nyX-DU-lhb" collectionClass="NSMutableArray" id="9b5-sf-Y5l"/>
                         <outletCollection property="cannons" destination="j9V-9k-gvV" collectionClass="NSMutableArray" id="cLx-xy-RIG"/>
                         <outletCollection property="cannons" destination="8iy-wx-M7g" collectionClass="NSMutableArray" id="Vh8-Js-Cel"/>
+                        <outletCollection property="numberButtons" destination="FDd-AH-lMO" collectionClass="NSMutableArray" id="gHv-ca-FGb"/>
+                        <outletCollection property="numberButtons" destination="60x-s4-tis" collectionClass="NSMutableArray" id="PQW-Dn-TRd"/>
+                        <outletCollection property="numberButtons" destination="phS-YM-RTd" collectionClass="NSMutableArray" id="HV1-dm-GmL"/>
+                        <outletCollection property="numberButtons" destination="pu2-ll-NWb" collectionClass="NSMutableArray" id="fci-gc-oC7"/>
+                        <outletCollection property="numberButtons" destination="aHH-Ig-QTc" collectionClass="NSMutableArray" id="pFD-jC-uHl"/>
                         <segue destination="8yf-63-c8Y" kind="presentation" identifier="gameEndSegue" id="EeN-0b-G32"/>
                     </connections>
                 </viewController>
@@ -1653,31 +1661,31 @@
                         <action selector="tapLogo:" destination="zHI-YB-iRK" id="46h-Np-V3L"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="R1q-qm-aLM">
+                <gestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" id="zV6-bj-H3C" customClass="TouchDownGestureRecognizer" customModule="GeneratorApp" customModuleProvider="target">
                     <connections>
-                        <action selector="gunDown:" destination="zHI-YB-iRK" id="MeM-SW-maQ"/>
+                        <action selector="touchDownGun:" destination="zHI-YB-iRK" id="aAw-bC-fhv"/>
                     </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="vtb-RI-nCp">
+                </gestureRecognizer>
+                <gestureRecognizer id="RJo-8j-Ey5" customClass="TouchDownGestureRecognizer" customModule="GeneratorApp" customModuleProvider="target">
                     <connections>
-                        <action selector="gunDown:" destination="zHI-YB-iRK" id="fN5-ZJ-cOg"/>
+                        <action selector="touchDownGun:" destination="zHI-YB-iRK" id="28F-LQ-kHf"/>
                     </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="1PW-3I-ySd">
+                </gestureRecognizer>
+                <gestureRecognizer id="ODX-mD-fbm" customClass="TouchDownGestureRecognizer" customModule="GeneratorApp" customModuleProvider="target">
                     <connections>
-                        <action selector="gunDown:" destination="zHI-YB-iRK" id="hYx-6o-Nvf"/>
+                        <action selector="touchDownGun:" destination="zHI-YB-iRK" id="Be8-ut-Egc"/>
                     </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="K7i-W0-NxN">
+                </gestureRecognizer>
+                <gestureRecognizer id="fdu-zu-0vU" customClass="TouchDownGestureRecognizer" customModule="GeneratorApp" customModuleProvider="target">
                     <connections>
-                        <action selector="gunDown:" destination="zHI-YB-iRK" id="Vit-cP-dur"/>
+                        <action selector="touchDownGun:" destination="zHI-YB-iRK" id="Pxj-Qu-D9R"/>
                     </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="ShP-Wz-19w">
+                </gestureRecognizer>
+                <gestureRecognizer id="P3P-lm-V6X" customClass="TouchDownGestureRecognizer" customModule="GeneratorApp" customModuleProvider="target">
                     <connections>
-                        <action selector="gunDown:" destination="zHI-YB-iRK" id="lgR-iC-EpS"/>
+                        <action selector="touchDownGun:" destination="zHI-YB-iRK" id="iiM-8s-zVP"/>
                     </connections>
-                </tapGestureRecognizer>
+                </gestureRecognizer>
             </objects>
             <point key="canvasLocation" x="858" y="119"/>
         </scene>
@@ -1989,7 +1997,7 @@
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhN-Fs-7yI" customClass="DottedView" customModule="GeneratorApp" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="319" height="206.5"/>
                                                                                 <subviews>
-                                                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="38" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0lH-LP-ZGW">
+                                                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="38" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0lH-LP-ZGW">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="319" height="206.5"/>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                                         <prototypes>
@@ -2094,7 +2102,7 @@
                                                                                         </prototypes>
                                                                                     </tableView>
                                                                                     <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZU-sy-4UH" customClass="FullRoundView" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                        <rect key="frame" x="144" y="88.5" width="30" height="30"/>
+                                                                                        <rect key="frame" x="144" y="89" width="30" height="30"/>
                                                                                         <subviews>
                                                                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="FqG-eA-ETx">
                                                                                                 <rect key="frame" x="5" y="5" width="20" height="20"/>
