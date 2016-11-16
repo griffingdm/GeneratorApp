@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class PrincipalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
@@ -16,6 +17,8 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
     var allLabels: [Int:[String]]!
     
     var tabViewController: TabViewController!
+    
+    //var gameScores: [GameScore]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,8 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
         
+        //getTheScores()
+        
         //tableView.tableHeaderView = tableView.dequeueReusableCell(withIdentifier: "principlesHeader")
         
         //let footerView: FooterTableViewCell = tableView.dequeueReusableCell(withIdentifier: "footer") as! FooterTableViewCell
@@ -46,12 +51,28 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //print("scrolled")
+//        if scrollView.contentOffset.y < -10 {
+//            print("refresh")
+//            //tableView.reloadData()
+//            tableView.cellForRow(at: IndexPath(item: 1, section: 0))?.awakeFromNib()
+//        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,6 +88,8 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "circuitBreakCell") as! CircuitBreakerUITabTableViewCell
             cell.parentController = self
+            
+            
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "principlesHeader")
@@ -98,21 +121,11 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         tabViewController.performSegue(withIdentifier: "gameSegue", sender: nil)
     }
     
-    //MARK: UITableViewDelegate
-//    func tableView(_ tableView: UITableView,
-//                            viewForHeaderInSection section: Int) -> UIView?
-//    {
-//        // This is where you would change section header content
-//        return tableView.dequeueReusableCell(withIdentifier: "header")?.contentView
-//    }
-    
-    
-//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        // This is where you would change section header content
-//        return tableView.dequeueReusableCell(withIdentifier: "footer")?.contentView
-//    }
-    
-    /*
+    @IBAction func tapRefresh(_ sender: UITapGestureRecognizer) {
+        print("refresh")
+        tableView.reloadData()
+        tableView.cellForRow(at: IndexPath(item: 1, section: 0))?.awakeFromNib()
+    }
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -120,6 +133,5 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
      }
-     */
     
 }

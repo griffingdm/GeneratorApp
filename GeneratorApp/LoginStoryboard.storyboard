@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11760" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R1r-ej-OHU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R1r-ej-OHU">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -397,19 +397,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="wH4-jq-W3P">
-                                                        <rect key="frame" x="0.0" y="243" width="596" height="82"/>
+                                                        <rect key="frame" x="0.0" y="243" width="596" height="103.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Va3-rc-BG8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="596" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="596" height="51.5"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erz-bB-uQH">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="51.5"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="ENTER NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTc-bc-mWM" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                <rect key="frame" x="20" y="5" width="100" height="20"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="20" id="qX0-m4-ycs"/>
-                                                                                </constraints>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="ENTER NAME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTc-bc-mWM" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
+                                                                                <rect key="frame" x="20" y="5" width="54" height="42"/>
                                                                                 <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
                                                                                 <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -423,14 +420,17 @@
                                                                             <constraint firstItem="lTc-bc-mWM" firstAttribute="centerX" secondItem="erz-bB-uQH" secondAttribute="centerX" id="njl-X8-I9q"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9c-Oa-jUO">
-                                                                        <rect key="frame" x="142" y="0.0" width="454" height="30"/>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9c-Oa-jUO" customClass="DottedView" customModule="GeneratorApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="96" y="0.0" width="500" height="51.5"/>
                                                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="Q62-cJ-Pv8"/>
+                                                                        </constraints>
                                                                     </view>
                                                                 </subviews>
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rS1-U2-gYf">
-                                                                <rect key="frame" x="0.0" y="32" width="596" height="50"/>
+                                                                <rect key="frame" x="0.0" y="53.5" width="596" height="50"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RPc-Ze-lce">
                                                                         <rect key="frame" x="10" y="10" width="576" height="30"/>
@@ -439,7 +439,7 @@
                                                                         </constraints>
                                                                         <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="22"/>
-                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue"/>
                                                                     </textField>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -453,7 +453,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bdg-Be-eLs">
-                                                        <rect key="frame" x="0.0" y="327" width="596" height="429"/>
+                                                        <rect key="frame" x="0.0" y="348.5" width="596" height="407.5"/>
                                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4D-Bz-9E6">
@@ -639,8 +639,10 @@
                     </view>
                     <connections>
                         <outlet property="mamaStack" destination="ieK-IU-Fl4" id="ek2-it-u4n"/>
+                        <outlet property="nameFieldLabel" destination="lTc-bc-mWM" id="Trz-hm-LeB"/>
                         <outlet property="nameIdField" destination="RPc-Ze-lce" id="jYb-Rh-LeQ"/>
                         <outlet property="nameStack" destination="wH4-jq-W3P" id="zn8-6N-P8e"/>
+                        <outlet property="pageHeader" destination="qEY-ej-FlV" id="Ype-Q3-Mny"/>
                         <outlet property="powerUpButtonParentView" destination="C2Y-gw-SKu" id="GRT-0J-7Eu"/>
                         <outlet property="topSectionParent" destination="IZk-e6-6Ag" id="DXl-O0-E2X"/>
                         <outletCollection property="buttonViewsToRound" destination="Ifp-j4-Seh" collectionClass="NSMutableArray" id="VMu-TN-3n9"/>
@@ -662,7 +664,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="112.5" y="135.21126760563379"/>
+            <point key="canvasLocation" x="112.5" y="134.765625"/>
         </scene>
         <!--TabViewStoryBoard-->
         <scene sceneID="ySO-qM-sLZ">

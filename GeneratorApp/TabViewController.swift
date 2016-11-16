@@ -72,6 +72,10 @@ class TabViewController: UIViewController {
     override func viewDidLayoutSubviews() {
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
     @IBAction func cancelToHome(segue:UIStoryboardSegue) {
     }
     
@@ -90,8 +94,8 @@ class TabViewController: UIViewController {
         //tabButtons[previousIndex].isSelected = false
         let previousVC = viewControllers[previousIndex]
         previousVC.willMove(toParentViewController: nil)
-        previousVC.view.removeFromSuperview()
-        previousVC.removeFromParentViewController()
+        //previousVC.view.removeFromSuperview()
+        //previousVC.removeFromParentViewController()
         
         //tabButtons[selectedIndex].isSelected = true
         let selectedVC = viewControllers[selectedIndex]

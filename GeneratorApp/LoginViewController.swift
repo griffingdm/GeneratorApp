@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var mamaStack: UIStackView!
     @IBOutlet weak var topSectionParent: UIView!
@@ -18,8 +18,12 @@ class LoginViewController: UIViewController {
     //@IBOutlet weak var passKeyStack: UIStackView!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var nameIdField: UITextField!
+    @IBOutlet weak var nameFieldLabel: SpaceLabel!
+    @IBOutlet weak var pageHeader: SpaceLabel!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    let limitLength: Int = 7
     
     var ogNameFrame: CGRect!
     var ogPasskeyFrame: CGRect!
@@ -36,6 +40,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nameIdField.delegate = self
+        
         NotificationCenter.default.addObserver(forName: Notification.Name.UIKeyboardWillShow, object: nil, queue: OperationQueue.main) { (notification: Notification) in
             // Any code you put in here will be called when the keyboard is about to display
             self.showKeyboard(notification: notification)
@@ -48,15 +54,12 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        nameIdField.becomeFirstResponder()
         //UIView.animate(withDuration: 0) {
         //    self.passKeyStack.isHidden = true
         //}
         
-        ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
-        ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
-        ogNameFrame = mamaStack.convert(nameStack.frame, from: nameStack.superview)
         //ogPasskeyFrame = mamaStack.convert(passKeyStack.frame, from: passKeyStack.superview)
-        
     }
     
     func showKeyboard(notification: Notification){
@@ -89,12 +92,46 @@ class LoginViewController: UIViewController {
         //performSegue(withIdentifier: "loginSegue", sender: nil)
         //performSegue(withIdentifier: "TabStorySegue", sender: nil)
         
-        if (nameIdField.text?.characters.count)! < 3 {
+        if (nameIdField.text?.characters.count)! < 1 {
             print("make it more than two letters!")
+            makeNameError()
         } else {
             appDelegate.user = nameIdField.text
             performSegue(withIdentifier: "GameSegue", sender: nil)
         }
+    }
+    
+    func makeNameError(){
+        if pageHeader.superview?.layer.animationKeys()?.count == nil && pageHeader.text == "CIRCUIT BREAKER" {
+            UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
+                self.pageHeader.superview?.isHidden = true
+                self.pageHeader.alpha = 0
+            }, completion: {(Bool) in
+                self.pageHeader.text = "ENTER A NAME!"
+                UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
+                    self.pageHeader.superview?.isHidden = false
+                    self.pageHeader.alpha = 1
+                }, completion: {(Bool) in
+                    delay(1, closure: {
+                        self.returnNameError()
+                    })
+                })
+            })
+        }
+    }
+    
+    func returnNameError(){
+        UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
+            self.pageHeader.superview?.isHidden = true
+            self.pageHeader.alpha = 0
+        }, completion: {(Bool) in
+            self.pageHeader.text = "CIRCUIT BREAKER"
+            UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
+                self.pageHeader.superview?.isHidden = false
+                self.pageHeader.alpha = 1
+            }, completion: {(Bool) in
+            })
+        })
     }
     
     override func viewDidLayoutSubviews() {
@@ -108,6 +145,10 @@ class LoginViewController: UIViewController {
         if appDelegate.user != nil {
             nameIdField.text = appDelegate.user
         }
+        
+        ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
+        ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
+        ogNameFrame = mamaStack.convert(nameStack.frame, from: nameStack.superview)
     }
     
     @IBAction func tapView(_ sender: Any) {
@@ -117,6 +158,18 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return true }
+        let newLength = text.characters.count + string.characters.count - range.length
+        return newLength <= limitLength
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        self.tapPowerUp(self)
+        return true
     }
     
     /*

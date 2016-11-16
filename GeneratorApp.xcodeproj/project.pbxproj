@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		580C9C6720FA3F43A992EDD5 /* Pods_GeneratorAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D11424CD39CFD0397893E27 /* Pods_GeneratorAppTests.framework */; };
+		6D041C831DDB844A0035702F /* ScoreCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D041C821DDB844A0035702F /* ScoreCellTableViewCell.swift */; };
 		6D26AA591DC85C2200088307 /* EquipmentDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D26AA581DC85C2200088307 /* EquipmentDetailStoryboard.storyboard */; };
 		6D26AA5B1DC85C5300088307 /* EquipmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26AA5A1DC85C5300088307 /* EquipmentDetailViewController.swift */; };
 		6D45A3061DC6ADB700124B02 /* DottedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A3051DC6ADB700124B02 /* DottedView.swift */; };
@@ -64,6 +65,7 @@
 		6DE769461DC17D7A0076D12B /* PrincipalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE769451DC17D7A0076D12B /* PrincipalTableViewCell.swift */; };
 		6DF300101DD69AF8004CA955 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF3000F1DD69AF8004CA955 /* GameScene.swift */; };
 		6DF300121DD7CE67004CA955 /* GameEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF300111DD7CE67004CA955 /* GameEndViewController.swift */; };
+		6DF8F6C01DDBF89D00DE3112 /* TouchDownGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF8F6BF1DDBF89D00DE3112 /* TouchDownGestureRecognizer.swift */; };
 		8CF61791634035F0B77D3D19 /* Pods_GeneratorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B28241CA7E3FEF5C3831CC /* Pods_GeneratorApp.framework */; };
 		9F38881A6E05E0847A7FBBFC /* Pods_GeneratorAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2A1041EC503BBBED8C28FD /* Pods_GeneratorAppUITests.framework */; };
 		C85C83371DDAE656004DEA08 /* GENERATOR LOGO LAPTOP STICKER.txt in Resources */ = {isa = PBXBuildFile; fileRef = C85C83341DDAE656004DEA08 /* GENERATOR LOGO LAPTOP STICKER.txt */; };
@@ -96,6 +98,7 @@
 		2D11424CD39CFD0397893E27 /* Pods_GeneratorAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeneratorAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		589B8500EE25EC2718EE44A6 /* Pods-GeneratorAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneratorAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeneratorAppUITests/Pods-GeneratorAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CD1D2D2DB18845597E23695 /* Pods-GeneratorAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneratorAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeneratorAppTests/Pods-GeneratorAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D041C821DDB844A0035702F /* ScoreCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCellTableViewCell.swift; sourceTree = "<group>"; };
 		6D26AA581DC85C2200088307 /* EquipmentDetailStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EquipmentDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		6D26AA5A1DC85C5300088307 /* EquipmentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentDetailViewController.swift; sourceTree = "<group>"; };
 		6D45A3051DC6ADB700124B02 /* DottedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DottedView.swift; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 		6DE769451DC17D7A0076D12B /* PrincipalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalTableViewCell.swift; sourceTree = "<group>"; };
 		6DF3000F1DD69AF8004CA955 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		6DF300111DD7CE67004CA955 /* GameEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEndViewController.swift; sourceTree = "<group>"; };
+		6DF8F6BF1DDBF89D00DE3112 /* TouchDownGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchDownGestureRecognizer.swift; path = ../TouchDownGestureRecognizer.swift; sourceTree = "<group>"; };
 		77AC1BBEEAC2209575FD2D71 /* Pods-GeneratorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneratorApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeneratorApp/Pods-GeneratorApp.release.xcconfig"; sourceTree = "<group>"; };
 		7EFC8A882D77AF75057D5E45 /* Pods-GeneratorAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneratorAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeneratorAppTests/Pods-GeneratorAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9459980DF6B06F28DB311F5A /* Pods-GeneratorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneratorApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeneratorApp/Pods-GeneratorApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 				6D97BD8A1DC10F9A00FEB78C /* SpaceLabel.swift */,
 				6D45A3051DC6ADB700124B02 /* DottedView.swift */,
 				6D9CB40B1DD6738300893B18 /* FullRoundView.swift */,
+				6DF8F6BF1DDBF89D00DE3112 /* TouchDownGestureRecognizer.swift */,
 				6DAE11511DCFFE590034D485 /* Transition Files */,
 				6D9933F51DC68C2E00F697C2 /* TableViewCells */,
 				6D914B941DBDC77B00413CA5 /* controllers */,
@@ -354,6 +359,7 @@
 		6D9933F51DC68C2E00F697C2 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				6D041C821DDB844A0035702F /* ScoreCellTableViewCell.swift */,
 				6DB076DD1DD9632200CE41FF /* ShareTableViewCell.swift */,
 				6D96663F1DD958830079D40E /* CircuitBreakerUITabTableViewCell.swift */,
 				6D72B4221DCD337F00FA3F3E /* MaterialCollectionViewCell.swift */,
@@ -688,6 +694,7 @@
 				6DF300121DD7CE67004CA955 /* GameEndViewController.swift in Sources */,
 				6D914B931DBDC77600413CA5 /* LoginViewController.swift in Sources */,
 				6D9666401DD958830079D40E /* CircuitBreakerUITabTableViewCell.swift in Sources */,
+				6D041C831DDB844A0035702F /* ScoreCellTableViewCell.swift in Sources */,
 				6DB076DE1DD9632200CE41FF /* ShareTableViewCell.swift in Sources */,
 				6DB076E21DD9722000CE41FF /* EndGameTransition.swift in Sources */,
 				6DE769461DC17D7A0076D12B /* PrincipalTableViewCell.swift in Sources */,
@@ -706,6 +713,7 @@
 				6DF300101DD69AF8004CA955 /* GameScene.swift in Sources */,
 				6DAE114F1DCFFE540034D485 /* BaseTransition.swift in Sources */,
 				6D914B501DBDAEBD00413CA5 /* AppDelegate.swift in Sources */,
+				6DF8F6C01DDBF89D00DE3112 /* TouchDownGestureRecognizer.swift in Sources */,
 				C893E21C1DD6A02100B4D4BC /* ProjectViewController.swift in Sources */,
 				6D9CB40C1DD6738300893B18 /* FullRoundView.swift in Sources */,
 				6D9CB40A1DD6641B00893B18 /* GameViewController.swift in Sources */,
