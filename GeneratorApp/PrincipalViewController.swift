@@ -51,12 +51,28 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //print("scrolled")
+//        if scrollView.contentOffset.y < -10 {
+//            print("refresh")
+//            //tableView.reloadData()
+//            tableView.cellForRow(at: IndexPath(item: 1, section: 0))?.awakeFromNib()
+//        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,21 +89,6 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
             let cell = tableView.dequeueReusableCell(withIdentifier: "circuitBreakCell") as! CircuitBreakerUITabTableViewCell
             cell.parentController = self
             
-//            if gameScores.count > 0 {
-//                for (index, pLabel) in cell.topPlayerLabels.enumerated(){
-//                    if gameScores[index].playerName != nil {
-//                        pLabel.text = gameScores[index].playerName!
-//                    }
-//                }
-//                
-//                for (index, sLabel) in cell.topScoreLabels.enumerated(){
-//                    if gameScores[index].score != nil {
-//                        sLabel.text = "\(gameScores[index].score!)"
-//                    }
-//                }
-//            }
-            
-            cell.getTheScores()
             
             return cell
         case 2:
@@ -120,65 +121,11 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         tabViewController.performSegue(withIdentifier: "gameSegue", sender: nil)
     }
     
-//    @IBAction func getTheScores() {
-//        
-//        
-//        let query = PFQuery(className:"GameScore")
-//        query.order(byDescending: "score")
-//        query.limit = 3
-//        
-//        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
-//            if error == nil {
-//                
-//                // The find succeeded.
-//                print("Successfully retrieved \(objects!.count) scores.")
-//                // Do something with the found objects
-//                if let objects = objects {
-//                    for object in objects {
-//                        print(object.objectId ?? "-")
-//                        let thisName = object["playerName"] as! String
-//                        let thisScore = object["score"] as! Int
-//                        
-//                        let newGameScore = GameScore(playerName: thisName, score: thisScore)
-//                        
-//                        //print(object["playerName"])
-//                        
-//                        self.gameScores.append(newGameScore)
-//                    }
-//                    
-//                    self.tableView.reloadData()
-//                    //self.activityIndicator.stopAnimating()
-//                    //self.activityIndicator.superview?.alpha = 0
-//                    //self.scoreTableView.reloadData()
-//                }
-//            } else {
-//                // Log details of the failure
-//                print("Error: \(error!) \(error!)")
-//                print("THAT DIDNT WORK")
-//            }
-//        }
-//    }
-//    
-//    struct GameScore {
-//        var playerName: String!
-//        var score: Int!
-//    }
-    
-    //MARK: UITableViewDelegate
-//    func tableView(_ tableView: UITableView,
-//                            viewForHeaderInSection section: Int) -> UIView?
-//    {
-//        // This is where you would change section header content
-//        return tableView.dequeueReusableCell(withIdentifier: "header")?.contentView
-//    }
-    
-    
-//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        // This is where you would change section header content
-//        return tableView.dequeueReusableCell(withIdentifier: "footer")?.contentView
-//    }
-    
-    /*
+    @IBAction func tapRefresh(_ sender: UITapGestureRecognizer) {
+        print("refresh")
+        tableView.reloadData()
+        tableView.cellForRow(at: IndexPath(item: 1, section: 0))?.awakeFromNib()
+    }
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -186,6 +133,5 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
      }
-     */
     
 }

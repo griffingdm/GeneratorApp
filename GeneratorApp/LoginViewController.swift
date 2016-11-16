@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var mamaStack: UIStackView!
     @IBOutlet weak var topSectionParent: UIView!
@@ -22,6 +22,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var pageHeader: SpaceLabel!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    let limitLength: Int = 7
     
     var ogNameFrame: CGRect!
     var ogPasskeyFrame: CGRect!
@@ -37,6 +39,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameIdField.delegate = self
         
         NotificationCenter.default.addObserver(forName: Notification.Name.UIKeyboardWillShow, object: nil, queue: OperationQueue.main) { (notification: Notification) in
             // Any code you put in here will be called when the keyboard is about to display
@@ -154,6 +158,18 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return true }
+        let newLength = text.characters.count + string.characters.count - range.length
+        return newLength <= limitLength
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        self.tapPowerUp(self)
+        return true
     }
     
     /*

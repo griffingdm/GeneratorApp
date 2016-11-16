@@ -16,6 +16,9 @@ class GameEndViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var leaderboardLabel: SpaceLabel!
     @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var textureView: UIImageView!
+    @IBOutlet weak var mamaStack: UIStackView!
+    @IBOutlet weak var tableBG: DottedView!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -24,6 +27,11 @@ class GameEndViewController: UIViewController, UITableViewDelegate, UITableViewD
     var gameScores: [GameScore] = []
     
     var gameController: GameViewController!
+    
+    var gradientFrame: CGRect!
+    var theGradientLayer: CAGradientLayer!
+    let bottomColor: CGColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1).cgColor
+    let topColor: CGColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 0).cgColor
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,7 +154,7 @@ class GameEndViewController: UIViewController, UITableViewDelegate, UITableViewD
                         
                         let newGameScore = GameScore(playerName: thisName, score: thisScore)
                         
-                        print(object["playerName" as! String])
+                        print(object["playerName"])
                         
                         self.gameScores.append(newGameScore)
                     }
@@ -177,9 +185,22 @@ class GameEndViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    override func viewDidLayoutSubviews() {
+        //makeGradient()
+        //view.layer.addSublayer(theGradientLayer)
+        //view.bringSubview(toFront: textureView)
+    }
+    
     struct GameScore {
         var playerName: String!
         var score: Int!
+    }
+    
+    func makeGradient(){
+        let gHeight: CGFloat = 20.0
+        gradientFrame = view.convert(mamaStack.frame, to: mamaStack.superview)
+        gradientFrame = CGRect(x: gradientFrame.origin.x, y: gradientFrame.origin.y + gradientFrame.height - gHeight, width: gradientFrame.width, height: gHeight)
+        theGradientLayer = vertGradient(topColor: topColor, bottomColor: bottomColor, frame: gradientFrame, yStart: 0)
     }
     
     /*

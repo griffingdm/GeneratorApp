@@ -92,7 +92,7 @@
                                             <constraint firstAttribute="height" constant="75" id="na7-im-kNg"/>
                                         </constraints>
                                     </stackView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="356" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9IU-Cy-Wro">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="356" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9IU-Cy-Wro">
                                         <rect key="frame" x="26" y="75" width="323" height="1405"/>
                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -233,12 +233,16 @@
                                                                                             <subviews>
                                                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="icon-prin-game" translatesAutoresizingMaskIntoConstraints="NO" id="nxm-Ba-HYQ">
                                                                                                     <rect key="frame" x="20" y="85.5" width="60" height="80"/>
+                                                                                                    <gestureRecognizers/>
                                                                                                     <constraints>
                                                                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="XnD-g6-5eF">
                                                                                                             <variation key="widthClass=compact" constant="60"/>
                                                                                                         </constraint>
                                                                                                         <constraint firstAttribute="height" constant="80" id="s43-X6-GUS"/>
                                                                                                     </constraints>
+                                                                                                    <connections>
+                                                                                                        <outletCollection property="gestureRecognizers" destination="zQ3-nQ-1Xo" appends="YES" id="Rlh-99-czI"/>
+                                                                                                    </connections>
                                                                                                 </imageView>
                                                                                             </subviews>
                                                                                             <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -347,12 +351,16 @@
                                                                                                                 </label>
                                                                                                             </subviews>
                                                                                                             <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                            <gestureRecognizers/>
                                                                                                             <constraints>
                                                                                                                 <constraint firstItem="3JR-YB-Bx9" firstAttribute="top" secondItem="xQt-Wp-6Ro" secondAttribute="top" constant="10" id="0Dn-Wn-2tq"/>
                                                                                                                 <constraint firstAttribute="bottom" secondItem="3JR-YB-Bx9" secondAttribute="bottom" constant="10" id="FSx-Li-iHL"/>
                                                                                                                 <constraint firstAttribute="trailing" secondItem="3JR-YB-Bx9" secondAttribute="trailing" constant="10" id="Iqy-L5-zEL"/>
                                                                                                                 <constraint firstItem="3JR-YB-Bx9" firstAttribute="leading" secondItem="xQt-Wp-6Ro" secondAttribute="leading" constant="10" id="m1k-Ur-H1O"/>
                                                                                                             </constraints>
+                                                                                                            <connections>
+                                                                                                                <outletCollection property="gestureRecognizers" destination="Rh9-iZ-KaZ" appends="YES" id="9bR-T9-Fmc"/>
+                                                                                                            </connections>
                                                                                                         </view>
                                                                                                     </subviews>
                                                                                                 </stackView>
@@ -1285,6 +1293,16 @@
                 <tapGestureRecognizer id="iUg-qG-jGT" userLabel="logoTap">
                     <connections>
                         <action selector="tapLogo:" destination="yQV-B1-rjf" id="RU0-AC-vT3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Rh9-iZ-KaZ" userLabel="topPlayerRefresh">
+                    <connections>
+                        <action selector="tapRefresh:" destination="yQV-B1-rjf" id="Kzy-z0-TFC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zQ3-nQ-1Xo">
+                    <connections>
+                        <action selector="tapRefresh:" destination="yQV-B1-rjf" id="afa-ab-QlD"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
