@@ -56,9 +56,23 @@ class GameEndViewController: UIViewController, UITableViewDelegate, UITableViewD
 //        cell.modelLabel.text = equip.model
 //        cell.quantity.text = "HRS-\(equip.qty!)"
         
+        let theName = gameScores[indexPath.row].playerName
+        let theScore = gameScores[indexPath.row].score!
+        
         cell.rankLabel.text = "\(indexPath.row + 1)"
-        cell.NameLabel.text = gameScores[indexPath.row].playerName
-        cell.scoreLabel.text = "\(gameScores[indexPath.row].score!)"
+        cell.NameLabel.text = theName
+        cell.scoreLabel.text = "\(theScore)"
+        
+        if theName == appDelegate.user && theScore == score {
+            cell.rankLabel.textColor = #colorLiteral(red: 0.9176470588, green: 0.2588235294, blue: 0.1450980392, alpha: 1)
+            cell.NameLabel.textColor = #colorLiteral(red: 0.9176470588, green: 0.2588235294, blue: 0.1450980392, alpha: 1)
+            cell.scoreLabel.textColor = #colorLiteral(red: 0.9176470588, green: 0.2588235294, blue: 0.1450980392, alpha: 1)
+        } else {
+            cell.rankLabel.textColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
+            cell.NameLabel.textColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
+            cell.scoreLabel.textColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
+        }
+        
         
         return cell
     }
