@@ -11,6 +11,7 @@ import Parse
 
 class PrincipalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var refreshLabel: UILabel!
     
     var theImages: [UIImage] = []
     var headers: [String]!
@@ -37,6 +38,8 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
+        
+        refreshLabel.alpha = 0
         
         //getTheScores()
         
@@ -67,12 +70,35 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        //print("scrolled")
-//        if scrollView.contentOffset.y < -10 {
-//            print("refresh")
-//            //tableView.reloadData()
-//            tableView.cellForRow(at: IndexPath(item: 1, section: 0))?.awakeFromNib()
-//        }
+        if scrollView.contentOffset.y < -100 {
+            print("ready to refresh!")
+            //aniType(label: refreshLabel, text: "RELEASE & REFRESH", wait: 0.25)
+            
+            if self.refreshLabel.alpha == 0{
+                UIView.animate(withDuration: 0.25, animations: {
+                    
+                    self.refreshLabel.alpha = 1
+                }, completion: { (Bool) in
+                })
+            }
+        } else {
+            if self.refreshLabel.alpha == 1{
+                UIView.animate(withDuration: 0.25, animations: {
+                    
+                    self.refreshLabel.alpha = 0
+                }, completion: { (Bool) in
+                })
+            }
+        }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.contentOffset.y < -100 {
+            print("refreshing")
+            //tableView.reloadData()
+            tableView.cellForRow(at: IndexPath(item: 1, section: 0))?.awakeFromNib()
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -124,7 +150,7 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
     @IBAction func tapRefresh(_ sender: UITapGestureRecognizer) {
         print("refresh")
         tableView.reloadData()
-        tableView.cellForRow(at: IndexPath(item: 1, section: 0))?.awakeFromNib()
+        //tableView.cellForRow(at: IndexPath(item: 1, section: 0))?.awakeFromNib()
     }
      // MARK: - Navigation
      

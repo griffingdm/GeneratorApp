@@ -47,3 +47,13 @@ func vertGradient(topColor: CGColor, bottomColor: CGColor, frame: CGRect, yStart
         return gradientLayer
 }
 
+func aniType(label: UILabel, text: String, wait: TimeInterval){
+    label.text = ""
+    
+    for (index, char) in text.characters.enumerated() {
+        delay(wait, closure: {
+            label.text = "\(label.text)\(char)"
+        })
+    }
+}
+
