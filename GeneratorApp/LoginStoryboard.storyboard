@@ -592,7 +592,7 @@
                                 <rect key="frame" x="7" y="20" width="754" height="994"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="side-text-right" translatesAutoresizingMaskIntoConstraints="NO" id="Tdg-1r-9Qu">
-                                        <rect key="frame" x="738.5" y="269" width="8.5" height="455"/>
+                                        <rect key="frame" x="745.5" y="269" width="8.5" height="455"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="9" id="JAX-KL-60F"/>
                                         </constraints>
@@ -607,7 +607,7 @@
                                 <constraints>
                                     <constraint firstItem="sEr-3b-UQt" firstAttribute="centerY" secondItem="Pgb-je-n8I" secondAttribute="centerY" id="DZr-3O-arC"/>
                                     <constraint firstItem="Tdg-1r-9Qu" firstAttribute="centerY" secondItem="Pgb-je-n8I" secondAttribute="centerY" id="Xg8-9x-Uzu"/>
-                                    <constraint firstAttribute="trailing" secondItem="Tdg-1r-9Qu" secondAttribute="trailing" constant="7" id="aXs-pz-5b0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tdg-1r-9Qu" secondAttribute="trailing" id="aXs-pz-5b0"/>
                                     <constraint firstItem="sEr-3b-UQt" firstAttribute="leading" secondItem="Pgb-je-n8I" secondAttribute="leading" id="egW-TK-2IX"/>
                                 </constraints>
                             </view>
