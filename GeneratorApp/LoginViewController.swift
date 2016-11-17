@@ -23,7 +23,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    let limitLength: Int = 7
+    let limitLength: Int = 10
     
     var ogNameFrame: CGRect!
     var ogPasskeyFrame: CGRect!
