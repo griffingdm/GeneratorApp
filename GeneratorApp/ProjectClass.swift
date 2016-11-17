@@ -14,14 +14,14 @@ class Project {
     var name: String!
     var model: String!
     var image: UIImage!
-    var qty: Int!
+    var qty: CGFloat!
     
     //for detail
     var detailImages: [UIImage]!
     var instructionText: String!
     
     
-    init(eName: String, eModel: String, eImage: UIImage, eQuant: Int, eDetailImages: [UIImage], eInstruct: String) {
+    init(eName: String, eModel: String, eImage: UIImage, eQuant: CGFloat, eDetailImages: [UIImage], eInstruct: String) {
         name = eName
         model = eModel
         image = eImage
@@ -30,7 +30,7 @@ class Project {
         instructionText = eInstruct
     }
     
-    func clone(equip: Equipment){
+    func clone(equip: Project){
         name = equip.name
         model = equip.model
         image = equip.image

@@ -57,3 +57,7 @@ func aniType(label: UILabel, text: String, wait: TimeInterval){
     }
 }
 
+func toRadians(degrees: Double) -> CGFloat{
+    return (CGFloat(degrees * M_PI) / 180.0)
+}
+

@@ -73,21 +73,15 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
         if scrollView.contentOffset.y < -100 {
             print("ready to refresh!")
             //aniType(label: refreshLabel, text: "RELEASE & REFRESH", wait: 0.25)
-            
             if self.refreshLabel.alpha == 0{
                 UIView.animate(withDuration: 0.25, animations: {
-                    
                     self.refreshLabel.alpha = 1
                 }, completion: { (Bool) in
                 })
             }
         } else {
             if self.refreshLabel.alpha == 1{
-                UIView.animate(withDuration: 0.25, animations: {
-                    
-                    self.refreshLabel.alpha = 0
-                }, completion: { (Bool) in
-                })
+                self.refreshLabel.alpha = 0
             }
         }
     }

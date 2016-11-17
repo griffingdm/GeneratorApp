@@ -160,9 +160,7 @@ class GameViewController: UIViewController {
         }
     }
     
-    func toRadians(degrees: Double) -> CGFloat{
-        return (CGFloat(degrees * M_PI) / 180.0)
-    }
+    
     
     func indicateScore(score: Int){
         for indicator in scoreIndicators {
