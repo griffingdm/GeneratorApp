@@ -7,21 +7,16 @@
 //
 
 import UIKit
+import Parse
 
 class MaterialsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var theCollectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    var materials: [Material]!
-    let paintersTape: Material = Material(picture: #imageLiteral(resourceName: "m-blue-tape1"), theLabel: "Painter's Tape")
-    let binderClips: Material = Material(picture: #imageLiteral(resourceName: "m-binder-clips1"), theLabel: "Binder Clips")
-    let dryEraseMarkers: Material = Material(picture: #imageLiteral(resourceName: "m-dry-erase1"), theLabel: "Dry-Erase Markers")
-    let paper: Material = Material(picture: #imageLiteral(resourceName: "m-construction-paper1"), theLabel: "Paper")
-    let rubberBands: Material = Material(picture: #imageLiteral(resourceName: "m-rubberbands1"), theLabel: "Rubber Bands")
-    let glueSticks: Material = Material(picture: #imageLiteral(resourceName: "m-glue-stick1"), theLabel: "Glue Sticks")
-    let pipeCleaners: Material = Material(picture: #imageLiteral(resourceName: "m-pipe-cleaners1"), theLabel: "Pipe Cleaners")
-    let postIts: Material = Material(picture: #imageLiteral(resourceName: "m-post-its1"), theLabel: "Post-Its")
-    let markers: Material = Material(picture: #imageLiteral(resourceName: "m-sharpies1"), theLabel: "Markers")
-    let xActo: Material = Material(picture: #imageLiteral(resourceName: "m-xacto1"), theLabel: "X-Acto Knives")
+    @IBOutlet weak var errorStack: UIStackView!
+    
+    var theMaterials: [Material]! = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +30,8 @@ class MaterialsViewController: UIViewController, UICollectionViewDelegate, UICol
             flowLayout.estimatedItemSize = CGSize(width: 160, height: 35)
         }
         
-        materials = [postIts, markers, paintersTape, dryEraseMarkers, xActo, binderClips, paper, rubberBands, glueSticks, pipeCleaners]
+        errorStack.isHidden = true
+        getMaterials()
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,25 +44,76 @@ class MaterialsViewController: UIViewController, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = theCollectionView.dequeueReusableCell(withReuseIdentifier: "MaterialCell", for: indexPath) as! MaterialCollectionViewCell
-        let material = materials[indexPath.row]
+        //let material = materials[indexPath.row]
+        let material = theMaterials[indexPath.row]
         
-        cell.materialImage.image = material.image
-        cell.materialLabel.text = material.label
+        //cell.materialImage.image = material.image
+        cell.imageLink = material.imageURL
+        cell.materialLabel.text = material.name
+        cell.loadImage()
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return materials.count
+        return theMaterials.count
+    }
+    
+    @IBAction func getMaterials() {
+        activityIndicator.startAnimating()
+        
+        let query = PFQuery(className:"Material")
+        //query.order(byDescending: "score")
+        //query.limit = 100
+        
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if error == nil {
+                
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) materials.")
+                // Do something with the found objects
+                if let objects = objects {
+                    for object in objects {
+                        print(object.objectId ?? "-")
+                        let thisName = object["Name"] as! String
+                        let imageURL = object["ImageURL"] as! String
+                        
+                        let newMaterial = Material(theName: thisName, imageLink: imageURL)
+                        
+                        print(object["Name"])
+                        
+                        self.theMaterials.append(newMaterial)
+                    }
+                    self.activityIndicator.stopAnimating()
+                    self.theCollectionView.reloadData()
+                }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!)")
+                print("THAT DIDNT WORK")
+                self.errorStack.isHidden = false
+            }
+        }
+    }
+    
+    @IBAction func tapRetry(_ sender: Any) {
+        errorStack.isHidden = true
+        getMaterials()
     }
     
     class Material{
-        var image: UIImage!
-        var label: String!
+        var image: UIImage?
+        var name: String!
+        var imageURL: String?
         
         init(picture: UIImage, theLabel: String) {
             image = picture
-            label = theLabel
+            name = theLabel
+        }
+        
+        init(theName: String, imageLink: String) {
+            name = theName
+            imageURL = imageLink
         }
     }
     
