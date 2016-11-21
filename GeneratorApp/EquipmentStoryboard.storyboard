@@ -636,6 +636,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Its-DE-dO1" userLabel="Vertical Labels">
+                                <rect key="frame" x="7" y="0.0" width="361" height="667"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="side-text-right" translatesAutoresizingMaskIntoConstraints="NO" id="P7F-wX-L0h">
+                                        <rect key="frame" x="352" y="106" width="9" height="455"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="9" id="AFk-t5-gpx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="side-text-left" translatesAutoresizingMaskIntoConstraints="NO" id="vhD-SX-dYH">
+                                        <rect key="frame" x="0.0" y="154" width="9" height="359"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="9" id="DBc-HP-MNA"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vhD-SX-dYH" firstAttribute="leading" secondItem="Its-DE-dO1" secondAttribute="leading" id="19K-hT-Unz"/>
+                                    <constraint firstItem="P7F-wX-L0h" firstAttribute="centerY" secondItem="Its-DE-dO1" secondAttribute="centerY" id="MU8-b6-Whg"/>
+                                    <constraint firstAttribute="trailing" secondItem="P7F-wX-L0h" secondAttribute="trailing" id="ZhQ-wl-Idb"/>
+                                    <constraint firstItem="vhD-SX-dYH" firstAttribute="centerY" secondItem="Its-DE-dO1" secondAttribute="centerY" id="fCP-M9-fUF"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GcV-7u-YjX">
                                 <rect key="frame" x="20" y="20" width="335" height="647"/>
                                 <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -720,10 +743,16 @@
                                                                 <constraint firstAttribute="trailing" secondItem="BtX-o7-Wl3" secondAttribute="trailing" id="iiI-M1-D47"/>
                                                             </constraints>
                                                         </stackView>
+                                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="IBX-XA-jbg">
+                                                            <rect key="frame" x="67" y="67.5" width="20" height="20"/>
+                                                            <color key="color" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </activityIndicatorView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="IBX-XA-jbg" firstAttribute="centerY" secondItem="FqZ-Rb-6i1" secondAttribute="centerY" id="27G-Pu-rnZ"/>
                                                         <constraint firstItem="hf1-Xf-geu" firstAttribute="leading" secondItem="Qix-15-f2z" secondAttribute="leading" id="3rD-nB-hgN"/>
+                                                        <constraint firstItem="IBX-XA-jbg" firstAttribute="centerX" secondItem="FqZ-Rb-6i1" secondAttribute="centerX" id="Aml-2J-7j8"/>
                                                         <constraint firstAttribute="bottom" secondItem="hf1-Xf-geu" secondAttribute="bottom" id="Q8g-PT-BeB"/>
                                                         <constraint firstItem="hf1-Xf-geu" firstAttribute="top" secondItem="Qix-15-f2z" secondAttribute="top" id="WfF-3K-aOX"/>
                                                         <constraint firstAttribute="trailing" secondItem="hf1-Xf-geu" secondAttribute="trailing" id="fRj-KX-ER1"/>
@@ -740,6 +769,7 @@
                                         </constraints>
                                         <size key="customSize" width="160" height="190"/>
                                         <connections>
+                                            <outlet property="activityIndicator" destination="IBX-XA-jbg" id="aeI-Kp-2ZA"/>
                                             <outlet property="materialImage" destination="FqZ-Rb-6i1" id="U3g-YO-4GT"/>
                                             <outlet property="materialLabel" destination="f3j-fX-ghl" id="nwu-hc-ywE"/>
                                         </connections>
@@ -756,40 +786,46 @@
                                     </mask>
                                 </variation>
                             </collectionView>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Its-DE-dO1" userLabel="Vertical Labels">
-                                <rect key="frame" x="7" y="0.0" width="361" height="667"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="obD-Cs-dMj">
+                                <rect key="frame" x="103.5" y="311.5" width="168" height="44.5"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="side-text-right" translatesAutoresizingMaskIntoConstraints="NO" id="P7F-wX-L0h">
-                                        <rect key="frame" x="352.5" y="105.5" width="8.5" height="455"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="9" id="AFk-t5-gpx"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="side-text-left" translatesAutoresizingMaskIntoConstraints="NO" id="vhD-SX-dYH">
-                                        <rect key="frame" x="0.0" y="153.5" width="9" height="359"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="9" id="DBc-HP-MNA"/>
-                                        </constraints>
-                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COULD NOT LOAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btI-Vr-wHh" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="168" height="26"/>
+                                        <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="20"/>
+                                        <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAP TO RETRY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEp-rg-bDC" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="26" width="168" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
+                                        <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="vhD-SX-dYH" firstAttribute="leading" secondItem="Its-DE-dO1" secondAttribute="leading" id="19K-hT-Unz"/>
-                                    <constraint firstItem="P7F-wX-L0h" firstAttribute="centerY" secondItem="Its-DE-dO1" secondAttribute="centerY" id="MU8-b6-Whg"/>
-                                    <constraint firstAttribute="trailing" secondItem="P7F-wX-L0h" secondAttribute="trailing" id="ZhQ-wl-Idb"/>
-                                    <constraint firstItem="vhD-SX-dYH" firstAttribute="centerY" secondItem="Its-DE-dO1" secondAttribute="centerY" id="fCP-M9-fUF"/>
-                                </constraints>
-                            </view>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="g9D-Gy-Fa4" appends="YES" id="7uk-kT-3mq"/>
+                                </connections>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="EEM-bd-vqQ">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <color key="color" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GcV-7u-YjX" firstAttribute="top" secondItem="lth-6B-uQt" secondAttribute="bottom" id="2qx-i4-CUK"/>
+                            <constraint firstItem="EEM-bd-vqQ" firstAttribute="centerX" secondItem="Qp8-j8-Qua" secondAttribute="centerX" id="4on-MG-hff"/>
+                            <constraint firstItem="obD-Cs-dMj" firstAttribute="centerX" secondItem="Qp8-j8-Qua" secondAttribute="centerX" id="AXZ-nN-oVe"/>
                             <constraint firstItem="vA0-kP-NhO" firstAttribute="top" secondItem="Its-DE-dO1" secondAttribute="bottom" id="EyY-Ko-MeQ"/>
                             <constraint firstItem="GcV-7u-YjX" firstAttribute="centerX" secondItem="Qp8-j8-Qua" secondAttribute="centerX" id="R4b-JX-2EE"/>
                             <constraint firstItem="Its-DE-dO1" firstAttribute="leading" secondItem="Qp8-j8-Qua" secondAttribute="leading" constant="7" id="ZFc-Tz-e5l"/>
                             <constraint firstItem="GcV-7u-YjX" firstAttribute="leading" secondItem="Qp8-j8-Qua" secondAttribute="leading" constant="20" id="cBv-g2-fB7"/>
                             <constraint firstAttribute="trailing" secondItem="Its-DE-dO1" secondAttribute="trailing" constant="7" id="eCC-00-2hh"/>
+                            <constraint firstItem="obD-Cs-dMj" firstAttribute="centerY" secondItem="Qp8-j8-Qua" secondAttribute="centerY" id="f2a-Iw-KHu"/>
                             <constraint firstItem="Its-DE-dO1" firstAttribute="top" secondItem="Qp8-j8-Qua" secondAttribute="top" id="hZe-uV-k4g"/>
                             <constraint firstItem="vA0-kP-NhO" firstAttribute="top" secondItem="GcV-7u-YjX" secondAttribute="bottom" id="oW6-bA-4vq"/>
+                            <constraint firstItem="EEM-bd-vqQ" firstAttribute="centerY" secondItem="Qp8-j8-Qua" secondAttribute="centerY" id="pHd-di-1pG"/>
                         </constraints>
                         <variation key="widthClass=regular">
                             <mask key="constraints">
@@ -798,10 +834,17 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="EEM-bd-vqQ" id="wZT-Qw-Yt9"/>
+                        <outlet property="errorStack" destination="obD-Cs-dMj" id="BtW-UM-Dpf"/>
                         <outlet property="theCollectionView" destination="GcV-7u-YjX" id="84M-MR-42C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZf-dF-k9Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="g9D-Gy-Fa4">
+                    <connections>
+                        <action selector="tapRetry:" destination="KpE-32-lMf" id="9p5-wP-NfN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2320.8000000000002" y="1535.0824587706147"/>
         </scene>
