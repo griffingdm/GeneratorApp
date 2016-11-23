@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yQV-B1-rjf">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -134,7 +134,7 @@
                                                                                     <rect key="frame" x="88.5" y="0.0" width="87" height="88"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOLLOW US" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OES-Mt-ZMI">
-                                                                                            <rect key="frame" x="15" y="26.5" width="57" height="36.5"/>
+                                                                                            <rect key="frame" x="15" y="26" width="57" height="36.5"/>
                                                                                             <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                                             <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                             <nil key="highlightedColor"/>
@@ -168,7 +168,7 @@
                                                                             <rect key="frame" x="0.0" y="90" width="264" height="36"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="#GENERATOR_MAKERSPACE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9F-Aa-jXB">
-                                                                                    <rect key="frame" x="38.5" y="10" width="187.5" height="16"/>
+                                                                                    <rect key="frame" x="39" y="10" width="187.5" height="16"/>
                                                                                     <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                                     <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -294,7 +294,7 @@
                                                                                                                         <constraint firstAttribute="width" constant="10" id="jl1-VI-VKb"/>
                                                                                                                     </constraints>
                                                                                                                 </view>
-                                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY CIRCUIT BREAKER" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwk-0L-04i" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
+                                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CIRCUIT BREAKER" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwk-0L-04i" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
                                                                                                                     <rect key="frame" x="10" y="0.0" width="142" height="95.5"/>
                                                                                                                     <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                                     <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="20"/>
@@ -390,7 +390,7 @@
                                                                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="37.5"/>
                                                                                                             <subviews>
                                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nw-6P-jB5" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                                                    <rect key="frame" x="17.5" y="5" width="6.5" height="27.5"/>
+                                                                                                                    <rect key="frame" x="17" y="5" width="6.5" height="27.5"/>
                                                                                                                     <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                                     <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                                                                     <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -466,7 +466,7 @@
                                                                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="37.5"/>
                                                                                                             <subviews>
                                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEa-uj-Dnw" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                                                    <rect key="frame" x="16.5" y="5" width="7.5" height="27.5"/>
+                                                                                                                    <rect key="frame" x="17" y="5" width="7.5" height="27.5"/>
                                                                                                                     <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                                     <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                                                                     <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -542,7 +542,7 @@
                                                                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="37.5"/>
                                                                                                             <subviews>
                                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzi-4i-PAj" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                                                    <rect key="frame" x="16.5" y="5" width="7.5" height="27.5"/>
+                                                                                                                    <rect key="frame" x="17" y="5" width="7.5" height="27.5"/>
                                                                                                                     <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                                     <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                                                                     <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -622,7 +622,7 @@
                                                                                             <rect key="frame" x="2" y="2" width="230" height="46"/>
                                                                                             <subviews>
                                                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="maf-LM-50h">
-                                                                                                    <rect key="frame" x="9.5" y="0.0" width="211.5" height="46"/>
+                                                                                                    <rect key="frame" x="10" y="0.0" width="211.5" height="46"/>
                                                                                                     <subviews>
                                                                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="lightning-left" translatesAutoresizingMaskIntoConstraints="NO" id="iCO-hY-KWp">
                                                                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="46"/>
@@ -652,7 +652,7 @@
                                                                                                 <constraint firstItem="maf-LM-50h" firstAttribute="centerY" secondItem="cJq-0F-1wI" secondAttribute="centerY" id="VLT-Oa-fCP"/>
                                                                                             </constraints>
                                                                                         </view>
-                                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPF-vd-web">
+                                                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPF-vd-web">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="233" height="50"/>
                                                                                             <connections>
                                                                                                 <action selector="playCircuitBreaker:" destination="NWr-0c-deI" eventType="touchUpInside" id="l4c-nP-zAJ"/>
@@ -786,21 +786,21 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrincipleCell" rowHeight="467" id="mwk-xo-RzX" customClass="PrincipalTableViewCell" customModule="GeneratorApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="672" width="268" height="467"/>
+                                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrincipleCell" rowHeight="448" id="mwk-xo-RzX" customClass="PrincipalTableViewCell" customModule="GeneratorApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="672" width="268" height="448"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mwk-xo-RzX" id="4MA-Pj-axf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="268" height="467"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="268" height="448"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gnk-iP-1zd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="268" height="439"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="268" height="420"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-VX-86X">
-                                                                    <rect key="frame" x="2" y="2" width="264" height="435"/>
+                                                                    <rect key="frame" x="2" y="2" width="264" height="416"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="SZv-EJ-48c">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="264" height="435"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="264" height="416"/>
                                                                             <subviews>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZjO-Vg-RRp" customClass="DottedView" customModule="GeneratorApp" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="264" height="20"/>
@@ -810,13 +810,13 @@
                                                                                     </constraints>
                                                                                 </view>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="cOl-q9-rLI">
-                                                                                    <rect key="frame" x="0.0" y="22" width="264" height="325"/>
+                                                                                    <rect key="frame" x="0.0" y="22" width="264" height="306"/>
                                                                                     <subviews>
                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIr-Zd-aPV">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="325"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="306"/>
                                                                                             <subviews>
                                                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="icon-prin-1" translatesAutoresizingMaskIntoConstraints="NO" id="mgU-TW-eRM">
-                                                                                                    <rect key="frame" x="20" y="123" width="60" height="80"/>
+                                                                                                    <rect key="frame" x="20" y="113.5" width="60" height="80"/>
                                                                                                     <constraints>
                                                                                                         <constraint firstAttribute="height" constant="80" id="DU7-52-i98"/>
                                                                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="jHC-gD-NAh">
@@ -834,7 +834,7 @@
                                                                                             </constraints>
                                                                                         </view>
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="h45-di-llP">
-                                                                                            <rect key="frame" x="102" y="0.0" width="162" height="325"/>
+                                                                                            <rect key="frame" x="102" y="0.0" width="162" height="306"/>
                                                                                             <subviews>
                                                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ofx-dc-vmM">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="162" height="40"/>
@@ -876,7 +876,7 @@
                                                                                                     </subviews>
                                                                                                 </stackView>
                                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tht-2P-EVB">
-                                                                                                    <rect key="frame" x="0.0" y="42" width="162" height="283"/>
+                                                                                                    <rect key="frame" x="0.0" y="42" width="162" height="264"/>
                                                                                                     <subviews>
                                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNl-Sf-rMY">
                                                                                                             <rect key="frame" x="0.0" y="0.0" width="162" height="10"/>
@@ -886,24 +886,24 @@
                                                                                                             </constraints>
                                                                                                         </view>
                                                                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyP-tu-6JV">
-                                                                                                            <rect key="frame" x="0.0" y="10" width="162" height="263"/>
+                                                                                                            <rect key="frame" x="0.0" y="10" width="162" height="244"/>
                                                                                                             <subviews>
                                                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02f-SR-AYD">
-                                                                                                                    <rect key="frame" x="0.0" y="0.0" width="10" height="263"/>
+                                                                                                                    <rect key="frame" x="0.0" y="0.0" width="10" height="244"/>
                                                                                                                     <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                                     <constraints>
                                                                                                                         <constraint firstAttribute="width" constant="10" id="mDl-CD-ugt"/>
                                                                                                                     </constraints>
                                                                                                                 </view>
                                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOR PLAYING ONLY" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvg-Yn-cfT" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
-                                                                                                                    <rect key="frame" x="10" y="0.0" width="142" height="263"/>
+                                                                                                                    <rect key="frame" x="10" y="0.0" width="142" height="244"/>
                                                                                                                     <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                                     <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="20"/>
                                                                                                                     <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                                     <nil key="highlightedColor"/>
                                                                                                                 </label>
                                                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tsg-bp-SaC">
-                                                                                                                    <rect key="frame" x="152" y="0.0" width="10" height="263"/>
+                                                                                                                    <rect key="frame" x="152" y="0.0" width="10" height="244"/>
                                                                                                                     <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                                     <constraints>
                                                                                                                         <constraint firstAttribute="width" constant="10" id="vog-Kn-MhM"/>
@@ -912,7 +912,7 @@
                                                                                                             </subviews>
                                                                                                         </stackView>
                                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c35-yJ-zqJ">
-                                                                                                            <rect key="frame" x="0.0" y="273" width="162" height="10"/>
+                                                                                                            <rect key="frame" x="0.0" y="254" width="162" height="10"/>
                                                                                                             <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                             <constraints>
                                                                                                                 <constraint firstAttribute="height" constant="10" id="1o3-HC-Xt1"/>
@@ -925,14 +925,14 @@
                                                                                     </subviews>
                                                                                 </stackView>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAk-mJ-Q8c">
-                                                                                    <rect key="frame" x="0.0" y="349" width="264" height="20"/>
+                                                                                    <rect key="frame" x="0.0" y="330" width="264" height="20"/>
                                                                                     <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="20" id="5dF-Cl-qIy"/>
                                                                                     </constraints>
                                                                                 </view>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="pwQ-L5-nWf">
-                                                                                    <rect key="frame" x="0.0" y="371" width="264" height="64"/>
+                                                                                    <rect key="frame" x="0.0" y="352" width="264" height="64"/>
                                                                                     <subviews>
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMA-3r-f8S">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="264" height="20"/>
@@ -1133,7 +1133,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="footer" rowHeight="101" id="Nla-Wq-4Ta" customClass="FooterTableViewCell" customModule="GeneratorApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1139" width="268" height="101"/>
+                                                <rect key="frame" x="0.0" y="1120" width="268" height="101"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nla-Wq-4Ta" id="aE2-dJ-5SQ">
                                                     <rect key="frame" x="0.0" y="0.0" width="268" height="101"/>
@@ -1149,7 +1149,7 @@
                                                                             <rect key="frame" x="2" y="2" width="264" height="46"/>
                                                                             <subviews>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bRc-M1-dPd">
-                                                                                    <rect key="frame" x="12" y="0.0" width="240" height="46"/>
+                                                                                    <rect key="frame" x="12.5" y="0.0" width="240" height="46"/>
                                                                                     <subviews>
                                                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="lightning-left" translatesAutoresizingMaskIntoConstraints="NO" id="fMI-Km-Ton">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="46"/>

@@ -25,12 +25,14 @@ class TabViewController: UIViewController {
     var principalController: PrincipalViewController!
     var projectsController: UIViewController!
     var equipmentController: UIViewController!
+    var feedController: FeedViewController!
+    var loginController: LoginViewController!
     
     var defaultImages: [UIImage]!
     var selectedImages: [UIImage]!
     
     var viewControllers: [UIViewController]!
-    var selectedIndex: Int = 1
+    var selectedIndex: Int = 2
     
     var gradientFrame: CGRect!
     var theGradientLayer: CAGradientLayer!
@@ -42,14 +44,18 @@ class TabViewController: UIViewController {
         let equipmentStoryboard = UIStoryboard(name: "EquipmentStoryboard", bundle: nil)
         let principleStoryboard = UIStoryboard(name: "PrincipleStoryboard", bundle: nil)
         let projectStoryboard = UIStoryboard(name: "ProjectStoryboard", bundle: nil)
+        let feedStoryboard = UIStoryboard(name: "FeedStoryboard", bundle: nil)
+        let loginStoryboard = UIStoryboard(name: "LoginStoryboard", bundle: nil)
+        
+        loginController = loginStoryboard.instantiateViewController(withIdentifier: "gameLogin") as! LoginViewController
+        feedController = feedStoryboard.instantiateViewController(withIdentifier: "feed") as! FeedViewController
         principalController = principleStoryboard.instantiateViewController(withIdentifier: "controller0") as! PrincipalViewController
         projectsController = projectStoryboard.instantiateViewController(withIdentifier: "controller0")
         equipmentController = equipmentStoryboard.instantiateViewController(withIdentifier: "controller0")
-        viewControllers = [projectsController, principalController, equipmentController]
-        defaultImages = [#imageLiteral(resourceName: "nav-icon-proj"), #imageLiteral(resourceName: "nav-icon-prin"), #imageLiteral(resourceName: "nav-icon-equip")]
-        selectedImages = [#imageLiteral(resourceName: "nav-icon-proj-active") , #imageLiteral(resourceName: "nav-icon-prin-active"), #imageLiteral(resourceName: "nav-icon-equip-active")]
         
-        tapTab(tabButtons[selectedIndex])
+        viewControllers = [projectsController, feedController, principalController, loginController, equipmentController]
+        defaultImages = [#imageLiteral(resourceName: "nav-icon-proj"), #imageLiteral(resourceName: "nav-icon-feed"),#imageLiteral(resourceName: "nav-icon-prin"), #imageLiteral(resourceName: "nav-icon-game"),#imageLiteral(resourceName: "nav-icon-equip")]
+        selectedImages = [#imageLiteral(resourceName: "nav-icon-proj-active") , #imageLiteral(resourceName: "nav-icon-feed-active"), #imageLiteral(resourceName: "nav-icon-prin-active"), #imageLiteral(resourceName: "nav-icon-game-active"), #imageLiteral(resourceName: "nav-icon-equip-active")]
         
         principalController.tabViewController = self
         
@@ -57,11 +63,22 @@ class TabViewController: UIViewController {
         makeGradient()
         view.layer.addSublayer(theGradientLayer)
         view.bringSubview(toFront: textureView)
+        
+        for tab in tabButtons{
+            switch tab.tag {
+            case selectedIndex:
+                tapTab(tab)
+            default:
+                print("not that one")
+            }
+        }
+        //tapTab(tabButtons[selectedIndex])
     }
     
     func makeGradient(){
         gradientFrame = view.convert(bottomGradient.frame, to: bottomGradient.superview)
         theGradientLayer = vertGradient(topColor: topColor, bottomColor: bottomColor, frame: gradientFrame, yStart: 0)
+        theGradientLayer.name = "Gradient"
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,6 +106,13 @@ class TabViewController: UIViewController {
             } else if tabImage.tag == selectedIndex {
                 tabImage.image = selectedImages[selectedIndex]
             }
+        }
+        
+        switch selectedIndex {
+        case 1:
+            self.theGradientLayer.isHidden = true
+        default:
+            self.theGradientLayer.isHidden = false
         }
         
         //tabButtons[previousIndex].isSelected = false
