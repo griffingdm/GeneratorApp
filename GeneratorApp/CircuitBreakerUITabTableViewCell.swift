@@ -13,6 +13,7 @@ class CircuitBreakerUITabTableViewCell: UITableViewCell {
     @IBOutlet weak var circuitBreakImageView: UIImageView!
     @IBOutlet weak var CircuitBreakLabel: SpaceLabel!
     @IBOutlet weak var topThreeStack: UIStackView!
+    @IBOutlet weak var refreshIndicator: UIActivityIndicatorView!
     
     @IBOutlet var topPlayerLabels: [SpaceLabel]!
     @IBOutlet var topScoreLabels: [SpaceLabel]!
@@ -38,6 +39,7 @@ class CircuitBreakerUITabTableViewCell: UITableViewCell {
     }
     
     func getTheScores() {
+        refreshIndicator.startAnimating()
         gameScores = []
         
         //if gameScores.count < 3 {
@@ -101,6 +103,7 @@ class CircuitBreakerUITabTableViewCell: UITableViewCell {
             }
             
             self.topThreeStack.isHidden = false
+            refreshIndicator.stopAnimating()
             
             if sames != 6 {
                 self.parentController.tableView.reloadData()   

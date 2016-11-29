@@ -15,7 +15,7 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     let trotterHeads: Project = Project(eName: "TROTTER HEADS", eModel: "3D Printing", eImage: #imageLiteral(resourceName: "p-trotter-heads1"), eQuant: 2, eDetailImages: [#imageLiteral(resourceName: "p-trotter-heads2"), #imageLiteral(resourceName: "p-trotter-heads3")], eInstruct: "PRINT TROTTER HEAD")
     let generatorStickers: Project = Project(eName: "GENERATOR STICKERS", eModel: "Vinyl Cutting", eImage: #imageLiteral(resourceName: "p-generator-sticker1"), eQuant: 1, eDetailImages: [#imageLiteral(resourceName: "p-generator-sticker2"), #imageLiteral(resourceName: "p-generator-sticker3")], eInstruct: "GENERATOR LOGO LAPTOP STICKER")
-    let monitorStand: Project = Project(eName: "MONITOR STAND", eModel: "3D Printing", eImage: #imageLiteral(resourceName: "p-monitor-stand1"), eQuant: 4, eDetailImages: [#imageLiteral(resourceName: "p-monitor-stand2"), #imageLiteral(resourceName: "p-monitor-stand3")], eInstruct: "SERVICE MODELING PRINT")
+    let monitorStand: Project = Project(eName: "SERVICE MODELLING", eModel: "LARGE FORMAT PRINTER", eImage: #imageLiteral(resourceName: "p-service-modeling-template1"), eQuant: 0.5, eDetailImages: [#imageLiteral(resourceName: "p-service-modeling-template2"), #imageLiteral(resourceName: "p-service-modeling-template3")], eInstruct: "SERVICE MODELING PRINT")
     
     override func viewDidLoad() {
         super.viewDidLoad()

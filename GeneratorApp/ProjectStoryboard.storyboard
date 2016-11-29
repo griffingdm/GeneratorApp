@@ -245,7 +245,7 @@
                                                                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="dFq-zQ-paE">
                                                                                                             <rect key="frame" x="10" y="7" width="622" height="16"/>
                                                                                                             <subviews>
-                                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="VIEW PROJECT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0b-Sn-fCq" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
+                                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="VIEW PROJECT" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0b-Sn-fCq" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
                                                                                                                     <rect key="frame" x="0.0" y="0.0" width="595" height="16"/>
                                                                                                                     <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="12"/>
                                                                                                                     <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -349,13 +349,40 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DoZ-DD-QiP" userLabel="Vertical Labels">
+                                <rect key="frame" x="7" y="20" width="754" height="1004"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="side-text-right" translatesAutoresizingMaskIntoConstraints="NO" id="8KI-Wj-Ff7">
+                                        <rect key="frame" x="745.5" y="274" width="8.5" height="455"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="9" id="Hd8-SF-rnE"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="side-text-left" translatesAutoresizingMaskIntoConstraints="NO" id="gnz-SR-k42">
+                                        <rect key="frame" x="0.0" y="322" width="9" height="359"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="9" id="95N-v1-C5A"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gnz-SR-k42" firstAttribute="centerY" secondItem="DoZ-DD-QiP" secondAttribute="centerY" id="IfK-ho-OK5"/>
+                                    <constraint firstItem="gnz-SR-k42" firstAttribute="leading" secondItem="DoZ-DD-QiP" secondAttribute="leading" id="Ncw-Vm-fwm"/>
+                                    <constraint firstItem="8KI-Wj-Ff7" firstAttribute="centerY" secondItem="DoZ-DD-QiP" secondAttribute="centerY" id="qMQ-3v-ern"/>
+                                    <constraint firstAttribute="trailing" secondItem="8KI-Wj-Ff7" secondAttribute="trailing" id="vay-ui-Ote"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="DoZ-DD-QiP" firstAttribute="leading" secondItem="LVa-7y-NvA" secondAttribute="leading" constant="7" id="1eQ-us-WQR"/>
                             <constraint firstItem="LDZ-Q1-hEg" firstAttribute="top" secondItem="Q2A-Gy-W5Y" secondAttribute="bottom" id="4FY-4T-Qv1"/>
+                            <constraint firstAttribute="trailing" secondItem="DoZ-DD-QiP" secondAttribute="trailing" constant="7" id="DjN-n1-Zlo"/>
+                            <constraint firstItem="DoZ-DD-QiP" firstAttribute="top" secondItem="Q2A-Gy-W5Y" secondAttribute="bottom" id="NYb-Am-PP3"/>
                             <constraint firstItem="LDZ-Q1-hEg" firstAttribute="leading" secondItem="LVa-7y-NvA" secondAttribute="leading" id="PwM-if-9fT"/>
                             <constraint firstAttribute="trailing" secondItem="LDZ-Q1-hEg" secondAttribute="trailing" id="XOc-1d-q4N"/>
                             <constraint firstAttribute="bottom" secondItem="LDZ-Q1-hEg" secondAttribute="bottom" id="sBr-mE-3yr"/>
+                            <constraint firstItem="cXd-dd-wEw" firstAttribute="top" secondItem="DoZ-DD-QiP" secondAttribute="bottom" id="wtW-1i-2Rj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="C4w-qX-sMf"/>
@@ -399,5 +426,7 @@
         <image name="arrow-right" width="62" height="15"/>
         <image name="p-trotter-heads1" width="1000" height="1000"/>
         <image name="projects" width="418" height="177"/>
+        <image name="side-text-left" width="18" height="359"/>
+        <image name="side-text-right" width="18" height="455"/>
     </resources>
 </document>
