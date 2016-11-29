@@ -149,9 +149,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             nameIdField.text = appDelegate.user
         }
         
-        ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
-        ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
-        ogNameFrame = mamaStack.convert(nameStack.frame, from: nameStack.superview)
+        
+        if ogTopSectionFrame == nil {
+            ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
+            ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
+            ogNameFrame = mamaStack.convert(nameStack.frame, from: nameStack.superview)
+        }
     }
     
     @IBAction func tapView(_ sender: Any) {

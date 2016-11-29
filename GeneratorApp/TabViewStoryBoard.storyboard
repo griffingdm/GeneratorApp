@@ -43,7 +43,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                         <subviews>
                                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="nav-icon-proj" translatesAutoresizingMaskIntoConstraints="NO" id="NCk-X8-Mx4">
-                                                                <rect key="frame" x="0.5" y="0.0" width="67.5" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyR-Ga-OEz">
                                                                 <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
@@ -72,7 +72,7 @@
                                                         <rect key="frame" x="77" y="0.0" width="67" height="60"/>
                                                         <subviews>
                                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFit" image="nav-icon-feed" translatesAutoresizingMaskIntoConstraints="NO" id="9wK-4D-bAp">
-                                                                <rect key="frame" x="0.5" y="0.0" width="67.5" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phq-bc-4k3">
                                                                 <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
@@ -130,10 +130,10 @@
                                                         <rect key="frame" x="231" y="0.0" width="67" height="60"/>
                                                         <subviews>
                                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleAspectFit" image="nav-icon-game" translatesAutoresizingMaskIntoConstraints="NO" id="jUG-tw-J7C">
-                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUg-qg-3Qb">
-                                                                <rect key="frame" x="-0.5" y="0.0" width="67" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                                 <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                 <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal">
@@ -159,10 +159,10 @@
                                                         <rect key="frame" x="308" y="0.0" width="67" height="60"/>
                                                         <subviews>
                                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="4" contentMode="scaleAspectFit" image="nav-icon-equip" translatesAutoresizingMaskIntoConstraints="NO" id="Bds-Ru-aML">
-                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pf-W6-C1F">
-                                                                <rect key="frame" x="-0.5" y="0.0" width="67" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                                 <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                 <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal">

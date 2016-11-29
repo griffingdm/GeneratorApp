@@ -74,6 +74,7 @@ class CircuitBreakerUITabTableViewCell: UITableViewCell {
                     }
                 } else {
                     // Log details of the failure
+                    self.refreshIndicator.stopAnimating()
                     print("Error: \(error!) \(error!)")
                     print("THAT DIDNT WORK")
                 }
