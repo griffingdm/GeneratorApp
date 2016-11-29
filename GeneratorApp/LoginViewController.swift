@@ -18,8 +18,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //@IBOutlet weak var passKeyStack: UIStackView!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var nameIdField: UITextField!
-    @IBOutlet weak var nameFieldLabel: SpaceLabel!
     @IBOutlet weak var pageHeader: SpaceLabel!
+    @IBOutlet weak var enterNameLabelView: UIView!
+    @IBOutlet weak var nameFieldLabel: SpaceLabel!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -54,7 +55,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        nameIdField.becomeFirstResponder()
+        //nameIdField.becomeFirstResponder()
         //UIView.animate(withDuration: 0) {
         //    self.passKeyStack.isHidden = true
         //}
@@ -85,6 +86,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.powerUpButtonParentView.frame = self.ogPowerButtonFrame
             self.topSectionParent.frame = self.ogTopSectionFrame
         }, completion: { (Bool) in
+            self.view.layoutSubviews()
+            self.mamaStack.layoutSubviews()
         })
     }
     
@@ -93,7 +96,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //performSegue(withIdentifier: "TabStorySegue", sender: nil)
         
         if (nameIdField.text?.characters.count)! < 1 {
-            print("make it more than two letters!")
+            print("make it more than zero letters!")
             makeNameError()
         } else {
             appDelegate.user = nameIdField.text
@@ -102,15 +105,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func makeNameError(){
-        if pageHeader.superview?.layer.animationKeys()?.count == nil && pageHeader.text == "CIRCUIT BREAKER" {
+        if nameFieldLabel.superview?.layer.animationKeys()?.count == nil && nameFieldLabel.text == "ENTER NAME" {
             UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
-                self.pageHeader.superview?.isHidden = true
-                self.pageHeader.alpha = 0
+                self.nameFieldLabel.superview?.isHidden = true
+                self.nameFieldLabel.alpha = 0
             }, completion: {(Bool) in
-                self.pageHeader.text = "ENTER A NAME!"
+                self.nameFieldLabel.text = "ENTER A NAME!"
                 UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
-                    self.pageHeader.superview?.isHidden = false
-                    self.pageHeader.alpha = 1
+                    self.nameFieldLabel.superview?.isHidden = false
+                    self.nameFieldLabel.alpha = 1
                 }, completion: {(Bool) in
                     delay(1, closure: {
                         self.returnNameError()
@@ -122,13 +125,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func returnNameError(){
         UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
-            self.pageHeader.superview?.isHidden = true
-            self.pageHeader.alpha = 0
+            self.nameFieldLabel.superview?.isHidden = true
+            self.nameFieldLabel.alpha = 0
         }, completion: {(Bool) in
-            self.pageHeader.text = "CIRCUIT BREAKER"
+            self.nameFieldLabel.text = "ENTER NAME"
             UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {
-                self.pageHeader.superview?.isHidden = false
-                self.pageHeader.alpha = 1
+                self.nameFieldLabel.superview?.isHidden = false
+                self.nameFieldLabel.alpha = 1
             }, completion: {(Bool) in
             })
         })
@@ -146,9 +149,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             nameIdField.text = appDelegate.user
         }
         
-        ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
-        ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
-        ogNameFrame = mamaStack.convert(nameStack.frame, from: nameStack.superview)
+        
+        if ogTopSectionFrame == nil {
+            ogTopSectionFrame = mamaStack.convert(topSectionParent.frame, from: topSectionParent.superview)
+            ogPowerButtonFrame = mamaStack.convert(powerUpButtonParentView.frame, from: powerUpButtonParentView.superview)
+            ogNameFrame = mamaStack.convert(nameStack.frame, from: nameStack.superview)
+        }
     }
     
     @IBAction func tapView(_ sender: Any) {

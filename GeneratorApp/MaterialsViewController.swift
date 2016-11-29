@@ -92,6 +92,7 @@ class MaterialsViewController: UIViewController, UICollectionViewDelegate, UICol
                 print("Error: \(error!) \(error!)")
                 print("THAT DIDNT WORK")
                 self.errorStack.isHidden = false
+                self.activityIndicator.stopAnimating()
             }
         }
     }

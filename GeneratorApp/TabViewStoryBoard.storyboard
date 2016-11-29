@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FHr-be-2uP">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,30 +23,30 @@
                         <viewControllerLayoutGuide type="bottom" id="WN4-aw-XcB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vR1-Dg-Mve">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r5H-h2-I6n">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCv-EI-Hlf">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="676"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aC2-Rd-N9W">
-                                        <rect key="frame" x="0.0" y="676" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c2P-Mg-hoL">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0r-SM-dbB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="60"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                         <subviews>
                                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="nav-icon-proj" translatesAutoresizingMaskIntoConstraints="NO" id="NCk-X8-Mx4">
-                                                                <rect key="frame" x="0.6666666666666643" y="0.0" width="118.33333333333334" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyR-Ga-OEz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="118" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                                 <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                 <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal">
@@ -68,14 +68,43 @@
                                                             <constraint firstItem="kyR-Ga-OEz" firstAttribute="centerX" secondItem="d0r-SM-dbB" secondAttribute="centerX" id="uSN-zh-g9z"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grE-kh-aso">
-                                                        <rect key="frame" x="128" y="0.0" width="118" height="60"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSW-Kq-LXR">
+                                                        <rect key="frame" x="77" y="0.0" width="67" height="60"/>
                                                         <subviews>
-                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFit" image="nav-icon-prin-active" translatesAutoresizingMaskIntoConstraints="NO" id="PV5-tc-Ba2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="118" height="60"/>
+                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFit" image="nav-icon-feed" translatesAutoresizingMaskIntoConstraints="NO" id="9wK-4D-bAp">
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                             </imageView>
-                                                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDg-SR-6FJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="118" height="60"/>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phq-bc-4k3">
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
+                                                                <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
+                                                                <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="tapTab:" destination="FHr-be-2uP" eventType="touchUpInside" id="cfC-E2-tab"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="Phq-bc-4k3" firstAttribute="width" secondItem="VSW-Kq-LXR" secondAttribute="width" id="3S9-Kn-OH3"/>
+                                                            <constraint firstItem="9wK-4D-bAp" firstAttribute="centerY" secondItem="VSW-Kq-LXR" secondAttribute="centerY" id="IzD-Tb-raM"/>
+                                                            <constraint firstItem="9wK-4D-bAp" firstAttribute="width" secondItem="VSW-Kq-LXR" secondAttribute="width" id="Vo0-y0-bbc"/>
+                                                            <constraint firstItem="9wK-4D-bAp" firstAttribute="height" secondItem="VSW-Kq-LXR" secondAttribute="height" id="dfp-p4-NUg"/>
+                                                            <constraint firstItem="9wK-4D-bAp" firstAttribute="centerX" secondItem="VSW-Kq-LXR" secondAttribute="centerX" id="efQ-T5-EfZ"/>
+                                                            <constraint firstItem="Phq-bc-4k3" firstAttribute="centerX" secondItem="VSW-Kq-LXR" secondAttribute="centerX" id="hm8-SK-SdG"/>
+                                                            <constraint firstItem="Phq-bc-4k3" firstAttribute="centerY" secondItem="VSW-Kq-LXR" secondAttribute="centerY" id="ryW-X8-gua"/>
+                                                            <constraint firstItem="Phq-bc-4k3" firstAttribute="height" secondItem="VSW-Kq-LXR" secondAttribute="height" id="wZM-QK-jdE"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grE-kh-aso">
+                                                        <rect key="frame" x="154" y="0.0" width="67" height="60"/>
+                                                        <subviews>
+                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleAspectFit" image="nav-icon-prin-active" translatesAutoresizingMaskIntoConstraints="NO" id="PV5-tc-Ba2">
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
+                                                            </imageView>
+                                                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDg-SR-6FJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                                 <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                 <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal">
@@ -97,14 +126,43 @@
                                                             <constraint firstItem="mDg-SR-6FJ" firstAttribute="width" secondItem="grE-kh-aso" secondAttribute="width" id="wyU-Ui-DCC"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-iz-FjY">
-                                                        <rect key="frame" x="256" y="0.0" width="118" height="60"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWM-w5-uFd">
+                                                        <rect key="frame" x="231" y="0.0" width="67" height="60"/>
                                                         <subviews>
-                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleAspectFit" image="nav-icon-equip" translatesAutoresizingMaskIntoConstraints="NO" id="Bds-Ru-aML">
-                                                                <rect key="frame" x="0.0" y="0.0" width="118.66666666666669" height="60"/>
+                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleAspectFit" image="nav-icon-game" translatesAutoresizingMaskIntoConstraints="NO" id="jUG-tw-J7C">
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                             </imageView>
-                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pf-W6-C1F">
-                                                                <rect key="frame" x="-0.33333333333331439" y="0.0" width="118" height="60"/>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUg-qg-3Qb">
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
+                                                                <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
+                                                                <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="tapTab:" destination="FHr-be-2uP" eventType="touchUpInside" id="Llc-aQ-LZO"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="jUG-tw-J7C" firstAttribute="centerY" secondItem="rWM-w5-uFd" secondAttribute="centerY" id="55Y-d5-AhH"/>
+                                                            <constraint firstItem="qUg-qg-3Qb" firstAttribute="centerX" secondItem="rWM-w5-uFd" secondAttribute="centerX" id="5LV-Ye-yh5"/>
+                                                            <constraint firstItem="qUg-qg-3Qb" firstAttribute="width" secondItem="rWM-w5-uFd" secondAttribute="width" id="PNN-wR-osO"/>
+                                                            <constraint firstItem="jUG-tw-J7C" firstAttribute="width" secondItem="rWM-w5-uFd" secondAttribute="width" id="S3l-rk-7Gh"/>
+                                                            <constraint firstItem="qUg-qg-3Qb" firstAttribute="height" secondItem="rWM-w5-uFd" secondAttribute="height" id="SOQ-Bi-hod"/>
+                                                            <constraint firstItem="qUg-qg-3Qb" firstAttribute="centerY" secondItem="rWM-w5-uFd" secondAttribute="centerY" id="ccp-Cc-ED4"/>
+                                                            <constraint firstItem="jUG-tw-J7C" firstAttribute="height" secondItem="rWM-w5-uFd" secondAttribute="height" id="rJj-8D-VDo"/>
+                                                            <constraint firstItem="jUG-tw-J7C" firstAttribute="centerX" secondItem="rWM-w5-uFd" secondAttribute="centerX" id="xjh-ls-Ul6"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-iz-FjY">
+                                                        <rect key="frame" x="308" y="0.0" width="67" height="60"/>
+                                                        <subviews>
+                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="4" contentMode="scaleAspectFit" image="nav-icon-equip" translatesAutoresizingMaskIntoConstraints="NO" id="Bds-Ru-aML">
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
+                                                            </imageView>
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pf-W6-C1F">
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                                                 <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="14"/>
                                                                 <color key="tintColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal">
@@ -147,9 +205,8 @@
                                             <constraint firstItem="c2P-Mg-hoL" firstAttribute="centerX" secondItem="aC2-Rd-N9W" secondAttribute="centerX" id="81O-R2-SSB"/>
                                             <constraint firstItem="c2P-Mg-hoL" firstAttribute="centerX" secondItem="aC2-Rd-N9W" secondAttribute="centerX" id="9rA-2D-9xl"/>
                                             <constraint firstAttribute="height" constant="60" id="Cc2-8u-EZZ"/>
-                                            <constraint firstItem="c2P-Mg-hoL" firstAttribute="leading" secondItem="aC2-Rd-N9W" secondAttribute="leading" constant="20" id="T4j-yE-9Ur"/>
+                                            <constraint firstItem="c2P-Mg-hoL" firstAttribute="leading" secondItem="aC2-Rd-N9W" secondAttribute="leading" id="T4j-yE-9Ur"/>
                                             <constraint firstItem="c2P-Mg-hoL" firstAttribute="centerY" secondItem="aC2-Rd-N9W" secondAttribute="centerY" id="dtv-31-pNT"/>
-                                            <constraint firstItem="c2P-Mg-hoL" firstAttribute="leading" secondItem="aC2-Rd-N9W" secondAttribute="leading" constant="20" id="nbQ-uI-hzO"/>
                                             <constraint firstItem="c2P-Mg-hoL" firstAttribute="top" secondItem="aC2-Rd-N9W" secondAttribute="top" id="wde-cq-OcF"/>
                                         </constraints>
                                         <variation key="default">
@@ -162,23 +219,22 @@
                                                 <include reference="81O-R2-SSB"/>
                                                 <exclude reference="9rA-2D-9xl"/>
                                                 <exclude reference="T4j-yE-9Ur"/>
-                                                <exclude reference="nbQ-uI-hzO"/>
                                             </mask>
                                         </variation>
                                     </view>
                                 </subviews>
                             </stackView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVt-Aj-6ce">
-                                <rect key="frame" x="0.0" y="656" width="414" height="20"/>
+                                <rect key="frame" x="0.0" y="587" width="375" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="8Mv-j1-pZp"/>
                                 </constraints>
                             </view>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aoa-F7-Pt5">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="texture" translatesAutoresizingMaskIntoConstraints="NO" id="2C8-9o-YJz">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -214,6 +270,10 @@
                         <outletCollection property="tabImageViews" destination="NCk-X8-Mx4" collectionClass="NSMutableArray" id="YW9-LV-fNL"/>
                         <outletCollection property="tabImageViews" destination="PV5-tc-Ba2" collectionClass="NSMutableArray" id="EuD-07-cRE"/>
                         <outletCollection property="tabImageViews" destination="Bds-Ru-aML" collectionClass="NSMutableArray" id="uSY-5K-Lo2"/>
+                        <outletCollection property="tabButtons" destination="Phq-bc-4k3" collectionClass="NSMutableArray" id="x43-eD-Ald"/>
+                        <outletCollection property="tabButtons" destination="qUg-qg-3Qb" collectionClass="NSMutableArray" id="74x-a3-Ve0"/>
+                        <outletCollection property="tabImageViews" destination="9wK-4D-bAp" collectionClass="NSMutableArray" id="Mf7-oC-lzl"/>
+                        <outletCollection property="tabImageViews" destination="jUG-tw-J7C" collectionClass="NSMutableArray" id="PgY-Ku-9Sr"/>
                         <segue destination="hae-4B-55c" kind="presentation" identifier="gameSegue" modalPresentationStyle="overCurrentContext" id="RKH-Q5-H8w"/>
                     </connections>
                 </viewController>
@@ -232,6 +292,8 @@
     </scenes>
     <resources>
         <image name="nav-icon-equip" width="127" height="128"/>
+        <image name="nav-icon-feed" width="127" height="128"/>
+        <image name="nav-icon-game" width="128" height="128"/>
         <image name="nav-icon-prin-active" width="127" height="128"/>
         <image name="nav-icon-proj" width="127" height="128"/>
         <image name="texture" width="1000" height="1500"/>

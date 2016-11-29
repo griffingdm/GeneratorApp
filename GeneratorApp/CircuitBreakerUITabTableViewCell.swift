@@ -34,15 +34,16 @@ class CircuitBreakerUITabTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func playCircuitBreaker(_ sender: Any) {
-        parentController.tabViewController.performSegue(withIdentifier: "gameSegue", sender: nil)
+    @IBAction func playCircuitBreaker(_ sender: AnyObject) {
+        //parentController.tabViewController.performSegue(withIdentifier: "gameSegue", sender: nil)
+        parentController.tabViewController.tapTab(sender)
     }
     
     func getTheScores() {
-        refreshIndicator.startAnimating()
         gameScores = []
         
         //if gameScores.count < 3 {
+            refreshIndicator.startAnimating()
             let query = PFQuery(className:"GameScore")
             query.order(byDescending: "score")
             query.limit = 3
@@ -73,6 +74,7 @@ class CircuitBreakerUITabTableViewCell: UITableViewCell {
                     }
                 } else {
                     // Log details of the failure
+                    self.refreshIndicator.stopAnimating()
                     print("Error: \(error!) \(error!)")
                     print("THAT DIDNT WORK")
                 }

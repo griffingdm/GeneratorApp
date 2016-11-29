@@ -109,7 +109,6 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UITableV
             let cell = tableView.dequeueReusableCell(withIdentifier: "circuitBreakCell") as! CircuitBreakerUITabTableViewCell
             cell.parentController = self
             
-            
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "principlesHeader")
