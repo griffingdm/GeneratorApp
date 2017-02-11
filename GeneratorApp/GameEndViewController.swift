@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 import Parse
 
 class GameEndViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -71,7 +72,7 @@ class GameEndViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.NameLabel.text = theName
         cell.scoreLabel.text = "\(theScore)"
         
-        if theName == appDelegate.user && theScore == score {
+        if theName == getName()?[0].value(forKey: "name") as? String && theScore == score {
             cell.rankLabel.textColor = #colorLiteral(red: 0.9176470588, green: 0.2588235294, blue: 0.1450980392, alpha: 1)
             cell.NameLabel.textColor = #colorLiteral(red: 0.9176470588, green: 0.2588235294, blue: 0.1450980392, alpha: 1)
             cell.scoreLabel.textColor = #colorLiteral(red: 0.9176470588, green: 0.2588235294, blue: 0.1450980392, alpha: 1)
@@ -105,7 +106,7 @@ class GameEndViewController: UIViewController, UITableViewDelegate, UITableViewD
             print("anonymous user")
             gameScore["playerName"] = "-"
         default:
-            gameScore["playerName"] = appDelegate.user
+            gameScore["playerName"] = getName()?[0].value(forKey: "name") as? String
         }
         
         UIView.animate(withDuration: 0.25, animations: {
