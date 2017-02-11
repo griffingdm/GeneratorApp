@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 import UIKit
 
 func CGAffineTransformMakeDegreeRotation(_ rotation: CGFloat) -> CGAffineTransform {
@@ -49,6 +50,46 @@ func vertGradient(topColor: CGColor, bottomColor: CGColor, frame: CGRect, yStart
 
 func toRadians(degrees: Double) -> CGFloat{
     return (CGFloat(degrees * M_PI) / 180.0)
+}
+
+func hasVotedUp(votes: [NSManagedObject], objId: String) -> Bool {
+    var votedUp = false
+    
+    if votes != nil {
+        for vote in votes {
+            let id = vote.value(forKey: "id") as! String
+            let up = vote.value(forKey: "up") as! Bool
+            
+            if objId == id && up {
+                votedUp = true
+            } else {
+            }
+        }
+    } else {
+        print("no votes")
+    }
+    
+    return votedUp
+}
+
+func hasVotedDown(votes: [NSManagedObject], objId: String) -> Bool {
+    var votedUp = false
+    
+    if votes != nil {
+        for vote in votes {
+            let id = vote.value(forKey: "id") as! String
+            let up = vote.value(forKey: "up") as! Bool
+            
+            if objId == id && !up {
+                votedUp = true
+            } else {
+            }
+        }
+    } else {
+        print("no votes")
+    }
+    
+    return votedUp
 }
 
 extension UIImageView {

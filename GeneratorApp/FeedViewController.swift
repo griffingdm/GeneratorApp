@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 import Parse
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate {
@@ -22,13 +23,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var sendImageView: UIImageView!
     
     var messages: [Message]! = []
+    var votes = [NSManagedObject]()
     
     var gradientFrame: CGRect!
     var gradientLayer: CAGradientLayer!
     let bottomColor: CGColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1).cgColor
     let topColor: CGColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 0).cgColor
     
-    var aniDuration: Double! = 0.25
+    var aniDuration: Double! = 0.2
     var keyboardRect: CGRect!
     var ogInputViewFrame: CGRect!
     
@@ -38,6 +40,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        getVotes()
+        
         getTheMessages()
         
         inputTextView.delegate = self
@@ -52,11 +56,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         inputTextView.text = initialMsgTxt
         
-        view.layoutSubviews()
-        makeGradient()
-        view.layer.addSublayer(gradientLayer)
-        view.bringSubview(toFront: sendingView)
-        
         NotificationCenter.default.addObserver(forName: Notification.Name.UIKeyboardWillShow, object: nil, queue: OperationQueue.main) { (notification: Notification) in
             // Any code you put in here will be called when the keyboard is about to display
             self.keyboardRect = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
@@ -65,9 +64,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         NotificationCenter.default.addObserver(forName: Notification.Name.UIKeyboardWillHide, object: nil, queue: OperationQueue.main) { (notification: Notification) in
             // Any code you put in here will be called when the keyboard is about to hide
-            self.hideKeyboard(notification: notification)
+            self.hideKeyboard()
         }
         
+        view.layoutSubviews()
+        makeGradient()
+        view.layer.addSublayer(gradientLayer)
+        view.bringSubview(toFront: sendingView)
     }
     
     @IBAction func tapView(_ sender: Any) {
@@ -93,18 +96,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         })
     }
     
-    func hideKeyboard(notification: Notification){
+    func hideKeyboard(){
         print("going down!")
         UIView.animate(withDuration: aniDuration, animations: {
             //self.sendingView.frame.origin.y = self.view.frame.maxY - self.sendingView.frame.height
-            
-        }, completion: { (Bool) in
             self.sendingBottomConstraint.constant = 0
+        }, completion: { (Bool) in
             self.gradientLayer.frame.origin.y = self.view.frame.maxY - self.sendingView.frame.height - self.gradientLayer.frame.height
         })
     }
     
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
     
     func makeGradient(){
@@ -120,7 +123,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         showKeyboard()
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -134,6 +136,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.votesLabel.text = "\((messages[indexPath.row].votes)!)"
         cell.votes = (messages[indexPath.row].votes)!
         
+        if hasVotedDown(votes: votes, objId: messages[indexPath.row].objId){
+            cell.downButton.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
+            cell.upButton.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1)
+        } else if hasVotedUp(votes: votes, objId: messages[indexPath.row].objId) {
+            cell.downButton.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1)
+            cell.upButton.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
+        } else {
+            cell.downButton.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1)
+            cell.upButton.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1)
+        }
+        
         cell.parentController = self
         
         return cell
@@ -143,12 +156,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return messages.count
     }
     
-    
     func getTheMessages() {
         tableIndicator.startAnimating()
         messages = []
-        
-        //if gameScores.count < 3 {
+
         let query = PFQuery(className:"Feed")
         query.order(byDescending: "votes")
         
@@ -167,11 +178,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                         
                         let newMessage = Message(message: thisMessage, votes: thisVotes, objId: thisId)
                         
-                        //print(object["playerName"])
-                        
                         self.messages.append(newMessage)
                     }
                     
+                    self.getVotes()
                     //self.setTheScores()
                     self.tableView.reloadData()
                     self.tableIndicator.stopAnimating()
@@ -186,7 +196,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.errorStack.isHidden = false
             }
         }
-        //}
     }
     
     @IBAction func tapRetry(_ sender: Any) {
@@ -195,8 +204,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func tapSend(_ sender: UITapGestureRecognizer) {
-        view.endEditing(true)
         saveMessage()
+        view.endEditing(true)
     }
     
     func saveMessage(){
@@ -221,6 +230,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if (success) {
                     // The object has been saved.
                     print("saved!")
+//                    print("objectID: \(message.objectId!)")
+                    self.saveVote(id: message.objectId!, up: true)
                     self.getTheMessages()
                     self.inputTextView.text = ""
                 } else {
@@ -239,11 +250,83 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func getVotes(){
+        let appDelegate =
+            UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        //2
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Votes")
+        
+        //3
+        do {
+            let results =
+                try managedContext.fetch(fetchRequest)
+            votes = results as! [NSManagedObject]
+            print(votes)
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+    }
+    
+    func deleteVote(id: String){
+        let appDelegate =
+            UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        //2
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Votes")
+        
+        //3
+        do {
+            let results =
+                try managedContext.fetch(fetchRequest)
+            for vote in results as! [NSManagedObject] {
+                if vote.value(forKey: "id") as! String == id{
+                    managedContext.delete(vote)
+                    print("vote deleted")
+                }
+            }
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+    }
+    
+    func saveVote(id: String, up: Bool) {
+        //1
+        let appDelegate =
+            UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        //2
+        let entity = NSEntityDescription.entity(forEntityName: "Votes", in: managedContext)
+        
+        let vote = NSManagedObject(entity: entity!, insertInto: managedContext)
+        
+        
+        //3
+        vote.setValue(id, forKey: "id")
+        vote.setValue(up, forKey: "up")
+        
+        //4
+        do {
+            try managedContext.save()
+            //5
+            votes.append(vote)
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+    }
+    
     struct Message {
         var message: String!
         var votes: Int!
         var objId: String!
     }
+    
     /*
      // MARK: - Navigation
      

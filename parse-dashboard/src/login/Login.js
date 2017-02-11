@@ -27,13 +27,11 @@ export default class Login extends React.Component {
   }
 
   render() {
-    const {path} = this.props;
-
     return (
       <LoginForm
         header='Access your Dashboard'
         action='Log In'
-        endpoint={`${path}login`}
+        endpoint='/login'
         >
         <LoginRow
           label='Username'
