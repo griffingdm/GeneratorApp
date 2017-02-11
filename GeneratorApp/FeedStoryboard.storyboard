@@ -332,7 +332,7 @@
                                                                 <rect key="frame" x="10" y="10" width="234" height="58"/>
                                                                 <color key="textColor" red="0.92549019610000005" green="0.87450980389999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="send"/>
                                                             </textView>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.1176470588" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -389,7 +389,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GXY-qJ-sUn">
-                                <rect key="frame" x="76" y="279.5" width="168" height="44.5"/>
+                                <rect key="frame" x="76" y="280" width="168" height="44.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COULD NOT LOAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mq-VB-ghc" customClass="SpaceLabel" customModule="GeneratorApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="168" height="26"/>

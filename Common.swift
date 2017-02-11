@@ -92,6 +92,30 @@ func hasVotedDown(votes: [NSManagedObject], objId: String) -> Bool {
     return votedUp
 }
 
+func getName() -> [NSManagedObject]? {
+    let appDelegate =
+        UIApplication.shared.delegate as! AppDelegate
+    
+    let managedContext = appDelegate.persistentContainer.viewContext
+    
+    //2
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+    
+    //3
+    do {
+        var results =
+            try managedContext.fetch(fetchRequest)
+        results = results as! [NSManagedObject]
+        if results != nil {
+            return (results as! [NSManagedObject])
+        }
+    } catch let error as NSError {
+        print("Could not fetch \(error), \(error.userInfo)")
+        return nil
+    }
+    return nil
+}
+
 extension UIImageView {
     func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
         contentMode = mode

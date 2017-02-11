@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -42,6 +43,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         nameIdField.delegate = self
+        
+        
         
         NotificationCenter.default.addObserver(forName: Notification.Name.UIKeyboardWillShow, object: nil, queue: OperationQueue.main) { (notification: Notification) in
             // Any code you put in here will be called when the keyboard is about to display
@@ -99,7 +102,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             print("make it more than zero letters!")
             makeNameError()
         } else {
-            appDelegate.user = nameIdField.text
+            saveName(name: nameIdField.text!)
             performSegue(withIdentifier: "GameSegue", sender: nil)
         }
     }
@@ -145,8 +148,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             roundCorners(view: buttonView, radius: cornerRadius)
         }
         
-        if appDelegate.user != nil {
-            nameIdField.text = appDelegate.user
+        if getName() != nil {
+            nameIdField.text = getName()?[0].value(forKey: "name") as? String
         }
         
         
@@ -176,6 +179,37 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
         self.tapPowerUp(self)
         return true
+    }
+    
+    func saveName(name: String) {
+        //1
+        let appDelegate =
+            UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        //delete existing name
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        do {
+            let results =
+                try managedContext.fetch(fetchRequest)
+            for name in results as! [NSManagedObject] {
+                managedContext.delete(name)
+            }
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+        
+        //save new name
+        let entity =  NSEntityDescription.entity(forEntityName: "User",
+                                                 in:managedContext)
+        let person = NSManagedObject(entity: entity!,
+                                     insertInto: managedContext)
+        person.setValue(name, forKey: "name")
+        do {
+            try managedContext.save()
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
     }
     
     /*
