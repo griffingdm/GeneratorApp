@@ -67,10 +67,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.hideKeyboard()
         }
         
+        self.makeGradient()
+        
         view.layoutSubviews()
-        makeGradient()
-        view.layer.addSublayer(gradientLayer)
-        view.bringSubview(toFront: sendingView)
+        delay(0.1) {
+            self.view.layer.addSublayer(self.gradientLayer)
+            self.view.bringSubview(toFront: self.sendingView)
+        }
     }
     
     @IBAction func tapView(_ sender: Any) {
@@ -80,6 +83,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func showKeyboard(){
         // Get the size of the keyboard.
         print("show keyboard")
+        
         var frame = keyboardRect
         frame = view.convert(frame!, from: view)
         
@@ -93,6 +97,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.gradientLayer.frame.origin.y = powerButtonY - self.gradientLayer.frame.height
         }, completion: {(Bool) in
             self.sendingBottomConstraint.constant = self.view.frame.maxY - self.sendingView.frame.maxY
+            if self.inputTextView.text == self.initialMsgTxt {
+                self.inputTextView.text = ""
+            }
         })
     }
     
@@ -108,12 +115,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+        if sendingBottomConstraint.constant == 0 {
+            hideKeyboard()
+        }
     }
     
     func makeGradient(){
         gradientFrame = view.convert(gradientView.frame, to: gradientView.superview)
         //gradientFrame = gradientView.frame
-        gradientLayer = vertGradient(topColor: topColor, bottomColor: bottomColor, frame: gradientFrame, yStart: 0)
+        gradientLayer = vertGradient(topColor: topColor, bottomColor: bottomColor, frame: CGRect(x: 0, y: gradientFrame.origin.y, width: view.frame.width, height: gradientFrame.height)/*gradientFrame*/ , yStart: 0)
         gradientLayer.name = "Gradient"
     }
     
