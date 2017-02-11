@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import CoreData
 import Parse
 
 class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var votesLabel: UILabel!
+    @IBOutlet weak var downButton: UIView!
+    @IBOutlet weak var upButton: UIView!
     
     var objId: String!
     var votes: Int!
+    
+    var votedUp: Bool = false
     
     var parentController: FeedViewController!
 
@@ -54,13 +59,35 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     @IBAction func downVotePress(_ sender: Any) {
-        votes = votes - 1
-        vote(votes: votes, objId: objId)
+        if parentController != nil {
+            if hasVotedDown(votes: parentController.votes, objId: objId){
+                print("youve already voted down")
+            } else {
+                votes = votes - 1
+                vote(votes: votes, objId: objId)
+                parentController.deleteVote(id: objId)
+                downButton.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
+                upButton.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1)
+                parentController.saveVote(id: objId, up: false)
+                parentController.getVotes()
+            }
+        }
     }
     
     @IBAction func upVotePress(_ sender: Any) {
-        votes = votes + 1
-        vote(votes: votes, objId: objId)
+        if parentController != nil {
+            if hasVotedUp(votes: parentController.votes, objId: objId){
+                print("youve already voted up")
+            } else {
+                votes = votes + 1
+                vote(votes: votes, objId: objId)
+                parentController.deleteVote(id: objId)
+                downButton.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.168627451, blue: 0.2, alpha: 1)
+                upButton.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
+                parentController.saveVote(id: objId, up: true)
+                parentController.getVotes()
+            }
+        }
     }
     
     struct Message {
