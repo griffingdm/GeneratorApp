@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0D5F5A1E4FEEFE00E79432 /* MaterialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D5F591E4FEEFE00E79432 /* MaterialCollectionViewCell.swift */; };
+		4C0D5F5C1E4FF61900E79432 /* MaterialDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D5F5B1E4FF61900E79432 /* MaterialDetailViewController.swift */; };
 		4CE2FECC1E4EA1FB0077A376 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE2FECB1E4EA1FB0077A376 /* CoreData.framework */; };
 		4CE2FED01E4EA9650077A376 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2FECD1E4EA5160077A376 /* Model.xcdatamodeld */; };
 		580C9C6720FA3F43A992EDD5 /* Pods_GeneratorAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D11424CD39CFD0397893E27 /* Pods_GeneratorAppTests.framework */; };
@@ -20,7 +22,6 @@
 		6D45A3081DC6B2DE00124B02 /* EquipmentTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A3071DC6B2DE00124B02 /* EquipmentTabViewController.swift */; };
 		6D45A30A1DC6BBEE00124B02 /* EquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A3091DC6BBEE00124B02 /* EquipmentViewController.swift */; };
 		6D45A30C1DC6BCB800124B02 /* EquipmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A30B1DC6BCB800124B02 /* EquipmentTableViewCell.swift */; };
-		6D72B4231DCD337F00FA3F3E /* MaterialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D72B4221DCD337F00FA3F3E /* MaterialCollectionViewCell.swift */; };
 		6D74930C1DDAA56700F48DF2 /* ProjectDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D74930B1DDAA56700F48DF2 /* ProjectDetailStoryboard.storyboard */; };
 		6D74930E1DDAA85200F48DF2 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D74930D1DDAA85200F48DF2 /* ProjectDetailViewController.swift */; };
 		6D7493151DDAB37B00F48DF2 /* PLOTTER.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6D7493141DDAB37B00F48DF2 /* PLOTTER.txt */; };
@@ -101,6 +102,8 @@
 /* Begin PBXFileReference section */
 		0ECAC1C57CE61EAD834B0D0D /* Pods-GeneratorAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneratorAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeneratorAppUITests/Pods-GeneratorAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2D11424CD39CFD0397893E27 /* Pods_GeneratorAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeneratorAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C0D5F591E4FEEFE00E79432 /* MaterialCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		4C0D5F5B1E4FF61900E79432 /* MaterialDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialDetailViewController.swift; sourceTree = "<group>"; };
 		4CE2FECB1E4EA1FB0077A376 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4CE2FECE1E4EA5160077A376 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		589B8500EE25EC2718EE44A6 /* Pods-GeneratorAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneratorAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeneratorAppUITests/Pods-GeneratorAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,7 +119,6 @@
 		6D45A3091DC6BBEE00124B02 /* EquipmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentViewController.swift; sourceTree = "<group>"; };
 		6D45A30B1DC6BCB800124B02 /* EquipmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentTableViewCell.swift; sourceTree = "<group>"; };
 		6D576ED01DE3E73D00AA89B4 /* GeneratorApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeneratorApp.entitlements; sourceTree = "<group>"; };
-		6D72B4221DCD337F00FA3F3E /* MaterialCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaterialCollectionViewCell.swift; path = ../MaterialCollectionViewCell.swift; sourceTree = "<group>"; };
 		6D74930B1DDAA56700F48DF2 /* ProjectDetailStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		6D74930D1DDAA85200F48DF2 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		6D7493141DDAB37B00F48DF2 /* PLOTTER.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PLOTTER.txt; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				6D09DD201DE53A3700A2D15A /* FeedViewController.swift */,
 				6D74930D1DDAA85200F48DF2 /* ProjectDetailViewController.swift */,
 				6D914B921DBDC77600413CA5 /* LoginViewController.swift */,
+				4C0D5F5B1E4FF61900E79432 /* MaterialDetailViewController.swift */,
 				6D97BD8C1DC11A7800FEB78C /* TabViewController.swift */,
 				6D45A3071DC6B2DE00124B02 /* EquipmentTabViewController.swift */,
 				C893E21B1DD6A02100B4D4BC /* ProjectViewController.swift */,
@@ -376,10 +379,10 @@
 		6D9933F51DC68C2E00F697C2 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				4C0D5F591E4FEEFE00E79432 /* MaterialCollectionViewCell.swift */,
 				6D041C821DDB844A0035702F /* ScoreCellTableViewCell.swift */,
 				6DB076DD1DD9632200CE41FF /* ShareTableViewCell.swift */,
 				6D96663F1DD958830079D40E /* CircuitBreakerUITabTableViewCell.swift */,
-				6D72B4221DCD337F00FA3F3E /* MaterialCollectionViewCell.swift */,
 				6D9933F01DC5181200F697C2 /* FooterTableViewCell.swift */,
 				6DE769451DC17D7A0076D12B /* PrincipalTableViewCell.swift */,
 				6D09DD221DE5520F00A2D15A /* FeedTableViewCell.swift */,
@@ -732,13 +735,14 @@
 				6DE460BB1DCC30270019099B /* EquipmentClass.swift in Sources */,
 				6D9933F11DC5181200F697C2 /* FooterTableViewCell.swift in Sources */,
 				6D45A3061DC6ADB700124B02 /* DottedView.swift in Sources */,
-				6D72B4231DCD337F00FA3F3E /* MaterialCollectionViewCell.swift in Sources */,
 				6D45A3081DC6B2DE00124B02 /* EquipmentTabViewController.swift in Sources */,
 				6D45A30C1DC6BCB800124B02 /* EquipmentTableViewCell.swift in Sources */,
 				6D09DD231DE5520F00A2D15A /* FeedTableViewCell.swift in Sources */,
+				4C0D5F5A1E4FEEFE00E79432 /* MaterialCollectionViewCell.swift in Sources */,
 				6DF300101DD69AF8004CA955 /* GameScene.swift in Sources */,
 				6DAE114F1DCFFE540034D485 /* BaseTransition.swift in Sources */,
 				6D09DD211DE53A3700A2D15A /* FeedViewController.swift in Sources */,
+				4C0D5F5C1E4FF61900E79432 /* MaterialDetailViewController.swift in Sources */,
 				6D914B501DBDAEBD00413CA5 /* AppDelegate.swift in Sources */,
 				6DF8F6C01DDBF89D00DE3112 /* TouchDownGestureRecognizer.swift in Sources */,
 				C893E21C1DD6A02100B4D4BC /* ProjectViewController.swift in Sources */,
@@ -905,6 +909,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 59BGYH7DCM;
 				INFOPLIST_FILE = GeneratorApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GM.GeneratorApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -920,6 +925,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 59BGYH7DCM;
 				INFOPLIST_FILE = GeneratorApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GM.GeneratorApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

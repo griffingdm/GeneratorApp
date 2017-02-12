@@ -13,6 +13,7 @@ class MaterialCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var materialImage: UIImageView!
     @IBOutlet weak var materialLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var outOfStockLabel: UILabel!
     
     var imageLink: String?
     

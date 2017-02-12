@@ -26,9 +26,6 @@ class MaterialsViewController: UIViewController, UICollectionViewDelegate, UICol
         theCollectionView.dataSource = self
         theCollectionView.contentInset.top = 75.0
         theCollectionView.contentInset.bottom = 20
-//        if let flowLayout = theCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-//            flowLayout.estimatedItemSize = CGSize(width: 160, height: 190)
-//        }
         
         errorStack.isHidden = true
         getMaterials()
@@ -51,6 +48,13 @@ class MaterialsViewController: UIViewController, UICollectionViewDelegate, UICol
         cell.imageLink = material.imageURL
         cell.materialLabel.text = material.name
         cell.loadImage()
+        
+        if !material.inStock! {
+            cell.outOfStockLabel.isHidden = false
+        } else {
+            cell.outOfStockLabel.isHidden = true
+        }
+        
         
         return cell
     }
@@ -77,11 +81,11 @@ class MaterialsViewController: UIViewController, UICollectionViewDelegate, UICol
                         print(object.objectId ?? "-")
                         let thisName = object["Name"] as! String
                         let imageURL = object["ImageURL"] as! String
+                        let inStock = object["InStock"] as! Bool
                         
-                        let newMaterial = Material(theName: thisName, imageLink: imageURL)
+                        let newMaterial = Material(theName: thisName, imageLink: imageURL, isInStock: inStock)
                         
                         print(object["Name"])
-                        
                         self.theMaterials.append(newMaterial)
                     }
                     self.activityIndicator.stopAnimating()
@@ -106,15 +110,17 @@ class MaterialsViewController: UIViewController, UICollectionViewDelegate, UICol
         var image: UIImage?
         var name: String!
         var imageURL: String?
+        var inStock: Bool?
         
         init(picture: UIImage, theLabel: String) {
             image = picture
             name = theLabel
         }
         
-        init(theName: String, imageLink: String) {
+        init(theName: String, imageLink: String, isInStock: Bool) {
             name = theName
             imageURL = imageLink
+            inStock = isInStock
         }
     }
     
