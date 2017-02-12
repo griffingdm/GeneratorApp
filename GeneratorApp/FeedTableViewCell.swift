@@ -15,6 +15,8 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var votesLabel: UILabel!
     @IBOutlet weak var downButton: UIView!
     @IBOutlet weak var upButton: UIView!
+    @IBOutlet weak var innapropriateView: UIView!
+    @IBOutlet weak var innapropriateLabel: UILabel!
     
     var objId: String!
     var votes: Int!
@@ -86,6 +88,43 @@ class FeedTableViewCell: UITableViewCell {
                 upButton.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
                 parentController.saveVote(id: objId, up: true)
                 parentController.getVotes()
+            }
+        }
+    }
+    
+    @IBAction func showInnapropriate(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.25) {
+            if self.innapropriateView.isHidden {
+                self.innapropriateView.isHidden = false
+            } else {
+                self.innapropriateView.isHidden = true
+            }
+        }
+    }
+    
+    @IBAction func reportInnapropriate(_ sender: UIButton) {
+        print("reporting innapropriate")
+        let query = PFQuery(className: "Feed")
+        
+        print(objId)
+        
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if error == nil {
+                if let objects = objects {
+                    for object in objects {
+                        if object.objectId == self.objId {
+                            object.deleteEventually()
+                            print("deleting")
+                            self.innapropriateLabel.text = "REPORTED!"
+                        }
+                    }
+                    delay(0.2, closure: {
+                        self.parentController.getTheMessages()
+                    })
+                }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!)")
             }
         }
     }

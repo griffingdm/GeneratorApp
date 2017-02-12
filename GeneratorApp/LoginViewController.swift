@@ -149,7 +149,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         
         if getName() != nil {
-            nameIdField.text = getName()?[0].value(forKey: "name") as? String
+            if (getName()?.count)! > 0{
+                nameIdField.text = getName()?[0].value(forKey: "name") as? String
+            }
         }
         
         
