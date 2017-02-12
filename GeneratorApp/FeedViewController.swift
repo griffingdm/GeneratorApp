@@ -146,6 +146,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.commentLabel.text = messages[indexPath.row].message
         cell.votesLabel.text = "\((messages[indexPath.row].votes)!)"
         cell.votes = (messages[indexPath.row].votes)!
+        cell.innapropriateView.isHidden = true
+        cell.innapropriateLabel.text = "INNAPROPRIATE"
         
         if hasVotedDown(votes: votes, objId: messages[indexPath.row].objId){
             cell.downButton.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8745098039, blue: 0.7333333333, alpha: 1)
